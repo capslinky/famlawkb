@@ -1,0 +1,188 @@
+site_name: Arizona Family Law Wiki
+site_url: https://azfamilylaw.wiki
+site_description: Free comprehensive guide to family law in Arizona - divorce, custody, support, and more
+site_author: Arizona Family Law Wiki Contributors
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - toc.follow
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  logo: assets/logo.png
+
+nav:
+  - Home: index.md
+  
+  - Core Topics:
+    - Divorce: core-topics/Divorce.md
+    - Child Custody: core-topics/Child Custody.md
+    - Child Support: core-topics/Child Support.md
+    - Property Division: core-topics/Property Division.md
+    - Spousal Maintenance: core-topics/Spousal Maintenance.md
+  
+  - Legal Process:
+    - Court Procedures: procedures/Court Procedures.md
+    - Legal Representation: procedures/Legal Representation.md
+    - Alternative Dispute Resolution: procedures/Alternative Dispute Resolution.md
+    - Appeals: procedures/Appeals.md
+  
+  - Special Situations:
+    - Domestic Violence: special-situations/Domestic Violence.md
+    - Paternity: special-situations/Paternity.md
+    - Parenting Time: special-situations/Parenting Time.md
+    - Grandparent Rights: special-situations/Grandparent Rights.md
+  
+  - Resources:
+    - Forms & Documents: resources/Forms and Documents.md
+    - Child Support Calculator: resources/Child Support Calculator.md
+    - Property Division Worksheet: resources/Property Division Worksheet.md
+    - Financial Issues: resources/Financial Issues.md
+    - Post-Decree Issues: resources/Post-Decree Issues.md
+    - Tax Considerations: resources/Tax Considerations.md
+  
+  - Additional Topics:
+    - Marriage & Domestic Relations: additional-topics/Marriage and Domestic Relations.md
+    - Adoption: additional-topics/Adoption.md
+    - Business Valuation: additional-topics/Business Valuation.md
+    - Criminal Law Interface: additional-topics/Criminal Law Interface.md
+    - Elder Law: additional-topics/Elder Law.md
+    - Evidence & Discovery: additional-topics/Evidence and Discovery.md
+    - Interstate & International: additional-topics/Interstate and International.md
+    - Juvenile Law: additional-topics/Juvenile Law.md
+    - Reproductive Rights: additional-topics/Reproductive Rights.md
+    - Special Circumstances: additional-topics/Special Circumstances.md
+  
+  - Reference:
+    - FAQ: reference/FAQ.md
+    - Glossary: reference/Glossary.md
+    - Legal Disclaimer: Legal Disclaimer.md
+  
+  - About:
+    - Contributing: CONTRIBUTING.md
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      lang:
+        - en
+  - minify:
+      minify_html: true
+  - tags:
+      tags_file: tags.md
+  - social:
+      cards_enabled: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      enabled: true
+      fallback_to_build_date: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/azfamilylaw/wiki
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/azfamilylaw
+    - icon: fontawesome/solid/envelope
+      link: mailto:info@azfamilylaw.wiki
+  
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+  
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback! Help us improve by telling us what's wrong.
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+copyright: >
+  Copyright &copy; 2024 Arizona Family Law Wiki –
+  <a href="#__consent">Change cookie settings</a>
