@@ -11,7 +11,7 @@ Welcome to Arizona's most comprehensive free resource for family law information
 
 > **⚠️ LEGAL DISCLAIMER**  
 > This wiki provides **information only** and does not constitute legal advice. Laws change frequently, and every situation is unique. Always consult with a qualified Arizona attorney for specific legal matters.  
-> [Read full disclaimer →](Legal%20Disclaimer.md)
+> [Read full disclaimer →](Legal Disclaimer.md)
 
 ## 🎯 How This Wiki Helps You
 
@@ -38,25 +38,25 @@ Welcome to Arizona's most comprehensive free resource for family law information
 <div class="grid cards" markdown>
 
 -   **💔 Getting Divorced**  
-    [Divorce Process](core-topics/Divorce.md) • [Property Division](core-topics/Property%20Division.md) • [Spousal Support](core-topics/Spousal%20Maintenance.md)
+    [Divorce Process](core-topics/Divorce.md) • [Property Division](core-topics/Property Division.md) • [Spousal Support](core-topics/Spousal Maintenance.md)
 
 -   **👨‍👩‍👧 Child Custody Issues**  
-    [Custody Laws](core-topics/Child%20Custody.md) • [Parenting Time](special-situations/Parenting%20Time.md) • [Child Support](core-topics/Child%20Support.md)
+    [Custody Laws](core-topics/Child Custody.md) • [Parenting Time](special-situations/Parenting Time.md) • [Child Support](core-topics/Child Support.md)
 
 -   **🛡️ Need Protection**  
-    [Domestic Violence](special-situations/Domestic%20Violence.md) • [Orders of Protection](special-situations/Domestic%20Violence.md#orders-of-protection)
+    [Domestic Violence](special-situations/Domestic Violence.md) • [Orders of Protection](special-situations/Domestic Violence.md#orders-of-protection)
 
 -   **📄 After Divorce**  
-    [Modifications](resources/Post-Decree%20Issues.md#modification-proceedings) • [Enforcement](resources/Post-Decree%20Issues.md#enforcement-of-orders)
+    [Modifications](resources/Post-Decree Issues.md#modification-proceedings) • [Enforcement](resources/Post-Decree Issues.md#enforcement-of-orders)
 
 </div>
 
 ### Most Common Questions
 
 - [How long does divorce take in Arizona?](reference/FAQ.md#how-long-does-it-take-to-get-divorced-in-arizona)
-- [How is child support calculated?](core-topics/Child%20Support.md#calculation-process)
-- [Can I move out of state with my children?](resources/Post-Decree%20Issues.md#relocation-with-children)
-- [What is community property?](core-topics/Property%20Division.md#community-property-principles)
+- [How is child support calculated?](core-topics/Child Support.md#calculation-process)
+- [Can I move out of state with my children?](resources/Post-Decree Issues.md#relocation-with-children)
+- [What is community property?](core-topics/Property Division.md#community-property-principles)
 - [At what age can a child choose which parent to live with?](reference/FAQ.md#at-what-age-can-a-child-choose-which-parent-to-live-with)
 
 [View all FAQs →](reference/FAQ.md)
@@ -68,16 +68,16 @@ Welcome to Arizona's most comprehensive free resource for family law information
 <div class="grid cards" markdown>
 
 -   **💑 Relationships & Marriage**  
-    [Marriage Requirements](additional-topics/Marriage%20and%20Domestic%20Relations.md) • [Prenuptial Agreements](additional-topics/Marriage%20and%20Domestic%20Relations.md#prenuptial-agreements) • [Divorce](core-topics/Divorce.md) • [Legal Separation](additional-topics/Marriage%20and%20Domestic%20Relations.md#legal-separation)
+    [Marriage Requirements](additional-topics/Marriage and Domestic Relations.md) • [Prenuptial Agreements](additional-topics/Marriage and Domestic Relations.md#prenuptial-agreements) • [Divorce](core-topics/Divorce.md) • [Legal Separation](additional-topics/Marriage and Domestic Relations.md#legal-separation)
 
 -   **👶 Children & Parenting**  
-    [Custody](core-topics/Child%20Custody.md) • [Parenting Time](special-situations/Parenting%20Time.md) • [Support](core-topics/Child%20Support.md) • [Paternity](special-situations/Paternity.md) • [Adoption](additional-topics/Adoption.md)
+    [Custody](core-topics/Child Custody.md) • [Parenting Time](special-situations/Parenting Time.md) • [Support](core-topics/Child Support.md) • [Paternity](special-situations/Paternity.md) • [Adoption](additional-topics/Adoption.md)
 
 -   **💰 Financial Matters**  
-    [Property Division](core-topics/Property%20Division.md) • [Spousal Support](core-topics/Spousal%20Maintenance.md) • [Debt Allocation](core-topics/Property%20Division.md#debt-allocation) • [Tax Issues](resources/Tax%20Considerations.md)
+    [Property Division](core-topics/Property Division.md) • [Spousal Support](core-topics/Spousal Maintenance.md) • [Debt Allocation](core-topics/Property Division.md#debt-allocation) • [Tax Issues](resources/Tax Considerations.md)
 
 -   **⚖️ Legal Process**  
-    [Court Procedures](procedures/Court%20Procedures.md) • [Evidence](additional-topics/Evidence%20and%20Discovery.md) • [Mediation](procedures/Alternative%20Dispute%20Resolution.md) • [Appeals](procedures/Appeals.md)
+    [Court Procedures](procedures/Court Procedures.md) • [Evidence](additional-topics/Evidence and Discovery.md) • [Mediation](procedures/Alternative Dispute Resolution.md) • [Appeals](procedures/Appeals.md)
 
 </div>
 
@@ -86,16 +86,16 @@ Welcome to Arizona's most comprehensive free resource for family law information
 <div class="grid cards" markdown>
 
 -   **🛡️ Protection & Safety**  
-    [Domestic Violence](special-situations/Domestic%20Violence.md) • [Elder Law](additional-topics/Elder%20Law.md) • [Juvenile Law](additional-topics/Juvenile%20Law.md)
+    [Domestic Violence](special-situations/Domestic Violence.md) • [Elder Law](additional-topics/Elder Law.md) • [Juvenile Law](additional-topics/Juvenile Law.md)
 
 -   **🌐 Complex Situations**  
-    [Interstate Issues](additional-topics/Interstate%20and%20International.md) • [Military Families](additional-topics/Special%20Circumstances.md#military-divorce-issues) • [Same-Sex Marriage](additional-topics/Special%20Circumstances.md#same-sex-marriage-issues)
+    [Interstate Issues](additional-topics/Interstate and International.md) • [Military Families](additional-topics/Special Circumstances.md#military-divorce-issues) • [Same-Sex Marriage](additional-topics/Special Circumstances.md#same-sex-marriage-issues)
 
 -   **👴 Extended Family**  
-    [Grandparent Rights](special-situations/Grandparent%20Rights.md) • [Third-Party Rights](special-situations/Grandparent%20Rights.md#third-party-custody-petitions) • [Reproductive Rights](additional-topics/Reproductive%20Rights.md)
+    [Grandparent Rights](special-situations/Grandparent Rights.md) • [Third-Party Rights](special-situations/Grandparent Rights.md#third-party-custody-petitions) • [Reproductive Rights](additional-topics/Reproductive Rights.md)
 
 -   **📋 After Court**  
-    [Post-Decree Issues](resources/Post-Decree%20Issues.md) • [Modifications](resources/Post-Decree%20Issues.md#modification-proceedings) • [Enforcement](resources/Post-Decree%20Issues.md#enforcement-of-orders)
+    [Post-Decree Issues](resources/Post-Decree Issues.md) • [Modifications](resources/Post-Decree Issues.md#modification-proceedings) • [Enforcement](resources/Post-Decree Issues.md#enforcement-of-orders)
 
 </div>
 
@@ -138,8 +138,8 @@ While this wiki provides valuable information, you should consult an attorney fo
 
 - [Find Your Court](https://www.azcourts.gov/find-a-court)
 - [Court Forms](https://www.azcourts.gov/selfservicecenter/Forms)
-- [Filing Fees](procedures/Court%20Procedures.md#filing-fees)
-- [Fee Waivers](procedures/Court%20Procedures.md#fee-waivers)
+- [Filing Fees](procedures/Court Procedures.md#filing-fees)
+- [Fee Waivers](procedures/Court Procedures.md#fee-waivers)
 
 ## 🤝 Contributing
 
@@ -172,6 +172,6 @@ This wiki is a community resource maintained by legal professionals and voluntee
 
 ---
 
-**Quick Links**: [Divorce](core-topics/Divorce.md) • [Custody](core-topics/Child%20Custody.md) • [Support](core-topics/Child%20Support.md) • [Property](core-topics/Property%20Division.md) • [FAQ](reference/FAQ.md) • [Glossary](reference/Glossary.md) • [Court Forms](https://www.azcourts.gov/selfservicecenter/Forms)
+**Quick Links**: [Divorce](core-topics/Divorce.md) • [Custody](core-topics/Child Custody.md) • [Support](core-topics/Child Support.md) • [Property](core-topics/Property Division.md) • [FAQ](reference/FAQ.md) • [Glossary](reference/Glossary.md) • [Court Forms](https://www.azcourts.gov/selfservicecenter/Forms)
 
 <p class="footer-note">This wiki is provided as a public service. Information is current as of January 2024. Always verify current law before relying on any information.</p>

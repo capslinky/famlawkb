@@ -717,11 +717,11 @@ File motion for attorney fees early!
 
 ## 🔗 Related Topics
 
-- [Court Procedures](Court%20Procedures.md) - Filing and court rules
+- [Court Procedures](Court Procedures.md) - Filing and court rules
 - [Divorce Process](Divorce.md) - Overview of process
-- [Financial Issues](Financial%20Issues.md) - Attorney fee awards
-- [Domestic Violence](Domestic%20Violence.md) - Special legal needs
-- [Alternative Dispute Resolution](Alternative%20Dispute%20Resolution.md) - Mediation options
+- [Financial Issues](Financial Issues.md) - Attorney fee awards
+- [Domestic Violence](Domestic Violence.md) - Special legal needs
+- [Alternative Dispute Resolution](Alternative Dispute Resolution.md) - Mediation options
 
 ## 📞 Get Help
 
@@ -748,7 +748,7 @@ Choosing legal representation is a major decision. Consider your needs, complexi
 
 ---
 
-**Navigation**: [← Court Procedures](Court%20Procedures.md) | [Alternative Dispute Resolution →](Alternative%20Dispute%20Resolution.md)
+**Navigation**: [← Court Procedures](Court Procedures.md) | [Alternative Dispute Resolution →](Alternative Dispute Resolution.md)
 
 *Last updated: January 30, 2024*
 

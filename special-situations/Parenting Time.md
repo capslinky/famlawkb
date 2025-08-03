@@ -562,11 +562,11 @@ Same days each week
 
 ## 🔗 Related Topics
 
-- [Child Custody](Child%20Custody.md) - Legal decision-making
-- [Child Support](Child%20Support.md) - Financial obligations
-- [Domestic Violence](Domestic%20Violence.md) - Safety concerns
-- [Post-Decree Issues](Post-Decree%20Issues.md) - Modifications
-- [Long Distance](Interstate%20and%20International.md) - Moving away
+- [Child Custody](Child Custody.md) - Legal decision-making
+- [Child Support](Child Support.md) - Financial obligations
+- [Domestic Violence](Domestic Violence.md) - Safety concerns
+- [Post-Decree Issues](Post-Decree Issues.md) - Modifications
+- [Long Distance](Interstate and International.md) - Moving away
 
 ## 📞 Get Help
 
@@ -598,6 +598,6 @@ Remember: The goal is giving children meaningful relationships with both parents
 
 ---
 
-**Navigation**: [← Child Custody](Child%20Custody.md) | [Child Support →](Child%20Support.md)
+**Navigation**: [← Child Custody](Child Custody.md) | [Child Support →](Child Support.md)
 
 *Last updated: January 30, 2024*

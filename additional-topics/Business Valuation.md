@@ -22,18 +22,18 @@ reviewed: 2024-12-30
 
 **Key Point**: Businesses started or grown during marriage are community property. Proper valuation ensures fair division and accurate support calculations.
 
-## ¡ Key Takeaways
+## ï¿½ Key Takeaways
 
-- =¼ Businesses are community property if started/grown during marriage
-- =Ê Multiple valuation methods exist (market, income, asset)
+- =ï¿½ Businesses are community property if started/grown during marriage
+- =ï¿½ Multiple valuation methods exist (market, income, asset)
 - =T Professional goodwill may be divisible in Arizona
-- =° Valuation affects both property division and support
+- =ï¿½ Valuation affects both property division and support
 - = Discovery is extensive for business assets
-- =h=¼ Expert witnesses usually required
-- =È Date of valuation matters significantly
--   Hidden income often discovered in process
+- =h=ï¿½ Expert witnesses usually required
+- =ï¿½ Date of valuation matters significantly
+- ï¿½ Hidden income often discovered in process
 
-## =Ë In This Guide
+## =ï¿½ In This Guide
 
 - [When Business Valuation is Needed](#when-business-valuation-is-needed)
 - [Types of Business Interests](#types-of-business-interests)
@@ -45,7 +45,7 @@ reviewed: 2024-12-30
 - [Common Disputes](#common-disputes)
 - [Tax Implications](#tax-implications)
 
-## =¼ When Business Valuation is Needed
+## =ï¿½ When Business Valuation is Needed
 
 ### Situations Requiring Valuation
 
@@ -72,25 +72,25 @@ reviewed: 2024-12-30
 
 ### Why Accurate Valuation Matters
 
-**Property Division** <â
+**Property Division** <ï¿½
 - Determines buyout amount
 - Affects overall settlement
 - May impact other assets
 - Influences negotiation
 
-**Support Calculations** =µ
+**Support Calculations** =ï¿½
 - Real income determination
 - Earning capacity
 - Cash flow available
 - Perks and benefits
 
-**Tax Planning** =Ê
+**Tax Planning** =ï¿½
 - Capital gains issues
 - Depreciation recapture
 - Transfer methods
 - Future tax burden
 
-## <â Types of Business Interests
+## <ï¿½ Types of Business Interests
 
 ### Ownership Structures
 
@@ -120,25 +120,25 @@ reviewed: 2024-12-30
 
 ### Special Considerations
 
-**Minority Interests** =É
+**Minority Interests** =ï¿½
 - Lack of control discount
 - Lack of marketability discount
 - May be 20-40% less
 - Depends on rights
 
-**Professional Practices** =h•
+**Professional Practices** =hï¿½
 - Personal vs enterprise goodwill
 - Referral sources
 - Non-compete issues
 - Licensing requirements
 
-**Franchise Businesses** <ê
+**Franchise Businesses** <ï¿½
 - Franchise agreement terms
 - Territory rights
 - Transfer restrictions
 - Franchise fees
 
-## =Ê Valuation Methods
+## =ï¿½ Valuation Methods
 
 ### Three Main Approaches
 
@@ -186,7 +186,7 @@ Value based on future income/cash flow
 ```
 Annual profit: $200,000
 Capitalization rate: 20%
-Value: $200,000 ÷ 0.20 = $1,000,000
+Value: $200,000 ï¿½ 0.20 = $1,000,000
 ```
 
 ### 3. Asset Approach
@@ -224,7 +224,7 @@ Net value: $300,000
 - Cross-checking
 - Reasonableness test
 
-## =h• Professional Practices
+## =hï¿½ Professional Practices
 
 ### Unique Valuation Issues
 
@@ -244,21 +244,21 @@ Net value: $300,000
 
 ### Valuation Components
 
-**Tangible Assets** <å
+**Tangible Assets** <ï¿½
 - Equipment
 - Furniture
 - Supplies
 - Real estate
 - Computers
 
-**Intangible Assets** =Ë
+**Intangible Assets** =ï¿½
 - Patient/client lists
 - Trained staff
 - Systems/procedures
 - Location value
 - Phone numbers
 
-**Income Stream** =°
+**Income Stream** =ï¿½
 - Historical earnings
 - Future projections
 - Collection rates
@@ -278,7 +278,7 @@ Net value: $300,000
 - Geographic limits
 - Time restrictions
 
-## =Ž Goodwill Issues
+## =ï¿½ Goodwill Issues
 
 ### Types of Goodwill
 
@@ -289,7 +289,7 @@ Net value: $300,000
 - Relationships
 - **Generally not divisible**
 
-**Enterprise Goodwill** <â
+**Enterprise Goodwill** <ï¿½
 - Business reputation
 - Systems/procedures
 - Location
@@ -330,21 +330,21 @@ Net value: $300,000
 
 ### Business Records Needed
 
-**Financial Documents** =Ê
+**Financial Documents** =ï¿½
 - Tax returns (5 years)
 - Financial statements
 - Bank statements
 - Credit card records
 - Loan documents
 
-**Operational Records** =Ë
+**Operational Records** =ï¿½
 - Customer lists
 - Vendor contracts
 - Employee records
 - Lease agreements
 - Insurance policies
 
-**Corporate Documents** =Ñ
+**Corporate Documents** =ï¿½
 - Formation documents
 - Operating agreements
 - Meeting minutes
@@ -375,7 +375,7 @@ Net value: $300,000
 
 ### Hidden Asset Red Flags
 
-**Warning Signs** =©
+**Warning Signs** =ï¿½
 - Lifestyle exceeds income
 - Cash business
 - Multiple entities
@@ -389,7 +389,7 @@ Net value: $300,000
 - Inventory manipulation
 - False debts
 
-## =h=¼ Expert Witnesses
+## =h=ï¿½ Expert Witnesses
 
 ### When You Need One
 
@@ -438,7 +438,7 @@ Net value: $300,000
 - Poor communication
 - Unrealistic timeline
 
-## – Common Disputes
+## ï¿½ Common Disputes
 
 ### Valuation Date
 
@@ -483,7 +483,7 @@ Difference: $300,000 community or separate?
 - Sometimes split difference
 - Rarely average
 
-## =° Tax Implications
+## =ï¿½ Tax Implications
 
 ### Transfer Tax Issues
 
@@ -491,7 +491,7 @@ Difference: $300,000 community or separate?
 - Generally no tax
 - Basis carries over
 - Future gain issue
-- § 1041 applies
+- ï¿½ 1041 applies
 
 **Asset Purchases**:
 - Potential gains
@@ -528,7 +528,7 @@ Difference: $300,000 community or separate?
 - State tax issues
 - Federal coordination
 
-##   Common Mistakes
+## ï¿½ Common Mistakes
 
 ### Valuation Errors
 
@@ -582,12 +582,12 @@ Difference: $300,000 community or separate?
 
 **Fix**: Tax planning included
 
-## =Ö The Law
+## =ï¿½ The Law
 
 ### Key Statutes
-- **A.R.S. § 25-213** - Community property
-- **A.R.S. § 25-318** - Property disposition
-- **A.R.S. § 12-2601** - Expert testimony
+- **A.R.S. ï¿½ 25-213** - Community property
+- **A.R.S. ï¿½ 25-318** - Property disposition
+- **A.R.S. ï¿½ 12-2601** - Expert testimony
 
 ### Important Cases
 - *Mitchell v. Mitchell* - Goodwill rules
@@ -601,12 +601,12 @@ Difference: $300,000 community or separate?
 
 ## = Related Topics
 
-- [Property Division](../core-topics/Property%20Division.md) - Overall division rules
-- [Financial Issues](../resources/Financial%20Issues.md) - Discovery process
-- [Evidence and Discovery](Evidence%20and%20Discovery.md) - Discovery tools
-- [Spousal Maintenance](../core-topics/Spousal%20Maintenance.md) - Income determination
+- [Property Division](../core-topics/Property Division.md) - Overall division rules
+- [Financial Issues](../resources/Financial Issues.md) - Discovery process
+- [Evidence and Discovery](Evidence and Discovery.md) - Discovery tools
+- [Spousal Maintenance](../core-topics/Spousal Maintenance.md) - Income determination
 
-## =Þ Get Help
+## =ï¿½ Get Help
 
 ### Expert Resources
 - **Business Valuators**: [NACVA Directory](https://www.nacva.com)
@@ -624,6 +624,6 @@ Business valuation in divorce is complex and usually requires expert help. Start
 
 ---
 
-**Navigation**: [ Adoption](Adoption.md) | [Criminal Law Interface ’](Criminal%20Law%20Interface.md)
+**Navigation**: [ï¿½ Adoption](Adoption.md) | [Criminal Law Interface ï¿½](Criminal Law Interface.md)
 
 *Last updated: December 30, 2024*

@@ -646,11 +646,11 @@ reviewed: 2024-01-30
 
 ## 🔗 Related Topics
 
-- [Child Support](Child%20Support.md) - Calculations and collection
-- [Spousal Maintenance](Spousal%20Maintenance.md) - Alimony issues
-- [Property Division](Property%20Division.md) - Asset splitting
+- [Child Support](Child Support.md) - Calculations and collection
+- [Spousal Maintenance](Spousal Maintenance.md) - Alimony issues
+- [Property Division](Property Division.md) - Asset splitting
 - [Temporary Orders](Divorce.md#temporary-orders) - Emergency relief
-- [Court Procedures](Court%20Procedures.md) - Filing requirements
+- [Court Procedures](Court Procedures.md) - Filing requirements
 
 ## 📞 Get Help
 
@@ -675,6 +675,6 @@ Financial disclosure is not optional - it's mandatory with serious penalties. Ge
 
 ---
 
-**Navigation**: [← Court Procedures](Court%20Procedures.md) | [Post-Decree Issues →](Post-Decree%20Issues.md)
+**Navigation**: [← Court Procedures](Court Procedures.md) | [Post-Decree Issues →](Post-Decree Issues.md)
 
 *Last updated: January 30, 2024*

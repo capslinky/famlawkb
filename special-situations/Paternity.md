@@ -261,7 +261,7 @@ Establishing legal parentage is crucial for determining rights and responsibilit
 - Time with child
 - Health insurance
 - Childcare costs
-- [Calculator](resources/Child%20Support%20Calculator.md)
+- [Calculator](resources/Child Support Calculator.md)
 
 **Special Issues**:
 - No tax returns?
@@ -488,11 +488,11 @@ Establishing legal parentage is crucial for determining rights and responsibilit
 
 ## 🔗 Related Topics
 
-- [Child Custody](Child%20Custody.md) - Rights after paternity
-- [Child Support](Child%20Support.md) - Support calculations
-- [Unmarried Parents](Special%20Circumstances.md#unmarried-parents) - Special issues
+- [Child Custody](Child Custody.md) - Rights after paternity
+- [Child Support](Child Support.md) - Support calculations
+- [Unmarried Parents](Special Circumstances.md#unmarried-parents) - Special issues
 - [Adoption](Adoption.md) - Terminating rights
-- [Grandparent Rights](Grandparent%20Rights.md) - After paternity
+- [Grandparent Rights](Grandparent Rights.md) - After paternity
 
 ## 📞 Get Help
 
@@ -518,6 +518,6 @@ Establishing paternity is the first step to fathers' rights and children's benef
 
 ---
 
-**Navigation**: [← Child Support](Child%20Support.md) | [Adoption →](Adoption.md)
+**Navigation**: [← Child Support](Child Support.md) | [Adoption →](Adoption.md)
 
 *Last updated: January 30, 2024*

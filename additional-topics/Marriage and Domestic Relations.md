@@ -963,7 +963,7 @@ A: Yes, existing marriages can convert to covenant marriage with counseling and 
 - [Marriage License Requirements by County](https://www.azcourts.gov)
 
 ### Educational Materials
-- [Covenant Marriage Information](https://www.azleg.gov/briefs/house/covenant%20marriage.pdf)
+- [Covenant Marriage Information](https://www.azleg.gov/briefs/house/covenant marriage.pdf)
 - [Prenuptial Agreement Guide](https://www.azbar.org/for-the-public)
 - [Name Change Procedures](https://www.azcourts.gov/selfservicecenter)
 

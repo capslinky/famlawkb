@@ -66,7 +66,7 @@ This document provides a comprehensive, prioritized list of improvements for the
   - Move Same-Sex Marriage to its own page
   - Or rename/reorganize for clarity
 - [ ] Standardize all internal links:
-  - Remove URL encoding (%20)
+  - Remove URL encoding ( )
   - Use consistent relative paths
   - Fix any broken anchors
 - [ ] Delete or merge outdated Welcome.md file

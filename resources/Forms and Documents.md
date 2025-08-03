@@ -281,6 +281,6 @@ Jump to the forms you need:
 
 ---
 
-**Navigation**: [← Resources](../Welcome.md) | [Child Support Calculator →](Child%20Support%20Calculator.md)
+**Navigation**: [← Resources](../Welcome.md) | [Child Support Calculator →](Child Support Calculator.md)
 
 *Last updated: January 30, 2024. Forms and requirements change frequently - always verify current versions.*

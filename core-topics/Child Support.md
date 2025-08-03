@@ -389,11 +389,11 @@ Example: Parent earning $6,000/month may pay Parent earning $2,000/month even wi
 
 ## 🔗 Related Topics
 
-- [Child Support Calculator](resources/Child%20Support%20Calculator.md) - Step-by-step guide
-- [Financial Affidavit](resources/Forms%20and%20Documents.md#financial-forms) - Required form
-- [Enforcement](Financial%20Issues.md#enforcement-mechanisms) - Collection options
-- [Modifications](Post-Decree%20Issues.md#modification-proceedings) - Change process
-- [Tax Considerations](Tax%20Considerations.md#child-related-tax-benefits) - Tax impacts
+- [Child Support Calculator](resources/Child Support Calculator.md) - Step-by-step guide
+- [Financial Affidavit](resources/Forms and Documents.md#financial-forms) - Required form
+- [Enforcement](Financial Issues.md#enforcement-mechanisms) - Collection options
+- [Modifications](Post-Decree Issues.md#modification-proceedings) - Change process
+- [Tax Considerations](Tax Considerations.md#child-related-tax-benefits) - Tax impacts
 
 ## 📞 Get Help
 
@@ -430,6 +430,6 @@ Example: Parent earning $6,000/month may pay Parent earning $2,000/month even wi
 
 ---
 
-**Navigation**: [← Child Custody](Child%20Custody.md) | [Paternity →](Paternity.md)
+**Navigation**: [← Child Custody](Child Custody.md) | [Paternity →](Paternity.md)
 
 *Last updated: January 30, 2024. Guidelines effective July 1, 2022.*

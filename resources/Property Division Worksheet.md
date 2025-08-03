@@ -278,10 +278,10 @@ List any claims that property should be separate (not divided):
 
 ## 🔗 Related Resources
 
-- [Property Division Guide](../Property%20Division.md)
-- [Financial Affidavit](Forms%20and%20Documents.md#financial-forms)
-- [Tax Considerations](../Tax%20Considerations.md)
-- [QDRO Information](../Property%20Division.md#retirement-accounts-qdros)
+- [Property Division Guide](../Property Division.md)
+- [Financial Affidavit](Forms and Documents.md#financial-forms)
+- [Tax Considerations](../Tax Considerations.md)
+- [QDRO Information](../Property Division.md#retirement-accounts-qdros)
 
 ---
 

@@ -677,11 +677,11 @@ Show:
 
 ## 🔗 Related Topics
 
-- [Child Support](Child%20Support.md) - Calculation details
-- [Spousal Maintenance](Spousal%20Maintenance.md) - When it ends
-- [Child Custody](Child%20Custody.md) - Best interests
-- [Financial Issues](Financial%20Issues.md) - Collection tools
-- [Court Procedures](Court%20Procedures.md) - How to file
+- [Child Support](Child Support.md) - Calculation details
+- [Spousal Maintenance](Spousal Maintenance.md) - When it ends
+- [Child Custody](Child Custody.md) - Best interests
+- [Financial Issues](Financial Issues.md) - Collection tools
+- [Court Procedures](Court Procedures.md) - How to file
 
 ## 📞 Get Help
 
@@ -706,6 +706,6 @@ Life changes after divorce are normal, but handle them properly through the cour
 
 ---
 
-**Navigation**: [← Financial Issues](Financial%20Issues.md) | [Appeals →](Appeals.md)
+**Navigation**: [← Financial Issues](Financial Issues.md) | [Appeals →](Appeals.md)
 
 *Last updated: January 30, 2024*

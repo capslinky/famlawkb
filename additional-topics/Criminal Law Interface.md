@@ -556,10 +556,10 @@ Solution: Often wait for criminal resolution
 
 ## 🔗 Related Topics
 
-- [Domestic Violence](../special-situations/Domestic%20Violence.md) - Protection and safety
-- [Child Custody](../core-topics/Child%20Custody.md) - Best interests factors
-- [Evidence and Discovery](Evidence%20and%20Discovery.md) - Discovery rules
-- [Court Procedures](../procedures/Court%20Procedures.md) - Filing requirements
+- [Domestic Violence](../special-situations/Domestic Violence.md) - Protection and safety
+- [Child Custody](../core-topics/Child Custody.md) - Best interests factors
+- [Evidence and Discovery](Evidence and Discovery.md) - Discovery rules
+- [Court Procedures](../procedures/Court Procedures.md) - Filing requirements
 
 ## 📞 Get Help
 
@@ -586,6 +586,6 @@ Criminal charges don't automatically mean losing custody, but they create seriou
 
 ---
 
-**Navigation**: [← Elder Law](Elder%20Law.md) | [Evidence and Discovery →](Evidence%20and%20Discovery.md)
+**Navigation**: [← Elder Law](Elder Law.md) | [Evidence and Discovery →](Evidence and Discovery.md)
 
 *Last updated: December 30, 2024*

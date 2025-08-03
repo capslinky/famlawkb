@@ -723,10 +723,10 @@ Always get confirmation
 ## 🔗 Related Topics
 
 - [Divorce Process](Divorce.md) - Start to finish
-- [Financial Disclosure](Financial%20Issues.md) - What to provide
-- [Legal Help](Legal%20Representation.md) - Attorney options
-- [Forms & Documents](resources/Forms%20and%20Documents.md) - What you need
-- [Alternative Dispute Resolution](Alternative%20Dispute%20Resolution.md) - Avoid trial
+- [Financial Disclosure](Financial Issues.md) - What to provide
+- [Legal Help](Legal Representation.md) - Attorney options
+- [Forms & Documents](resources/Forms and Documents.md) - What you need
+- [Alternative Dispute Resolution](Alternative Dispute Resolution.md) - Avoid trial
 
 ## 📞 Get Help
 
@@ -747,6 +747,6 @@ Court procedures seem complex but follow patterns. Use self-help centers, meet a
 
 ---
 
-**Navigation**: [← Legal Representation](Legal%20Representation.md) | [Alternative Dispute Resolution →](Alternative%20Dispute%20Resolution.md)
+**Navigation**: [← Legal Representation](Legal Representation.md) | [Alternative Dispute Resolution →](Alternative Dispute Resolution.md)
 
 *Last updated: January 30, 2024*

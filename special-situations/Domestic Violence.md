@@ -463,11 +463,11 @@ Perpetrator must show:
 
 ## 🔗 Related Topics
 
-- [Safety Planning Guide](resources/Safety%20Planning.md)
-- [Child Custody](Child%20Custody.md) - Impact of DV
+- [Safety Planning Guide](resources/Safety Planning.md)
+- [Child Custody](Child Custody.md) - Impact of DV
 - [Divorce Process](Divorce.md) - With protection orders
-- [Emergency Resources](resources/Emergency%20Resources.md)
-- [Court Procedures](Court%20Procedures.md) - Filing process
+- [Emergency Resources](resources/Emergency Resources.md)
+- [Court Procedures](Court Procedures.md) - Filing process
 
 ## 📞 Get Help Now
 
@@ -506,6 +506,6 @@ Perpetrator must show:
 
 **Remember**: You are not alone. Help is available. Your safety matters.
 
-**Navigation**: [← Family Protection](index.md#protection--safety) | [Elder Law →](Elder%20Law.md)
+**Navigation**: [← Family Protection](index.md#protection--safety) | [Elder Law →](Elder Law.md)
 
 *Last updated: January 30, 2024. If you're in danger, don't wait - get help now.*

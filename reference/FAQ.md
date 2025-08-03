@@ -86,7 +86,7 @@ Jump to your topic:
 - Both self-represent
 - Use mediator + one lawyer drafts
 
-[Legal Help Options →](Legal%20Representation.md)
+[Legal Help Options →](Legal Representation.md)
 
 ### What's legal separation vs divorce?
 
@@ -98,7 +98,7 @@ Jump to your topic:
 - Religious considerations
 - Can convert to divorce later
 
-[Compare Options →](Marriage%20and%20Domestic%20Relations.md#legal-separation)
+[Compare Options →](Marriage and Domestic Relations.md#legal-separation)
 
 ---
 
@@ -114,7 +114,7 @@ Jump to your topic:
 - Never completely controlling
 - Must show good reasoning
 
-[Custody Factors →](Child%20Custody.md#best-interests-factors)
+[Custody Factors →](Child Custody.md#best-interests-factors)
 
 ### Does Arizona favor mothers?
 
@@ -126,7 +126,7 @@ Jump to your topic:
 - No preference for mothers
 - Statistics show fairly even outcomes
 
-[Best Interests Standard →](Child%20Custody.md#best-interests-factors)
+[Best Interests Standard →](Child Custody.md#best-interests-factors)
 
 ### What is 50/50 custody?
 
@@ -138,7 +138,7 @@ Jump to your topic:
 - Alternating 2 weeks
 - Split weeks
 
-[Parenting Schedules →](Parenting%20Time.md#common-schedules)
+[Parenting Schedules →](Parenting Time.md#common-schedules)
 
 ### Can I move with kids?
 
@@ -150,7 +150,7 @@ Jump to your topic:
 - Court hearing if disputed
 - Best interests test applied
 
-[Relocation Rules →](Post-Decree%20Issues.md#relocation-with-children)
+[Relocation Rules →](Post-Decree Issues.md#relocation-with-children)
 
 ### How do I change custody?
 
@@ -162,7 +162,7 @@ Jump to your topic:
 - Benefits child
 - Higher standard than initial order
 
-[Modification Process →](Child%20Custody.md#modifying-custody)
+[Modification Process →](Child Custody.md#modifying-custody)
 
 ### Can grandparents get visitation?
 
@@ -174,7 +174,7 @@ Jump to your topic:
 - Parent unreasonably denying
 - Harm without visitation
 
-[Grandparent Rights →](Grandparent%20Rights.md)
+[Grandparent Rights →](Grandparent Rights.md)
 
 ---
 
@@ -190,7 +190,7 @@ Jump to your topic:
 3. Adjust for parenting time
 4. Add healthcare/childcare
 
-[Support Calculator →](resources/Child%20Support%20Calculator.md)
+[Support Calculator →](resources/Child Support Calculator.md)
 
 ### Does 50/50 mean no support?
 
@@ -198,7 +198,7 @@ Jump to your topic:
 
 **Example**: If one parent earns $6,000/month and other earns $2,000/month, higher earner pays even with equal time.
 
-[50/50 Support →](Child%20Support.md#common-questions)
+[50/50 Support →](Child Support.md#common-questions)
 
 ### When does support end?
 
@@ -210,7 +210,7 @@ Jump to your topic:
 - Can't extend for college
 - May continue if disabled
 
-[Duration Rules →](Child%20Support.md#when-does-support-end)
+[Duration Rules →](Child Support.md#when-does-support-end)
 
 ### Can support be changed?
 
@@ -222,7 +222,7 @@ Jump to your topic:
 - Child's needs change
 - Every 3 years automatic review
 
-[Modification Info →](Child%20Support.md#modifying-support)
+[Modification Info →](Child Support.md#modifying-support)
 
 ### What if they won't pay?
 
@@ -235,7 +235,7 @@ Jump to your topic:
 - Contempt/jail
 - Credit reporting
 
-[Enforcement Help →](Child%20Support.md#enforcement-options)
+[Enforcement Help →](Child Support.md#enforcement-options)
 
 ---
 
@@ -251,7 +251,7 @@ Jump to your topic:
 - Gifts/inheritance = separate
 - Name on title doesn't matter
 
-[Property Division →](Property%20Division.md)
+[Property Division →](Property Division.md)
 
 ### Who keeps the house?
 
@@ -263,7 +263,7 @@ Jump to your topic:
 3. Continue co-owning
 4. Trade for other assets
 
-[House Options →](Property%20Division.md#who-keeps-the-house)
+[House Options →](Property Division.md#who-keeps-the-house)
 
 ### What about retirement?
 
@@ -275,7 +275,7 @@ Jump to your topic:
 - Can trade for other assets
 - Taxes considered
 
-[Retirement Division →](Property%20Division.md#retirement-accounts-qdros)
+[Retirement Division →](Property Division.md#retirement-accounts-qdros)
 
 ### Are debts divided too?
 
@@ -287,7 +287,7 @@ Jump to your topic:
 - Creditors not bound by divorce
 - Need to refinance when possible
 
-[Debt Division →](Property%20Division.md#debt-division)
+[Debt Division →](Property Division.md#debt-division)
 
 ### What's spousal support?
 
@@ -300,7 +300,7 @@ Jump to your topic:
 - Standard of living
 - Not automatic
 
-[Spousal Maintenance →](Spousal%20Maintenance.md)
+[Spousal Maintenance →](Spousal Maintenance.md)
 
 ---
 
@@ -316,7 +316,7 @@ Jump to your topic:
 - After hearing: 1 year
 - All are FREE
 
-[Get Protection →](Domestic%20Violence.md#how-to-get-an-order)
+[Get Protection →](Domestic Violence.md#how-to-get-an-order)
 
 ### What protection is included?
 
@@ -329,7 +329,7 @@ Jump to your topic:
 - Stay 100+ yards away
 - Pet protection
 
-[Full Protection List →](Domestic%20Violence.md#what-protection-includes)
+[Full Protection List →](Domestic Violence.md#what-protection-includes)
 
 ### Will it affect custody?
 
@@ -341,7 +341,7 @@ Jump to your topic:
 - Must complete treatment
 - Long-term effects
 
-[Custody Impact →](Domestic%20Violence.md#impact-on-divorce-custody)
+[Custody Impact →](Domestic Violence.md#impact-on-divorce-custody)
 
 ### What if order is violated?
 
@@ -353,7 +353,7 @@ Jump to your topic:
 - Contempt of court
 - Extended protection
 
-[Violations →](Domestic%20Violence.md#violations--enforcement)
+[Violations →](Domestic Violence.md#violations--enforcement)
 
 ---
 
@@ -375,7 +375,7 @@ Jump to your topic:
 - Custody disputes
 - Feel overwhelmed
 
-[Legal Help →](Legal%20Representation.md)
+[Legal Help →](Legal Representation.md)
 
 ### Where do I file?
 
@@ -386,7 +386,7 @@ Jump to your topic:
 - No specific county requirement
 - E-filing available most places
 
-[Court Info →](Court%20Procedures.md)
+[Court Info →](Court Procedures.md)
 
 ### What forms do I need?
 
@@ -398,7 +398,7 @@ Jump to your topic:
 - Financial affidavit
 - Parenting plan (if kids)
 
-[Form Finder →](resources/Forms%20and%20Documents.md)
+[Form Finder →](resources/Forms and Documents.md)
 
 ### How long do I have to respond?
 
@@ -421,7 +421,7 @@ Jump to your topic:
 - No reason needed first time
 - Very limited after that
 
-[Judge Change →](Court%20Procedures.md)
+[Judge Change →](Court Procedures.md)
 
 ---
 
@@ -430,9 +430,9 @@ Jump to your topic:
 ### Browse by Topic
 - [Complete Topic Index](Welcome.md)
 - [Divorce Guide](Divorce.md)
-- [Child Custody](Child%20Custody.md)
-- [Child Support](Child%20Support.md)
-- [Property Division](Property%20Division.md)
+- [Child Custody](Child Custody.md)
+- [Child Support](Child Support.md)
+- [Property Division](Property Division.md)
 
 ### Get Personal Help
 - **Court Self-Help**: [Find Location](https://www.azcourts.gov/selfservicecenter)

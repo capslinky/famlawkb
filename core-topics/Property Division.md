@@ -436,11 +436,11 @@ Qualified Domestic Relations Order - special court order to divide retirement wi
 
 ## 🔗 Related Topics
 
-- [Financial Affidavit](resources/Forms%20and%20Documents.md#financial-forms) - Required disclosure
-- [Spousal Maintenance](Spousal%20Maintenance.md) - May affect division
-- [Tax Considerations](Tax%20Considerations.md) - Division tax impacts
-- [Business Valuation](Business%20Valuation.md) - Detailed guide
-- [Hidden Assets](Financial%20Issues.md#hidden-assets-investigation) - Investigation guide
+- [Financial Affidavit](resources/Forms and Documents.md#financial-forms) - Required disclosure
+- [Spousal Maintenance](Spousal Maintenance.md) - May affect division
+- [Tax Considerations](Tax Considerations.md) - Division tax impacts
+- [Business Valuation](Business Valuation.md) - Detailed guide
+- [Hidden Assets](Financial Issues.md#hidden-assets-investigation) - Investigation guide
 
 ## 📞 Get Help
 
@@ -466,17 +466,17 @@ Qualified Domestic Relations Order - special court order to divide retirement wi
 
 **Property Division Help**:
 - [Court Self-Help](https://www.azcourts.gov/selfservicecenter)
-- [Property Division Forms](resources/Forms%20and%20Documents.md#financial-forms)
+- [Property Division Forms](resources/Forms and Documents.md#financial-forms)
 - [Financial Affidavit Help](https://www.azcourts.gov/familylaw/Financial-Affidavit)
 
 ### Tools & Calculators
 
-- [Property Division Worksheet](resources/Property%20Division%20Worksheet.md)
+- [Property Division Worksheet](resources/Property Division Worksheet.md)
 - [QDRO Information](https://www.qdro.com)
 - [Business Valuation Basics](https://www.nacva.com)
 
 ---
 
-**Navigation**: [← Divorce](Divorce.md) | [Spousal Maintenance →](Spousal%20Maintenance.md)
+**Navigation**: [← Divorce](Divorce.md) | [Spousal Maintenance →](Spousal Maintenance.md)
 
 *Last updated: January 30, 2024. Laws change frequently - verify current information.*

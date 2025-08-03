@@ -347,12 +347,12 @@ Courts decide based on **best interests**:
 
 ## 🔗 Related Topics
 
-- [Child Custody](Child%20Custody.md) - Legal decision-making
-- [Child Support](Child%20Support.md) - Calculator and guidelines
-- [Property Division](Property%20Division.md) - Community property rules
-- [Spousal Maintenance](Spousal%20Maintenance.md) - Alimony factors
-- [Domestic Violence](Domestic%20Violence.md) - Protection orders
-- [Post-Decree Issues](Post-Decree%20Issues.md) - After divorce
+- [Child Custody](Child Custody.md) - Legal decision-making
+- [Child Support](Child Support.md) - Calculator and guidelines
+- [Property Division](Property Division.md) - Community property rules
+- [Spousal Maintenance](Spousal Maintenance.md) - Alimony factors
+- [Domestic Violence](Domestic Violence.md) - Protection orders
+- [Post-Decree Issues](Post-Decree Issues.md) - After divorce
 
 ## 📞 Get Help
 
@@ -393,6 +393,6 @@ Courts decide based on **best interests**:
 
 ---
 
-**Navigation**: [← Marriage & Domestic Relations](Marriage%20and%20Domestic%20Relations.md) | [Property Division →](Property%20Division.md)
+**Navigation**: [← Marriage & Domestic Relations](Marriage and Domestic Relations.md) | [Property Division →](Property Division.md)
 
 *Last updated: January 30, 2024. Laws change frequently - verify current information.*

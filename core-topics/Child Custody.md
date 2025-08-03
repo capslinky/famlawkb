@@ -355,7 +355,7 @@ Parent B: Fri 6pm - Sun 6pm (alternating)
 - Other parent can object
 - Court hearing if contested
 - Best interests analysis
-- See [Relocation Guide](Post-Decree%20Issues.md#relocation-with-children)
+- See [Relocation Guide](Post-Decree Issues.md#relocation-with-children)
 
 ### What if my ex won't follow orders?
 
@@ -412,11 +412,11 @@ Parent B: Fri 6pm - Sun 6pm (alternating)
 
 ## 🔗 Related Topics
 
-- [Parenting Time](Parenting%20Time.md) - Visitation schedules
-- [Child Support](Child%20Support.md) - Financial obligations
-- [Domestic Violence](Domestic%20Violence.md) - Protection orders
-- [Relocation](Post-Decree%20Issues.md#relocation-with-children) - Moving with children
-- [Grandparent Rights](Grandparent%20Rights.md) - Third-party rights
+- [Parenting Time](Parenting Time.md) - Visitation schedules
+- [Child Support](Child Support.md) - Financial obligations
+- [Domestic Violence](Domestic Violence.md) - Protection orders
+- [Relocation](Post-Decree Issues.md#relocation-with-children) - Moving with children
+- [Grandparent Rights](Grandparent Rights.md) - Third-party rights
 - [Paternity](Paternity.md) - Establishing parentage
 
 ## 📞 Get Help
@@ -457,6 +457,6 @@ Parent B: Fri 6pm - Sun 6pm (alternating)
 
 ---
 
-**Navigation**: [← Divorce](Divorce.md) | [Parenting Time →](Parenting%20Time.md)
+**Navigation**: [← Divorce](Divorce.md) | [Parenting Time →](Parenting Time.md)
 
 *Last updated: January 30, 2024. Laws change frequently - verify current information.*

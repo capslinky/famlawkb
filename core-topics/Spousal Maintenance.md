@@ -8,29 +8,30 @@ tags:
   - divorce
   - financial-support
   - modification
-updated: 2024-01-30
-reviewed: 2024-01-30
+updated: 2024-12-30
+reviewed: 2024-12-30
 ---
 
 # Spousal Maintenance (Alimony)
 
 ## 🔍 At a Glance
 
-**Quick Summary**: Spousal maintenance (alimony) provides financial support from one spouse to another after divorce. Unlike child support, there's no formula - judges decide based on need and ability to pay.
+**Quick Summary**: Spousal maintenance (alimony) provides financial support from one spouse to another after divorce. Arizona adopted spousal maintenance guidelines in 2023 that provide formulas for amount and duration, though judges can deviate.
 
 **Who This Affects**: Lower-earning spouses who can't meet reasonable needs through property or employment. Common after long marriages or when one spouse sacrificed career for family.
 
-**Key Point**: Must first prove eligibility, then court decides amount and duration.
+**Key Point**: Must first prove eligibility under A.R.S. § 25-319, then court applies guidelines or deviates with findings.
 
 ## ⚡ Key Takeaways
 
 - ✅ Must prove eligibility before amount/duration
-- ✅ No formula - judge has full discretion
+- 📊 **NEW 2023**: Guidelines provide formulas for amount and duration
+- 💰 Guideline amount: Based on income difference and marriage length
+- ⏱️ Guideline duration: 30-50% of marriage length (varies by years)
 - ⚠️ Tax rules changed in 2019 (not deductible)
 - ⚠️ Remarriage ends it automatically
-- 📊 Average duration: 30-50% of marriage length
-- 💰 Common amounts: 15-25% of income difference
 - 🔄 Can be modified if circumstances change
+- 📝 Court can deviate from guidelines with written findings
 
 ## 📋 In This Guide
 
@@ -155,84 +156,125 @@ reviewed: 2024-01-30
 
 ## 📊 How Much & How Long?
 
-### Amount Determination
+### 2023 Arizona Spousal Maintenance Guidelines
 
-**No Formula But Common Approaches**:
+**Guideline Calculator Formula**:
 
-**1. Needs-Based** (Most Common)
+**Step 1: Calculate Monthly Amount**
 ```
-Your reasonable monthly expenses     $5,000
-- Your income after divorce         -$2,000
-- Income from property              -$500
-= Potential maintenance             $2,500
+Combined Monthly Income × Applicable Percentage
+- Lower Earner's Monthly Income
+= Preliminary Maintenance Amount
+
+Then apply range: 15% to 20% of income difference
 ```
 
-**2. Income Equalization**
-- Add both incomes together
-- Divide by 2
-- Higher earner pays difference
-- Adjust for child support
+**Marriage Length Percentages**:
+- 0-3 years: Not applicable (rarely awarded)
+- 3-5 years: 31-32%
+- 5-10 years: 33-35%
+- 10-15 years: 36-38%
+- 15-20 years: 39-41%
+- 20+ years: 42-44%
 
-**3. Percentage Guidelines** (Informal)
-- 15-25% of income difference
-- 20-30% of payor's gross
-- Varies by county/judge
+**Step 2: Duration Formula**
+```
+Marriage Length × Duration Percentage = Months of Support
+```
 
-### Duration Guidelines
+**Duration Percentages by Length**:
+- 0-3 years: 20-30%
+- 3-5 years: 30-35%
+- 5-10 years: 35-40%
+- 10-15 years: 40-45%
+- 15-20 years: 45-50%
+- 20+ years: 50%+ or indefinite
 
-**Rules of Thumb** (Not Law):
+### 2023 Guideline Examples
 
-| Marriage Length | Support Duration |
-|----------------|------------------|
-| Under 5 years | 0-2 years |
-| 5-10 years | 2-4 years |
-| 10-15 years | 3-7 years |
-| 15-20 years | 5-10 years |
-| 20+ years | 10+ or permanent |
+**Example with Guidelines**:
+```
+Marriage: 12 years
+Husband's Income: $8,000/month
+Wife's Income: $3,000/month
+No minor children
 
-**Factors That Increase Duration**:
-- Older age (50+)
-- Health problems
-- No work history
-- Caring for disabled child
+Step 1 - Amount:
+Combined income: $11,000
+Applicable %: 37% (for 12-year marriage)
+$11,000 × 0.37 = $4,070
+$4,070 - $3,000 = $1,070/month
 
-### Real Examples
+Step 2 - Duration:
+12 years × 42% = 5 years (60 months)
+
+Guideline Result: $1,070/month for 5 years
+```
+
+### Deviation Factors
+
+**Court Can Deviate If**:
+- Unusual financial needs
+- Health issues
+- Property division affects
+- Earning capacity disparities
+- Domestic violence history
+- Other factors under A.R.S. § 25-319
+
+### Real Examples with 2023 Guidelines
 
 **Example 1: Short Marriage**
 ```
 Married: 4 years
-Wife: Teacher $40,000/year
-Husband: Engineer $90,000/year
+Wife: Teacher $3,333/month
+Husband: Engineer $7,500/month
 No kids
 
-Likely: $1,000-1,500/month for 2 years
+Guideline Calculation:
+Combined: $10,833 × 31.5% = $3,412
+$3,412 - $3,333 = $79 (too low)
+Minimum 15% of difference: ($7,500-$3,333) × 0.15 = $625
+Duration: 4 years × 32% = 1.3 years (16 months)
+
+Result: $625/month for 16 months
 ```
 
 **Example 2: Long Marriage**
 ```
 Married: 25 years
-Wife: Homemaker, no income
-Husband: Doctor $200,000/year
+Wife: Homemaker $0/month
+Husband: Doctor $16,667/month
 Kids grown
 
-Likely: $5,000-7,000/month indefinitely
+Guideline Calculation:
+Combined: $16,667 × 43% = $7,167
+$7,167 - $0 = $7,167/month
+Duration: 25 years × 50%+ = Indefinite
+
+Result: $7,167/month indefinitely
+(Court may deviate based on assets received)
 ```
 
-### The 13 Factors Courts Consider
+### The A.R.S. § 25-319(B) Factors
 
-1. **Marital lifestyle** - Not guaranteed to continue
-2. **Length of marriage** - Longer = more support
-3. **Age/health** - Affects ability to work
-4. **Work history** - Gaps matter
-5. **Earning ability** - Current and potential
-6. **Property received** - Income-producing?
-7. **Contributions** - To spouse's career
-8. **Sacrifices made** - For family
-9. **Time to train** - For employment
-10. **Ability to pay** - After own needs
-11. **Marital waste** - Gambling, affairs
-12. **Insurance costs** - Especially health
-13. **Domestic violence** - Financial impact
+**Guidelines are Starting Point - Court Also Considers**:
+
+1. **Standard of living** during marriage
+2. **Marriage duration** - Affects percentage
+3. **Age and health** of spouse seeking
+4. **Earning abilities** of both parties
+5. **Vocational skills** and employability
+6. **Contribution to earning ability** of other
+7. **Sacrificed opportunities** during marriage
+8. **Ability to contribute** to own needs
+9. **Financial resources** after property division
+10. **Time needed** for education/training
+11. **Excessive expenditures** or destruction
+12. **Cost of health insurance**
+13. **Actual damages** from criminal conduct
+
+**Plus 2023 Addition**:
+14. **All relevant factors** court deems appropriate
 
 ## 🔄 The Process
 
@@ -301,9 +343,15 @@ Likely: $5,000-7,000/month indefinitely
 
 **Example Impact**:
 ```
-Old Law: Pay $3,000 (deduct it) = $2,100 cost
-New Law: Pay $2,100 (no deduction) = $2,100 cost
-Recipient gets same after-tax amount
+Old Law (pre-2019): 
+Pay $3,000 (deduct it) = $2,100 actual cost
+Recipient pays tax on $3,000
+
+Current Law (2019+):
+Pay $3,000 (no deduction) = $3,000 actual cost
+Recipient receives $3,000 tax-free
+
+Net result: Higher cost to payor, same benefit to recipient
 ```
 
 ### Pre-2019 Orders
@@ -322,6 +370,7 @@ Recipient gets same after-tax amount
 - Keep the house
 - More retirement assets
 - Lump sum buyout
+- Note: Guidelines don't apply to property division
 
 **Calculate True Cost**:
 - Factor your tax bracket
@@ -507,7 +556,7 @@ Recipient gets same after-tax amount
 
 ### Is there a calculator?
 
-**No official calculator** exists in Arizona. Every case is unique based on the 13 factors. Some attorneys use informal guidelines of 15-25% of income difference.
+**Yes!** As of 2023, Arizona has official spousal maintenance guidelines with formulas. Courts use these as a starting point but can deviate. Some counties have online calculators, and many attorneys use software that incorporates the guidelines. The official guidelines are in the Arizona Rules of Family Law Procedure.
 
 ### Can I waive spousal maintenance?
 
@@ -632,18 +681,18 @@ Not required to take any job - must be "appropriate."
 
 ## 🔗 Related Topics
 
-- [Property Division](Property%20Division.md) - Trade property for support
+- [Property Division](Property Division.md) - Trade property for support
 - [Divorce Process](Divorce.md) - How to request
-- [Financial Issues](Financial%20Issues.md) - Budgeting help
-- [Post-Decree Issues](Post-Decree%20Issues.md) - Modifications
-- [Tax Considerations](Tax%20Considerations.md) - Current rules
+- [Financial Issues](Financial Issues.md) - Budgeting help
+- [Post-Decree Issues](Post-Decree Issues.md) - Modifications
+- [Tax Considerations](Tax Considerations.md) - Current rules
 
 ## 📞 Get Help
 
 ### Calculate Support
 - [Maricopa County Guidelines](https://superiorcourt.maricopa.gov/family/spousal-maintenance/)
 - [Financial Affidavit Form](https://www.azcourts.gov/selfservicecenter)
-- [Support Calculators](resources/Spousal%20Support%20Resources.md)
+- [Support Calculators](resources/Spousal Support Resources.md)
 
 ### Find Assistance
 - **Legal Aid**: [azlawhelp.org](https://www.azlawhelp.org)
@@ -652,10 +701,10 @@ Not required to take any job - must be "appropriate."
 
 ### Key Takeaway
 
-Spousal maintenance is highly case-specific. No two cases are alike. Document everything, be realistic about needs and ability, and consider getting professional help for complex situations.
+While Arizona now has spousal maintenance guidelines (2023), every case remains unique. The guidelines provide a starting point, but courts can and do deviate based on the statutory factors. Document everything, understand both the guidelines and deviation factors, and consider getting professional help for complex situations.
 
 ---
 
-**Navigation**: [← Property Division](Property%20Division.md) | [Financial Issues →](Financial%20Issues.md)
+**Navigation**: [← Property Division](Property Division.md) | [Financial Issues →](Financial Issues.md)
 
 *Last updated: January 30, 2024*

@@ -310,6 +310,6 @@ Automatically at:
 
 ---
 
-**Navigation**: [← Forms & Documents](Forms%20and%20Documents.md) | [Property Division Worksheet →](Property%20Division%20Worksheet.md)
+**Navigation**: [← Forms & Documents](Forms and Documents.md) | [Property Division Worksheet →](Property Division Worksheet.md)
 
 *Last updated: January 30, 2024. Calculator and guidelines effective July 1, 2022.*
