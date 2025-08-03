@@ -1,6 +1,7 @@
 {
-  "buildCommand": "bash build.sh",
   "outputDirectory": "site",
+  "buildCommand": "echo 'Using pre-built site'",
+  "installCommand": "echo 'No install needed'",
   "framework": null,
   "rewrites": [
     {

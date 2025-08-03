@@ -41,4 +41,5 @@ venv/
 env/
 
 # MkDocs
-site/
+# We're committing the site directory for Vercel
+# site/

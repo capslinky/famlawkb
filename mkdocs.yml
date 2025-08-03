@@ -2,7 +2,6 @@ site_name: Arizona Family Law Wiki
 site_url: https://azfamilylaw.wiki
 site_description: Free comprehensive guide to family law in Arizona - divorce, custody, support, and more
 site_author: Arizona Family Law Wiki Contributors
-docs_dir: .
 
 theme:
   name: material
