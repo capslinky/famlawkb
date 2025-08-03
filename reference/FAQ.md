@@ -8,8 +8,8 @@ tags:
   - quick-answers
   - family-law
   - resources
-updated: 2024-01-30
-reviewed: 2024-01-30
+updated: 2024-12-30
+reviewed: 2024-12-30
 ---
 
 # Frequently Asked Questions
@@ -21,8 +21,11 @@ Jump to your topic:
 - [Child Custody](#child-custody-questions)
 - [Child Support](#child-support-questions)
 - [Property & Money](#property--money-questions)
+- [Spousal Maintenance](#spousal-maintenance-questions)
 - [Protection Orders](#protection-order-questions)
 - [Legal Process](#legal-process-questions)
+- [After Divorce](#after-divorce-questions)
+- [Special Situations](#special-situations-questions)
 
 ---
 
@@ -425,6 +428,214 @@ Jump to your topic:
 
 ---
 
+## 💵 Spousal Maintenance Questions
+
+### How is alimony calculated in Arizona?
+
+**Quick Answer**: Arizona uses guidelines as of 2023 based on income and marriage length.
+
+**Formula Basics**:
+- Income difference × percentage (31-44% based on marriage length)
+- Duration: 30-50% of marriage length
+- Court can deviate with findings
+- Not automatic - must qualify first
+
+[Spousal Maintenance Guide →](../core-topics/Spousal Maintenance.md)
+
+### Can I get alimony if I cheated?
+
+**Quick Answer**: Yes - Arizona is no-fault, infidelity doesn't bar support.
+
+**But**:
+- Marital waste (spending on affair) matters
+- May affect amount
+- Not a complete bar
+- Need and ability still control
+
+[Eligibility Details →](../core-topics/Spousal Maintenance.md#do-i-qualify)
+
+### When does alimony end?
+
+**Quick Answer**: Remarriage, death, or date in order.
+
+**Automatic Termination**:
+- Recipient remarries (immediately)
+- Either party dies
+- End date arrives
+- Cohabitation (maybe)
+
+[When Support Ends →](../core-topics/Spousal Maintenance.md#when-it-ends)
+
+---
+
+## 🔄 After Divorce Questions
+
+### Can I modify my divorce decree?
+
+**Quick Answer**: Support/custody yes, property division no.
+
+**What Can Change**:
+- Child support amount
+- Custody arrangements
+- Parenting time
+- Spousal maintenance
+
+**What Cannot**:
+- Property division
+- Debt allocation
+- Past due amounts
+
+[Modification Guide →](../resources/Post-Decree Issues.md)
+
+### What if my ex won't follow orders?
+
+**Quick Answer**: File for enforcement/contempt.
+
+**Enforcement Options**:
+- Wage garnishment
+- Contempt of court
+- License suspension
+- Property liens
+- Jail (last resort)
+
+[Enforcement Details →](../resources/Post-Decree Issues.md#enforcing-orders)
+
+### Can I move out of state with kids?
+
+**Quick Answer**: Need 45-day notice and may need permission.
+
+**Process**:
+- Written notice to other parent
+- Include proposed parenting plan
+- They have 30 days to object
+- Court hearing if contested
+
+[Relocation Rules →](../resources/Post-Decree Issues.md#moving-with-children)
+
+---
+
+## 🎯 Special Situations Questions
+
+### What if I'm pregnant during divorce?
+
+**Quick Answer**: Can still divorce, but paternity issues arise.
+
+**Considerations**:
+- Husband presumed father
+- May need paternity test
+- Child support starts at birth
+- Custody decided separately
+
+[Paternity Issues →](../special-situations/Paternity.md)
+
+### Can same-sex couples divorce in Arizona?
+
+**Quick Answer**: Yes - same process as any divorce.
+
+**Key Points**:
+- Legal since 2014
+- Same rights/procedures
+- Child custody same rules
+- Property division identical
+
+[Marriage Equality →](../additional-topics/Special Circumstances.md)
+
+### What about military divorce?
+
+**Quick Answer**: Special rules apply but Arizona courts have jurisdiction.
+
+**Special Considerations**:
+- SCRA stay rights
+- Military pension division
+- BAH/BAS calculations
+- Deployment affects custody
+
+[Military Divorce →](../additional-topics/Special Circumstances.md)
+
+### Do I need to change my name?
+
+**Quick Answer**: Optional - can restore maiden name in divorce.
+
+**Options**:
+- Keep married name
+- Restore maiden/former name
+- Choose entirely new name
+- Free in divorce decree
+
+[Name Change Guide →](../additional-topics/Name Changes.md)
+
+### What if there's domestic violence?
+
+**Quick Answer**: Get immediate protection and affects custody.
+
+**Important**:
+- Order of Protection available
+- Emergency custody possible
+- DV presumption against custody
+- Criminal charges separate
+
+[Domestic Violence Help →](../special-situations/Domestic Violence.md)
+
+### Can we just separate instead?
+
+**Quick Answer**: Yes - legal separation is an option.
+
+**Differences**:
+- Still legally married
+- Can't remarry
+- Keep some benefits
+- Same process as divorce
+
+[Legal Separation →](../additional-topics/Marriage and Domestic Relations.md#legal-separation)
+
+### What if we were never married?
+
+**Quick Answer**: Need paternity/custody case, not divorce.
+
+**Process**:
+- Establish paternity first
+- Then custody/support
+- No property division
+- No spousal support
+
+[Unmarried Parents →](../special-situations/Paternity.md)
+
+### Can I get an annulment?
+
+**Quick Answer**: Rarely - only if marriage was invalid.
+
+**Requirements**:
+- Fraud, force, or incapacity
+- Blood relations
+- Already married
+- Time limits apply
+
+[Annulment Guide →](../additional-topics/Annulment.md)
+
+### What about our business?
+
+**Quick Answer**: Community property if started/grew during marriage.
+
+**Issues**:
+- Need valuation
+- Buy-out options
+- Tax implications
+- Operation during divorce
+
+[Business Valuation →](../additional-topics/Business Valuation.md)
+
+### Do grandparents have rights?
+
+**Quick Answer**: Limited - can petition for visitation.
+
+**Requirements**:
+- Parent deceased/missing
+- Parents divorced 3+ months
+- Child born out of wedlock
+- Best interests of child
+
+[Grandparent Rights →](../special-situations/Grandparent Rights.md)
+
 ## 🔍 Didn't Find Your Answer?
 
 ### Browse by Topic
@@ -439,6 +650,8 @@ Jump to your topic:
 - **Legal Aid**: [azlawhelp.org](https://www.azlawhelp.org)
 - **Find Attorney**: [State Bar](https://www.azbar.org/FindLawyer)
 - **Crisis Help**: 1-800-799-7233
+- **Child Support Help**: 1-855-222-2670
+- **DV Hotline**: 1-800-799-7233 (24/7)
 
 ### Search This Wiki
 Use the search bar at the top of any page to find specific information.
