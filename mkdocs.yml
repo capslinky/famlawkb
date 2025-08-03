@@ -6,6 +6,7 @@ site_author: Arizona Family Law Wiki Contributors
 theme:
   name: material
   language: en
+  custom_dir: overrides
   features:
     - navigation.instant
     - navigation.tracking
@@ -150,6 +151,12 @@ extra:
           name: This page could be improved
           data: 0
           note: Thanks for your feedback! Help us improve by telling us what's wrong.
+
+extra_css:
+  - assets/stylesheets/custom.css
+
+extra_javascript:
+  - assets/javascripts/custom.js
 
 markdown_extensions:
   - abbr

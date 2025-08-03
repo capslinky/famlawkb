@@ -1,0 +1,357 @@
+/* Arizona Family Law Wiki - Custom Styles */
+
+/* Root variables for consistent theming */
+:root {
+  --md-primary-fg-color: #1a237e;  /* Deep blue for professionalism */
+  --md-primary-fg-color--light: #3949ab;
+  --md-primary-fg-color--dark: #000051;
+  --md-accent-fg-color: #ff6f00;  /* Warm orange for Arizona */
+  --md-accent-fg-color--light: #ffa040;
+  --md-accent-fg-color--dark: #c43e00;
+  
+  /* Custom colors */
+  --az-law-info: #e3f2fd;
+  --az-law-warning: #fff3cd;
+  --az-law-danger: #f8d7da;
+  --az-law-success: #d4edda;
+  
+  /* Typography */
+  --md-text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --md-code-font: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* Enhanced typography */
+.md-typeset {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #37474f;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  border-bottom: 3px solid var(--md-accent-fg-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  color: var(--md-primary-fg-color--light);
+  margin-top: 2rem;
+}
+
+.md-typeset h3 {
+  font-weight: 500;
+  color: #546e7a;
+}
+
+/* Hero section for homepage */
+.md-content__inner > h1:first-child {
+  background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, var(--md-primary-fg-color--light) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  margin: -1rem -1rem 2rem -1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Enhanced navigation */
+.md-nav__item--active > .md-nav__link {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+  background-color: var(--az-law-info);
+  border-radius: 4px;
+}
+
+/* Better search */
+.md-search__form {
+  background-color: rgba(255,255,255,0.95);
+  border: 2px solid var(--md-primary-fg-color--light);
+  border-radius: 8px;
+}
+
+.md-search__input:focus {
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(26,35,126,0.1);
+}
+
+/* Custom admonitions for legal content */
+.md-typeset .admonition.law-alert,
+.md-typeset details.law-alert {
+  border-color: var(--md-accent-fg-color);
+  background-color: var(--az-law-warning);
+}
+
+.md-typeset .admonition.law-alert > .admonition-title,
+.md-typeset details.law-alert > summary {
+  background-color: var(--md-accent-fg-color);
+  color: white;
+}
+
+.md-typeset .admonition.law-important,
+.md-typeset details.law-important {
+  border-color: #d32f2f;
+  background-color: var(--az-law-danger);
+}
+
+.md-typeset .admonition.law-statute,
+.md-typeset details.law-statute {
+  border-color: var(--md-primary-fg-color);
+  background-color: var(--az-law-info);
+}
+
+/* Cards for navigation sections */
+.law-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.law-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  border-color: var(--md-accent-fg-color);
+}
+
+.law-card h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+.law-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Quick links section */
+.quick-links {
+  background-color: var(--az-law-info);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.quick-links h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+.quick-links ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.quick-links li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.quick-links li:last-child {
+  border-bottom: none;
+}
+
+.quick-links a {
+  color: var(--md-primary-fg-color--light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.quick-links a:hover {
+  color: var(--md-accent-fg-color);
+  text-decoration: underline;
+}
+
+/* Statute reference styling */
+.statute-ref {
+  background-color: #f5f5f5;
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  font-family: var(--md-code-font);
+  font-size: 0.9rem;
+}
+
+/* Interactive calculator styles */
+.calculator-container {
+  background-color: #fafafa;
+  border: 2px solid var(--md-primary-fg-color--light);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.calculator-container input[type="number"],
+.calculator-container select {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.calculator-container button {
+  background-color: var(--md-accent-fg-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculator-container button:hover {
+  background-color: var(--md-accent-fg-color--dark);
+}
+
+/* Mobile responsiveness improvements */
+@media screen and (max-width: 768px) {
+  .md-content__inner > h1:first-child {
+    font-size: 1.8rem;
+    padding: 2rem 1rem;
+  }
+  
+  .law-card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .md-typeset {
+    font-size: 0.95rem;
+  }
+}
+
+/* Print styles for legal documents */
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer {
+    display: none !important;
+  }
+  
+  .md-content {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .md-typeset h1,
+  .md-typeset h2,
+  .md-typeset h3 {
+    page-break-after: avoid;
+  }
+  
+  .statute-ref {
+    break-inside: avoid;
+  }
+}
+
+/* Animated entrance for content */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-content__inner > * {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Custom footer enhancement */
+.md-footer {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color--dark) !important;
+}
+
+/* Enhanced tables for legal information */
+.md-typeset table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-typeset table th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.md-typeset table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.md-typeset table tr:last-child td {
+  border-bottom: none;
+}
+
+.md-typeset table tr:hover {
+  background-color: var(--az-law-info);
+}
+
+/* Progress indicator for multi-step processes */
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e0e0e0;
+  z-index: -1;
+}
+
+.process-step {
+  background-color: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.process-step.active {
+  background-color: var(--md-accent-fg-color);
+  color: white;
+  border-color: var(--md-accent-fg-color);
+}
+
+.process-step.completed {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  border-color: var(--md-primary-fg-color);
+}
