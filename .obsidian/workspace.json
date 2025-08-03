@@ -170,6 +170,8 @@
   },
   "active": "1686251cddea6aa2",
   "lastOpenFiles": [
+    "mkdocs.yml.tmp.35589.1754203584421",
+    "mkdocs.yml.tmp.35589.1754203178330",
     "build.sh",
     "requirements.txt",
     "api/auth.js.tmp.35589.1754184638063",
@@ -180,8 +182,6 @@
     "api",
     "api/index.js",
     "api/index.js.tmp.35589.1754184438832",
-    "middleware.js",
-    "api/_middleware.js",
     "resources/Child Custody Flowchart.md",
     "COMPLETE_PROJECT_SUMMARY.md",
     "resources/Common Mistakes Guide.md",

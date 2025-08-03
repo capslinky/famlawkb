@@ -2,10 +2,10 @@ site_name: Arizona Family Law Wiki
 site_url: https://azfamilylaw.wiki
 site_description: Free comprehensive guide to family law in Arizona - divorce, custody, support, and more
 site_author: Arizona Family Law Wiki Contributors
+docs_dir: .
 
 theme:
   name: material
-  custom_dir: overrides
   language: en
   features:
     - navigation.instant
@@ -116,17 +116,6 @@ plugins:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       lang:
         - en
-  - minify:
-      minify_html: true
-  - tags:
-      tags_file: tags.md
-  - social:
-      cards_enabled: true
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: timeago
-      enabled: true
-      fallback_to_build_date: true
 
 extra:
   social:
@@ -163,12 +152,6 @@ extra:
           data: 0
           note: Thanks for your feedback! Help us improve by telling us what's wrong.
 
-extra_css:
-  - stylesheets/extra.css
-
-extra_javascript:
-  - javascripts/extra.js
-
 markdown_extensions:
   - abbr
   - admonition
@@ -186,8 +169,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
