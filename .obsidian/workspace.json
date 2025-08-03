@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "additional-topics/Evidence and Discovery.md",
+                "file": "index.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Evidence and Discovery"
+              "title": "index"
             }
           }
         ]
@@ -170,6 +170,22 @@
   },
   "active": "1686251cddea6aa2",
   "lastOpenFiles": [
+    "requirements.txt",
+    "api/auth.js.tmp.35589.1754184638063",
+    "public/CNAME",
+    "public",
+    "VERCEL_DEPLOYMENT.md",
+    "api/auth.js",
+    "api",
+    "api/index.js",
+    "api/index.js.tmp.35589.1754184438832",
+    "middleware.js",
+    "api/_middleware.js",
+    "vercel.json",
+    "resources/Child Custody Flowchart.md",
+    "COMPLETE_PROJECT_SUMMARY.md",
+    "resources/Common Mistakes Guide.md",
+    "additional-topics/Evidence and Discovery.md",
     "additional-topics/Elder Law.md",
     "additional-topics/Criminal Law Interface.md",
     "additional-topics/Business Valuation.md",
@@ -189,22 +205,6 @@
     "additional-topics/Marriage and Domestic Relations.md",
     "additional-topics/Juvenile Law.md",
     "additional-topics/Interstate and International.md",
-    "additional-topics/Evidence and Discovery.md",
-    "additional-topics",
-    "special-situations/Grandparent Rights.md",
-    "reference/Glossary.md",
-    "reference/FAQ.md",
-    "special-situations/Parenting Time.md",
-    "special-situations/Paternity.md",
-    "special-situations/Domestic Violence.md",
-    "reference",
-    "special-situations",
-    "procedures",
-    "core-topics",
-    "getting-started",
-    "resources",
-    "topics/special-issues",
-    "topics/protection-safety",
-    "topics/marriage-divorce"
+    "special-situations/Grandparent Rights.md"
   ]
 }

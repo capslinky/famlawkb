@@ -68,12 +68,26 @@ nav:
   
   - Resources:
     - Forms & Documents: resources/Forms and Documents.md
-    - Divorce Process Flowchart: resources/Divorce Process Flowchart.md
-    - Child Support Calculator: resources/Child Support Calculator.md
-    - Property Division Worksheet: resources/Property Division Worksheet.md
-    - Financial Issues: resources/Financial Issues.md
-    - Post-Decree Issues: resources/Post-Decree Issues.md
-    - Tax Considerations: resources/Tax Considerations.md
+    - Interactive Tools:
+      - Interactive Calculators: resources/interactive-calculators.html
+      - Child Support Calculator: resources/Child Support Calculator.md
+      - Property Division Worksheet: resources/Property Division Worksheet.md
+    - Visual Flowcharts:
+      - Divorce Process Flowchart: resources/Divorce Process Flowchart.md
+      - Child Custody Flowchart: resources/Child Custody Flowchart.md
+      - Property Division Flowchart: resources/Property Division Flowchart.md
+      - Modification Process Flowchart: resources/Modification Process Flowchart.md
+      - Parenting Plan Flowchart: resources/Parenting Plan Flowchart.md
+      - DV Safety Planning Flowchart: resources/DV Safety Planning Flowchart.md
+    - Financial & Legal:
+      - Financial Issues: resources/Financial Issues.md
+      - Post-Decree Issues: resources/Post-Decree Issues.md
+      - Tax Considerations: resources/Tax Considerations.md
+    - Self-Help Resources:
+      - Court Forms Assistant: resources/Court Forms Assistant.md
+      - Self-Representation Guide: resources/Self-Representation Guide.md
+      - Legal Research Guide: resources/Legal Research Guide.md
+      - Common Mistakes Guide: resources/Common Mistakes Guide.md
   
   - Additional Topics:
     - Marriage & Domestic Relations: additional-topics/Marriage and Domestic Relations.md

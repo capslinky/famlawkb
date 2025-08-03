@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arizona Family Law Calculators</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .calculator-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2 {
+            color: #2c3e50;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        input[type="number"], input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        input[type="number"]:focus, select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f4f8;
+            border-radius: 4px;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .result h3 {
+            margin-top: 0;
+            color: #1976D2;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            color: #2196F3;
+            border-bottom-color: #2196F3;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .disclaimer {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arizona Family Law Interactive Calculators</h1>
+    
+    <div class="tabs">
+        <button class="tab active" onclick="showTab('support')">Child Support Calculator</button>
+        <button class="tab" onclick="showTab('spousal')">Spousal Maintenance Estimator</button>
+        <button class="tab" onclick="showTab('timeline')">Divorce Timeline Calculator</button>
+    </div>
+
+    <!-- Child Support Calculator -->
+    <div id="support" class="tab-content active">
+        <div class="calculator-container">
+            <h2>Child Support Calculator (2024 Guidelines)</h2>
+            
+            <div class="info">
+                <strong>Note:</strong> This calculator provides estimates based on Arizona's child support guidelines. Actual orders may vary based on specific circumstances.
+            </div>
+            
+            <div class="grid">
+                <div>
+                    <h3>Parent A Information</h3>
+                    <div class="input-group">
+                        <label for="parentAIncome">Monthly Gross Income ($)</label>
+                        <input type="number" id="parentAIncome" min="0" step="100" value="5000">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="parentADays">Parenting Days per Year</label>
+                        <input type="number" id="parentADays" min="0" max="365" value="104">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="parentAInsurance">Monthly Insurance for Children ($)</label>
+                        <input type="number" id="parentAInsurance" min="0" step="10" value="0">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="parentAChildcare">Monthly Childcare Costs ($)</label>
+                        <input type="number" id="parentAChildcare" min="0" step="10" value="0">
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Parent B Information</h3>
+                    <div class="input-group">
+                        <label for="parentBIncome">Monthly Gross Income ($)</label>
+                        <input type="number" id="parentBIncome" min="0" step="100" value="3000">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="parentBDays">Parenting Days per Year</label>
+                        <input type="number" id="parentBDays" min="0" max="365" value="261">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="parentBInsurance">Monthly Insurance for Children ($)</label>
+                        <input type="number" id="parentBInsurance" min="0" step="10" value="200">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="parentBChildcare">Monthly Childcare Costs ($)</label>
+                        <input type="number" id="parentBChildcare" min="0" step="10" value="600">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="numChildren">Number of Children</label>
+                <select id="numChildren">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6+</option>
+                </select>
+            </div>
+            
+            <button onclick="calculateChildSupport()">Calculate Child Support</button>
+            
+            <div id="supportResult" class="result" style="display:none;">
+                <h3>Estimated Child Support</h3>
+                <div id="supportDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spousal Maintenance Calculator -->
+    <div id="spousal" class="tab-content">
+        <div class="calculator-container">
+            <h2>Spousal Maintenance Estimator (2023 Guidelines)</h2>
+            
+            <div class="info">
+                <strong>Note:</strong> Arizona adopted spousal maintenance guidelines in 2023. This calculator provides estimates based on those guidelines.
+            </div>
+            
+            <div class="grid">
+                <div>
+                    <div class="input-group">
+                        <label for="payorIncome">Higher Earner's Monthly Income ($)</label>
+                        <input type="number" id="payorIncome" min="0" step="100" value="8000">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="recipientIncome">Lower Earner's Monthly Income ($)</label>
+                        <input type="number" id="recipientIncome" min="0" step="100" value="2000">
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="input-group">
+                        <label for="marriageLength">Length of Marriage (years)</label>
+                        <input type="number" id="marriageLength" min="0" max="50" step="0.5" value="12">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="childSupport">Monthly Child Support Obligation ($)</label>
+                        <input type="number" id="childSupport" min="0" step="50" value="0">
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="calculateSpousalMaintenance()">Calculate Maintenance</button>
+            
+            <div id="spousalResult" class="result" style="display:none;">
+                <h3>Estimated Spousal Maintenance</h3>
+                <div id="spousalDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Calculator -->
+    <div id="timeline" class="tab-content">
+        <div class="calculator-container">
+            <h2>Divorce Timeline Calculator</h2>
+            
+            <div class="info">
+                <strong>Note:</strong> Timelines vary significantly based on case complexity and court schedules.
+            </div>
+            
+            <div class="input-group">
+                <label for="caseType">Type of Divorce</label>
+                <select id="caseType">
+                    <option value="uncontested">Uncontested (Both Agree)</option>
+                    <option value="simple">Simple Contested</option>
+                    <option value="moderate">Moderate Complexity</option>
+                    <option value="complex">High Conflict/Complex</option>
+                </select>
+            </div>
+            
+            <div class="grid">
+                <div>
+                    <div class="input-group">
+                        <label for="hasChildren">Children Involved?</label>
+                        <select id="hasChildren">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="hasProperty">Significant Property/Assets?</label>
+                        <select id="hasProperty">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="input-group">
+                        <label for="needsDiscovery">Discovery Needed?</label>
+                        <select id="needsDiscovery">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="filingDate">Filing Date</label>
+                        <input type="date" id="filingDate" value="">
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="calculateTimeline()">Calculate Timeline</button>
+            
+            <div id="timelineResult" class="result" style="display:none;">
+                <h3>Estimated Divorce Timeline</h3>
+                <div id="timelineDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> These calculators provide estimates only and should not be relied upon as legal advice. Actual court orders may vary significantly based on specific circumstances. Always consult with a qualified Arizona family law attorney for accurate information about your case.
+    </div>
+
+    <script>
+        // Set today's date as default
+        document.getElementById('filingDate').value = new Date().toISOString().split('T')[0];
+        
+        // Tab functionality
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+        
+        // Child Support Calculator
+        function calculateChildSupport() {
+            const parentAIncome = parseFloat(document.getElementById('parentAIncome').value) || 0;
+            const parentBIncome = parseFloat(document.getElementById('parentBIncome').value) || 0;
+            const parentADays = parseInt(document.getElementById('parentADays').value) || 0;
+            const parentBDays = parseInt(document.getElementById('parentBDays').value) || 0;
+            const numChildren = parseInt(document.getElementById('numChildren').value);
+            const parentAInsurance = parseFloat(document.getElementById('parentAInsurance').value) || 0;
+            const parentBInsurance = parseFloat(document.getElementById('parentBInsurance').value) || 0;
+            const parentAChildcare = parseFloat(document.getElementById('parentAChildcare').value) || 0;
+            const parentBChildcare = parseFloat(document.getElementById('parentBChildcare').value) || 0;
+            
+            // Basic support obligation percentages (simplified)
+            const supportPercentages = {
+                1: 0.15,
+                2: 0.22,
+                3: 0.27,
+                4: 0.29,
+                5: 0.31,
+                6: 0.32
+            };
+            
+            const combinedIncome = parentAIncome + parentBIncome;
+            const basicSupport = combinedIncome * supportPercentages[numChildren];
+            
+            // Calculate income shares
+            const parentAShare = parentAIncome / combinedIncome;
+            const parentBShare = parentBIncome / combinedIncome;
+            
+            // Calculate parenting time adjustment
+            const parentAPercent = parentADays / 365;
+            const parentBPercent = parentBDays / 365;
+            
+            // Simplified calculation (actual is more complex)
+            let parentAObligation = basicSupport * parentAShare;
+            let parentBObligation = basicSupport * parentBShare;
+            
+            // Adjust for parenting time (simplified)
+            if (parentAPercent > 0.20) { // More than 73 days
+                parentAObligation *= (1 - parentAPercent * 0.25);
+            }
+            if (parentBPercent > 0.20) {
+                parentBObligation *= (1 - parentBPercent * 0.25);
+            }
+            
+            // Add additional expenses
+            const totalAdditional = parentAInsurance + parentBInsurance + parentAChildcare + parentBChildcare;
+            parentAObligation += totalAdditional * parentAShare;
+            parentBObligation += totalAdditional * parentBShare;
+            
+            // Determine who pays whom
+            const netSupport = parentAObligation - parentBObligation;
+            
+            let result = '<table>';
+            result += '<tr><th>Category</th><th>Parent A</th><th>Parent B</th></tr>';
+            result += `<tr><td>Monthly Income</td><td>$${parentAIncome.toFixed(2)}</td><td>$${parentBIncome.toFixed(2)}</td></tr>`;
+            result += `<tr><td>Income Share</td><td>${(parentAShare * 100).toFixed(1)}%</td><td>${(parentBShare * 100).toFixed(1)}%</td></tr>`;
+            result += `<tr><td>Parenting Days</td><td>${parentADays} (${(parentAPercent * 100).toFixed(1)}%)</td><td>${parentBDays} (${(parentBPercent * 100).toFixed(1)}%)</td></tr>`;
+            result += `<tr><td>Basic Support Share</td><td>$${parentAObligation.toFixed(2)}</td><td>$${parentBObligation.toFixed(2)}</td></tr>`;
+            result += '</table>';
+            
+            result += '<div style="margin-top: 20px; font-size: 18px; font-weight: bold;">';
+            if (netSupport > 0) {
+                result += `Parent A pays Parent B: <span style="color: #2196F3;">$${Math.abs(netSupport).toFixed(2)}/month</span>`;
+            } else {
+                result += `Parent B pays Parent A: <span style="color: #2196F3;">$${Math.abs(netSupport).toFixed(2)}/month</span>`;
+            }
+            result += '</div>';
+            
+            result += '<div class="warning" style="margin-top: 15px;">This is a simplified estimate. Actual calculations consider tax benefits, extraordinary expenses, and other factors.</div>';
+            
+            document.getElementById('supportDetails').innerHTML = result;
+            document.getElementById('supportResult').style.display = 'block';
+        }
+        
+        // Spousal Maintenance Calculator
+        function calculateSpousalMaintenance() {
+            const payorIncome = parseFloat(document.getElementById('payorIncome').value) || 0;
+            const recipientIncome = parseFloat(document.getElementById('recipientIncome').value) || 0;
+            const marriageLength = parseFloat(document.getElementById('marriageLength').value) || 0;
+            const childSupport = parseFloat(document.getElementById('childSupport').value) || 0;
+            
+            // 2023 Guidelines percentages based on marriage length
+            let percentage = 0;
+            let durationPercent = 0;
+            
+            if (marriageLength < 3) {
+                percentage = 0;
+                durationPercent = 0;
+            } else if (marriageLength < 5) {
+                percentage = 0.315;
+                durationPercent = 0.30;
+            } else if (marriageLength < 10) {
+                percentage = 0.34;
+                durationPercent = 0.35;
+            } else if (marriageLength < 15) {
+                percentage = 0.37;
+                durationPercent = 0.40;
+            } else if (marriageLength < 20) {
+                percentage = 0.40;
+                durationPercent = 0.45;
+            } else {
+                percentage = 0.43;
+                durationPercent = 0.50;
+            }
+            
+            // Calculate guideline amount
+            const combinedIncome = payorIncome + recipientIncome;
+            const guidelineAmount = (combinedIncome * percentage) - recipientIncome;
+            
+            // Check minimum (15% of income difference)
+            const incomeDifference = payorIncome - recipientIncome;
+            const minimumAmount = incomeDifference * 0.15;
+            
+            const maintenanceAmount = Math.max(guidelineAmount, minimumAmount, 0);
+            
+            // Adjust for child support (simplified)
+            const adjustedAmount = maintenanceAmount - (childSupport * 0.20);
+            
+            // Calculate duration
+            const durationMonths = Math.round(marriageLength * 12 * durationPercent);
+            const durationYears = (durationMonths / 12).toFixed(1);
+            
+            let result = '<table>';
+            result += '<tr><th>Factor</th><th>Value</th></tr>';
+            result += `<tr><td>Marriage Length</td><td>${marriageLength} years</td></tr>`;
+            result += `<tr><td>Income Difference</td><td>$${incomeDifference.toFixed(2)}/month</td></tr>`;
+            result += `<tr><td>Guideline Percentage</td><td>${(percentage * 100).toFixed(1)}%</td></tr>`;
+            result += `<tr><td>Duration Percentage</td><td>${(durationPercent * 100).toFixed(0)}%</td></tr>`;
+            result += '</table>';
+            
+            result += '<div style="margin-top: 20px;">';
+            result += '<h4>Guideline Calculation:</h4>';
+            result += `<p>Combined Income: $${combinedIncome.toFixed(2)} × ${(percentage * 100).toFixed(1)}% = $${(combinedIncome * percentage).toFixed(2)}</p>`;
+            result += `<p>Less Recipient Income: $${(combinedIncome * percentage).toFixed(2)} - $${recipientIncome.toFixed(2)} = $${guidelineAmount.toFixed(2)}</p>`;
+            
+            if (childSupport > 0) {
+                result += `<p>Adjusted for child support: $${maintenanceAmount.toFixed(2)} - adjustment = $${adjustedAmount.toFixed(2)}</p>`;
+            }
+            
+            result += '</div>';
+            
+            result += '<div style="margin-top: 20px; padding: 15px; background-color: #e8f4f8; border-radius: 4px;">';
+            result += '<h4>Estimated Spousal Maintenance:</h4>';
+            result += `<p style="font-size: 20px; margin: 10px 0;"><strong>Amount:</strong> $${Math.max(adjustedAmount, 0).toFixed(2)}/month</p>`;
+            
+            if (marriageLength >= 20) {
+                result += `<p style="font-size: 20px; margin: 10px 0;"><strong>Duration:</strong> ${durationYears} years or indefinite</p>`;
+            } else if (marriageLength >= 3) {
+                result += `<p style="font-size: 20px; margin: 10px 0;"><strong>Duration:</strong> ${durationYears} years (${durationMonths} months)</p>`;
+            } else {
+                result += `<p style="font-size: 20px; margin: 10px 0;"><strong>Duration:</strong> Rarely awarded for marriages under 3 years</p>`;
+            }
+            result += '</div>';
+            
+            result += '<div class="warning" style="margin-top: 15px;">Courts can deviate from guidelines based on the statutory factors in A.R.S. § 25-319(B).</div>';
+            
+            document.getElementById('spousalDetails').innerHTML = result;
+            document.getElementById('spousalResult').style.display = 'block';
+        }
+        
+        // Timeline Calculator
+        function calculateTimeline() {
+            const caseType = document.getElementById('caseType').value;
+            const hasChildren = document.getElementById('hasChildren').value === 'yes';
+            const hasProperty = document.getElementById('hasProperty').value === 'yes';
+            const needsDiscovery = document.getElementById('needsDiscovery').value === 'yes';
+            const filingDate = new Date(document.getElementById('filingDate').value);
+            
+            // Base timelines in days
+            let baseDays = {
+                'uncontested': 60,
+                'simple': 180,
+                'moderate': 365,
+                'complex': 730
+            };
+            
+            let totalDays = baseDays[caseType];
+            
+            // Adjustments
+            if (hasChildren) totalDays += 30;
+            if (hasProperty) totalDays += 45;
+            if (needsDiscovery) totalDays += 90;
+            
+            // Calculate key dates
+            const serviceDeadline = new Date(filingDate);
+            serviceDeadline.setDate(serviceDeadline.getDate() + 120);
+            
+            const responseDeadline = new Date(filingDate);
+            responseDeadline.setDate(responseDeadline.getDate() + 30);
+            
+            const disclosureDeadline = new Date(responseDeadline);
+            disclosureDeadline.setDate(disclosureDeadline.getDate() + 40);
+            
+            const earliestFinal = new Date(filingDate);
+            earliestFinal.setDate(earliestFinal.getDate() + 60);
+            
+            const estimatedFinal = new Date(filingDate);
+            estimatedFinal.setDate(estimatedFinal.getDate() + totalDays);
+            
+            // Format dates
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            
+            let result = '<h4>Key Dates:</h4>';
+            result += '<table>';
+            result += '<tr><th>Milestone</th><th>Date</th></tr>';
+            result += `<tr><td>Filing Date</td><td>${filingDate.toLocaleDateString('en-US', options)}</td></tr>`;
+            result += `<tr><td>Service Deadline (120 days)</td><td>${serviceDeadline.toLocaleDateString('en-US', options)}</td></tr>`;
+            result += `<tr><td>Response Due (if served immediately)</td><td>${responseDeadline.toLocaleDateString('en-US', options)}</td></tr>`;
+            result += `<tr><td>Financial Disclosure Due</td><td>${disclosureDeadline.toLocaleDateString('en-US', options)}</td></tr>`;
+            result += `<tr><td>Earliest Possible Final Decree</td><td>${earliestFinal.toLocaleDateString('en-US', options)}</td></tr>`;
+            result += `<tr style="background-color: #e8f4f8;"><td><strong>Estimated Final Decree</strong></td><td><strong>${estimatedFinal.toLocaleDateString('en-US', options)}</strong></td></tr>`;
+            result += '</table>';
+            
+            result += '<div style="margin-top: 20px;">';
+            result += '<h4>Timeline Breakdown:</h4>';
+            result += '<ul>';
+            result += `<li>Base ${caseType} divorce: ${baseDays[caseType]} days</li>`;
+            if (hasChildren) result += '<li>Children involved: +30 days</li>';
+            if (hasProperty) result += '<li>Significant property: +45 days</li>';
+            if (needsDiscovery) result += '<li>Discovery needed: +90 days</li>';
+            result += `<li><strong>Total estimated: ${totalDays} days (${(totalDays/30).toFixed(1)} months)</strong></li>`;
+            result += '</ul>';
+            result += '</div>';
+            
+            if (caseType === 'uncontested' && totalDays === 60) {
+                result += '<div class="info" style="margin-top: 15px;">This represents the absolute minimum timeline. Most uncontested cases take 2-3 months.</div>';
+            }
+            
+            if (caseType === 'complex') {
+                result += '<div class="warning" style="margin-top: 15px;">High-conflict cases can extend well beyond 2 years, especially with appeals or post-decree issues.</div>';
+            }
+            
+            document.getElementById('timelineDetails').innerHTML = result;
+            document.getElementById('timelineResult').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

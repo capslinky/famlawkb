@@ -1,0 +1,17 @@
+{
+  "buildCommand": "pip install mkdocs-material && mkdocs build",
+  "outputDirectory": "site",
+  "installCommand": "pip install mkdocs-material",
+  "framework": null,
+  "functions": {
+    "api/auth.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/auth"
+    }
+  ]
+}
