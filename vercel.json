@@ -1,7 +1,6 @@
 {
-  "buildCommand": "pip install mkdocs-material && mkdocs build",
+  "buildCommand": "bash build.sh",
   "outputDirectory": "site",
-  "installCommand": "pip install mkdocs-material",
   "framework": null,
   "rewrites": [
     {

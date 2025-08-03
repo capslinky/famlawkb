@@ -170,6 +170,7 @@
   },
   "active": "1686251cddea6aa2",
   "lastOpenFiles": [
+    "build.sh",
     "requirements.txt",
     "api/auth.js.tmp.35589.1754184638063",
     "public/CNAME",
@@ -181,7 +182,6 @@
     "api/index.js.tmp.35589.1754184438832",
     "middleware.js",
     "api/_middleware.js",
-    "vercel.json",
     "resources/Child Custody Flowchart.md",
     "COMPLETE_PROJECT_SUMMARY.md",
     "resources/Common Mistakes Guide.md",
