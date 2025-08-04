@@ -346,10 +346,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/reference/faq',
     title: 'Frequently Asked Questions',
     description: 'Common questions about Arizona family law',
-    status: 'planned',
-    category: 'Missing - Reference',
+    status: 'complete',
+    category: 'Reference',
     priority: 'high',
-    notes: 'High-demand content from MkDocs'
+    notes: 'Complete with comprehensive Q&A covering divorce, custody, support, property, protection orders, legal process, and special situations'
   },
   {
     path: '/procedures/court-procedures',
