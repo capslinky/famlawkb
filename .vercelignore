@@ -1,0 +1,16 @@
+# Ignore MkDocs site directory if it exists
+site/
+docs/
+mkdocs.yml
+requirements.txt
+*.md
+!README.md
+
+# Ignore Python files
+*.py
+__pycache__/
+*.pyc
+
+# Ignore build artifacts
+.DS_Store
+.obsidian/
