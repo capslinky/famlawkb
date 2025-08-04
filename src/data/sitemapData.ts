@@ -373,10 +373,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/legal-disclaimer',
     title: 'Legal Disclaimer',
     description: 'Important legal disclaimers and limitations',
-    status: 'planned',
-    category: 'Missing - Legal',
+    status: 'complete',
+    category: 'Legal',
     priority: 'high',
-    notes: 'Required for legal compliance'
+    notes: 'Complete with comprehensive legal disclaimers, Arizona Bar compliance, liability limitations, and professional responsibility guidelines'
   }
 ];
 
