@@ -319,10 +319,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/topics/child-support',
     title: 'Child Support (Comprehensive)',
     description: 'Complete guide to Arizona child support laws, calculation, and enforcement',
-    status: 'planned',
-    category: 'Missing - Core Topics',
+    status: 'complete',
+    category: 'Core Topics',
     priority: 'high',
-    notes: 'Critical missing content from MkDocs'
+    notes: 'Complete with comprehensive legal information, income guidelines, modification procedures, and enforcement options'
   },
   {
     path: '/topics/property-division',
