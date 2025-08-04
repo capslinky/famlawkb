@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, Baby, FileText, Scale, AlertCircle, Shield, Clock, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Paternity Cases - Arizona',
@@ -46,7 +45,7 @@ export default function PaternityPage() {
                   Understanding Paternity in Arizona
                 </h2>
                 <p className="text-blue-800 mb-3">
-                  When parents aren't married, establishing paternity is the first step to 
+                  When parents aren&apos;t married, establishing paternity is the first step to 
                   securing custody, visitation, and support rights.
                 </p>
                 <div className="bg-white rounded-lg p-4 border border-blue-200">
@@ -103,7 +102,7 @@ export default function PaternityPage() {
                     <div>
                       <h3 className="font-bold text-lg mb-3">Court-Ordered Paternity</h3>
                       <p className="text-gray-700 mb-3">
-                        When voluntary acknowledgment isn't possible:
+                        When voluntary acknowledgment isn&apos;t possible:
                       </p>
                       <ul className="space-y-2 text-gray-700">
                         <li className="flex items-start gap-2">
@@ -149,7 +148,7 @@ export default function PaternityPage() {
               <Card className="border-2 border-purple-300">
                 <CardContent className="p-6">
                   <Shield className="w-8 h-8 text-purple-600 mb-3" />
-                  <h3 className="font-bold text-lg mb-3">Father's Rights</h3>
+                  <h3 className="font-bold text-lg mb-3">Father&apos;s Rights</h3>
                   <p className="text-gray-700 mb-3">
                     Once paternity is established:
                   </p>
@@ -157,7 +156,7 @@ export default function PaternityPage() {
                     <li>• Can petition for custody/visitation</li>
                     <li>• Equal consideration for custody</li>
                     <li>• Decision-making authority rights</li>
-                    <li>• Access to child's records</li>
+                    <li>• Access to child&apos;s records</li>
                     <li>• Can object to adoption</li>
                     <li>• Inheritance rights established</li>
                   </ul>
@@ -167,7 +166,7 @@ export default function PaternityPage() {
               <Card className="border-2 border-green-300">
                 <CardContent className="p-6">
                   <Heart className="w-8 h-8 text-green-600 mb-3" />
-                  <h3 className="font-bold text-lg mb-3">Child's Benefits</h3>
+                  <h3 className="font-bold text-lg mb-3">Child&apos;s Benefits</h3>
                   <p className="text-gray-700 mb-3">
                     Establishing paternity helps children:
                   </p>
@@ -264,7 +263,7 @@ export default function PaternityPage() {
               <div>
                 <h3 className="font-semibold mb-2">Important Considerations</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Signing birth certificate doesn't establish legal paternity in Arizona</li>
+                  <li>• Signing birth certificate doesn&apos;t establish legal paternity in Arizona</li>
                   <li>• Married men are presumed fathers of children born during marriage</li>
                   <li>• Paternity can be challenged within specific time limits</li>
                   <li>• Once established, paternity is difficult to undo</li>
@@ -282,7 +281,7 @@ export default function PaternityPage() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-3">Mother Seeking Support</h3>
                   <p className="text-gray-700 mb-2">
-                    If father won't acknowledge paternity:
+                    If father won&apos;t acknowledge paternity:
                   </p>
                   <ul className="space-y-1 text-gray-700 text-sm">
                     <li>• File paternity action</li>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, FileText, Download, Printer, AlertCircle, Clock, CheckCircle, Info } from 'lucide-react';
+import { ArrowLeft, FileText, Download, Printer, AlertCircle, Clock, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -134,7 +134,7 @@ export default function ResponsePetitionPage() {
                     Before responding, carefully read the entire petition you were served:
                   </p>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Note the case number (you'll need this)</li>
+                    <li>• Note the case number (you&apos;ll need this)</li>
                     <li>• Identify what the other party is requesting</li>
                     <li>• Check each allegation made</li>
                     <li>• Determine what you agree/disagree with</li>
@@ -166,7 +166,7 @@ export default function ResponsePetitionPage() {
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                         <div>
-                          <strong>Lack Information:</strong> If you don't know
+                          <strong>Lack Information:</strong> If you don&apos;t know
                         </div>
                       </li>
                     </ul>
@@ -213,7 +213,7 @@ export default function ResponsePetitionPage() {
                 <ul className="space-y-2 text-gray-700">
                   <li>• Do NOT ignore the petition - you will lose by default</li>
                   <li>• File your response before the deadline, not on the deadline</li>
-                  <li>• Admitting to allegations doesn't mean you agree with everything</li>
+                  <li>• Admitting to allegations doesn&apos;t mean you agree with everything</li>
                   <li>• You can file your own requests (counterpetition) with response</li>
                   <li>• Consider legal advice if issues are complex</li>
                 </ul>
@@ -285,7 +285,7 @@ export default function ResponsePetitionPage() {
           <div className="mt-8 p-4 bg-orange-800 text-white rounded-lg text-center">
             <p className="font-bold">
               Missing your response deadline can result in losing your case by default. 
-              File on time and consider getting legal help if you're unsure about any part 
+              File on time and consider getting legal help if you&apos;re unsure about any part 
               of your response.
             </p>
           </div>

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, Calendar, FileText, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Standard Response Timeline - 10-20 Days - Arizona',

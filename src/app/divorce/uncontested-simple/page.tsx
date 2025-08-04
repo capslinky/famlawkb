@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, CheckCircle, FileText, Clock, DollarSign, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Uncontested Divorce Without Children - Arizona',
@@ -95,9 +94,7 @@ export default function UncontestedSimplePage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
-                      <GlossaryContent>
-                        No request for spousal maintenance or agreement reached
-                      </GlossaryContent>
+                      <span>No request for spousal maintenance or agreement reached</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -116,7 +113,7 @@ export default function UncontestedSimplePage() {
                       <div>
                         <h3 className="font-semibold mb-2">Prepare Documents</h3>
                         <ul className="text-gray-600 space-y-1">
-                          <li>• <GlossaryContent>Petition for Dissolution of Marriage</GlossaryContent></li>
+                          <li>• Petition for Dissolution of Marriage</li>
                           <li>• Summons</li>
                           <li>• Preliminary Injunction</li>
                           <li>• Notice of Right to Convert Health Insurance</li>
@@ -199,7 +196,7 @@ export default function UncontestedSimplePage() {
                       <div>
                         <h3 className="font-semibold mb-2">Submit Final Documents</h3>
                         <p className="text-gray-600">
-                          After 60-day waiting period, submit <GlossaryContent>Decree</GlossaryContent> for judge&apos;s signature.
+                          After 60-day waiting period, submit Decree for judge&apos;s signature.
                         </p>
                       </div>
                     </div>

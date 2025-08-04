@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+
 import Link from 'next/link';
 import { ArrowLeft, Book, Search, Volume2 } from 'lucide-react';
 import { legalGlossary, getTermsByCategory, GlossaryTerm } from '@/data/legalGlossary';

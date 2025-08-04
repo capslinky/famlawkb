@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, Shield, FileText, Clock, MapPin, AlertCircle, Phone } from 'lucide-react';
+import { ArrowLeft, Shield, FileText, MapPin, AlertCircle, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'How to File for a Protection Order - Arizona',
@@ -80,7 +79,7 @@ export default function HowToFilePage() {
                             roommate, parent of your child
                           </p>
                           <p className="text-sm text-gray-600">
-                            <GlossaryContent term="domestic violence" /> required
+                            Domestic violence required
                           </p>
                         </div>
                         <div className="bg-gray-50 rounded-lg p-4">
@@ -146,7 +145,7 @@ export default function HowToFilePage() {
                         <li>• Describe specific incidents with dates</li>
                         <li>• Explain why you fear future harm</li>
                         <li>• List any witnesses or evidence</li>
-                        <li>• Provide defendant's information</li>
+                        <li>• Provide defendant&apos;s information</li>
                         <li>• Request specific protections needed</li>
                       </ul>
                       <div className="bg-purple-50 rounded-lg p-4 mt-3">
@@ -221,7 +220,7 @@ export default function HowToFilePage() {
                         <li className="flex items-start gap-2">
                           <span className="font-bold text-red-600">•</span>
                           <div>
-                            <span className="font-semibold">You MUST attend:</span> Order expires if you don't appear
+                            <span className="font-semibold">You MUST attend:</span> Order expires if you don&apos;t appear
                           </div>
                         </li>
                       </ul>
@@ -254,7 +253,7 @@ export default function HowToFilePage() {
                   <MapPin className="w-8 h-8 text-green-600 mb-3" />
                   <h3 className="font-semibold mb-3">Information Needed</h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• Defendant's full name</li>
+                    <li>• Defendant&apos;s full name</li>
                     <li>• Their address/workplace</li>
                     <li>• Physical description</li>
                     <li>• Vehicle information</li>
@@ -286,20 +285,17 @@ export default function HowToFilePage() {
             <h3 className="font-bold text-lg mb-4">Emergency Safety Resources</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <Button 
-                  className="w-full bg-red-600 hover:bg-red-700 mb-2"
-                  onClick={() => window.location.href='tel:911'}
-                >
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call 911 - Immediate Danger
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="w-full"
-                  onClick={() => window.location.href='tel:1-800-799-7233'}
-                >
-                  National DV Hotline
-                </Button>
+                <Link href="tel:911" className="block w-full mb-2">
+                  <Button className="w-full bg-red-600 hover:bg-red-700">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call 911 - Immediate Danger
+                  </Button>
+                </Link>
+                <Link href="tel:1-800-799-7233" className="block w-full">
+                  <Button variant="outline" className="w-full">
+                    National DV Hotline
+                  </Button>
+                </Link>
               </div>
               <div>
                 <Link href="/protection/safety-plan">

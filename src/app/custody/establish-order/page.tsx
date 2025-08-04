@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, FileText, Scale, Users, Clock, Heart, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Establish Custody Order - Arizona',
@@ -35,8 +34,8 @@ export default function EstablishCustodyPage() {
                 <h2 className="text-lg font-semibold mb-2">No Current Court Order?</h2>
                 <p className="text-gray-700">
                   If you&apos;ve never had a court order for custody, you need to establish 
-                  <GlossaryContent>legal decision making</GlossaryContent> and 
-                  <GlossaryContent>parenting time</GlossaryContent> through the court.
+                  legal decision making and 
+                  parenting time through the court.
                 </p>
               </div>
             </div>
@@ -90,7 +89,7 @@ export default function EstablishCustodyPage() {
                   <CardContent className="p-6">
                     <h3 className="font-semibold mb-3">Parents Never Married</h3>
                     <p className="text-gray-600 mb-3">
-                      Must establish <GlossaryContent>paternity</GlossaryContent> first. Mother has sole custody 
+                      Must establish paternity first. Mother has sole custody 
                       until court order.
                     </p>
                     <Link href="/special-situations/paternity">
@@ -146,7 +145,7 @@ export default function EstablishCustodyPage() {
                         <h3 className="font-semibold mb-2">File Initial Documents</h3>
                         <ul className="text-gray-600 space-y-1 text-sm">
                           <li>• Petition for custody/paternity</li>
-                          <li>• Proposed <GlossaryContent>parenting plan</GlossaryContent></li>
+                          <li>• Proposed parenting plan</li>
                           <li>• Child support worksheet</li>
                           <li>• UCCJEA affidavit (jurisdiction)</li>
                         </ul>
@@ -203,7 +202,7 @@ export default function EstablishCustodyPage() {
                         <h3 className="font-semibold mb-2">Attempt Agreement</h3>
                         <p className="text-gray-600 text-sm">
                           Courts prefer parents to agree. May require 
-                          <GlossaryContent>mediation</GlossaryContent> to help reach agreement.
+                          mediation to help reach agreement.
                         </p>
                       </div>
                     </div>
@@ -231,7 +230,7 @@ export default function EstablishCustodyPage() {
 
             <section>
               <h2 className="text-2xl font-semibold mb-4">
-                What Courts Consider (<GlossaryContent>Best Interests</GlossaryContent>)
+                What Courts Consider (Best Interests)
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <Card>

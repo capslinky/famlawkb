@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, AlertTriangle, Clock, Calendar, FileText, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Urgent Response Required - Within 10 Days - Arizona',

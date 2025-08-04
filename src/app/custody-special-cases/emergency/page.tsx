@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, AlertTriangle, Shield, Phone, Clock, Gavel, FileText, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Emergency Custody Orders - Arizona',
@@ -51,13 +50,14 @@ export default function EmergencyCustodyPage() {
                 <div className="bg-white rounded-lg p-4 border border-red-300">
                   <h3 className="font-semibold mb-2">Emergency Resources:</h3>
                   <div className="space-y-2">
-                    <Button 
-                      className="w-full sm:w-auto bg-red-600 hover:bg-red-700"
-                      onClick={() => window.location.href='tel:911'}
+                    <Link href="tel:911" className="block">
+                  <Button className="w-full sm:w-auto bg-red-600 hover:bg-red-700"
+                      
                     >
                       <Phone className="w-4 h-4 mr-2" />
                       Call 911
                     </Button>
+                </Link>
                     <p className="text-sm">
                       Child Protective Services: 1-888-SOS-CHILD (1-888-767-2445)
                     </p>
@@ -85,7 +85,7 @@ export default function EmergencyCustodyPage() {
                         <ul className="space-y-2 text-gray-700">
                           <li>• Child in immediate danger of abuse or abduction</li>
                           <li>• Specific facts showing irreparable harm</li>
-                          <li>• Why notice shouldn't be required</li>
+                          <li>• Why notice shouldn&apos;t be required</li>
                           <li>• Sworn testimony or affidavit</li>
                         </ul>
                         <div className="mt-3 p-3 bg-white rounded border border-red-200">
@@ -262,7 +262,7 @@ export default function EmergencyCustodyPage() {
                   <h3 className="font-semibold mb-3">Custody Changes</h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
                     <li>• Temporary sole custody</li>
-                    <li>• Suspend other parent's time</li>
+                    <li>• Suspend other parent&apos;s time</li>
                     <li>• Supervised visitation only</li>
                     <li>• No contact orders</li>
                     <li>• Restrict who can be around child</li>
@@ -346,14 +346,15 @@ export default function EmergencyCustodyPage() {
           <section className="mt-8">
             <h3 className="font-bold text-lg mb-4">Immediate Actions</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Button 
-                className="w-full bg-red-600 hover:bg-red-700" 
+              <Link href="tel:911" className="block">
+                  <Button className="w-full bg-red-600 hover:bg-red-700" 
                 size="lg"
-                onClick={() => window.location.href='tel:911'}
+                
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call 911 if Immediate Danger
               </Button>
+                </Link>
               <Link href="/forms/emergency-motion">
                 <Button className="w-full" size="lg">
                   <FileText className="w-5 h-5 mr-2" />
@@ -375,7 +376,7 @@ export default function EmergencyCustodyPage() {
 
           <div className="mt-8 p-4 bg-red-800 text-white rounded-lg text-center">
             <p className="font-bold">
-              Children's safety is paramount. If you believe a child is in immediate danger, 
+              Children&apos;s safety is paramount. If you believe a child is in immediate danger, 
               act now. Contact emergency services first, then pursue legal remedies.
             </p>
           </div>

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, Shield, Phone, MapPin, Package, CreditCard, Users, FileText, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Create a Safety Plan - Arizona',
@@ -116,8 +115,8 @@ export default function SafetyPlanPage() {
                       </p>
                       <div className="grid md:grid-cols-2 gap-4">
                         <ul className="space-y-1 text-gray-700 text-sm">
-                          <li>• Driver's license/ID</li>
-                          <li>• Birth certificates (yours & children's)</li>
+                          <li>• Driver&apos;s license/ID</li>
+                          <li>• Birth certificates (yours & children&apos;s)</li>
                           <li>• Social Security cards</li>
                           <li>• Immigration papers</li>
                           <li>• Protection orders</li>
@@ -163,7 +162,7 @@ export default function SafetyPlanPage() {
                     <div>
                       <h3 className="font-bold text-lg mb-3">Emergency Bag</h3>
                       <p className="text-gray-700 mb-3">
-                        Pack and hide at trusted friend's house or safe location:
+                        Pack and hide at trusted friend&apos;s house or safe location:
                       </p>
                       <div className="grid md:grid-cols-2 gap-4">
                         <ul className="space-y-1 text-gray-700 text-sm">
@@ -175,7 +174,7 @@ export default function SafetyPlanPage() {
                         </ul>
                         <ul className="space-y-1 text-gray-700 text-sm">
                           <li>• Important documents</li>
-                          <li>• Children's favorite toys</li>
+                          <li>• Children&apos;s favorite toys</li>
                           <li>• Phone charger</li>
                           <li>• Photos (evidence & sentimental)</li>
                           <li>• Address book</li>
@@ -212,7 +211,7 @@ export default function SafetyPlanPage() {
                   <h3 className="font-semibold mb-3">Workplace Safety</h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
                     <li>• Inform security/reception</li>
-                    <li>• Provide abuser's photo</li>
+                    <li>• Provide abuser&apos;s photo</li>
                     <li>• Change work schedule if possible</li>
                     <li>• Have escorts to car</li>
                     <li>• Document all contact attempts</li>
@@ -233,7 +232,7 @@ export default function SafetyPlanPage() {
                   <div>
                     <h4 className="font-semibold mb-2">Phone Safety:</h4>
                     <ul className="space-y-1 text-gray-700 text-sm">
-                      <li>• Get new phone/number abuser doesn't know</li>
+                      <li>• Get new phone/number abuser doesn&apos;t know</li>
                       <li>• Turn off location services</li>
                       <li>• Check for tracking apps</li>
                       <li>• Use passwords/biometrics</li>
@@ -243,7 +242,7 @@ export default function SafetyPlanPage() {
                     <h4 className="font-semibold mb-2">Online Safety:</h4>
                     <ul className="space-y-1 text-gray-700 text-sm">
                       <li>• Change all passwords</li>
-                      <li>• Use safe computer at library/friend's</li>
+                      <li>• Use safe computer at library/friend&apos;s</li>
                       <li>• Create new email account</li>
                       <li>• Block on social media</li>
                       <li>• Clear browser history</li>
@@ -255,7 +254,7 @@ export default function SafetyPlanPage() {
           </section>
 
           <section className="mt-8">
-            <h2 className="text-2xl font-bold mb-4">Children's Safety</h2>
+            <h2 className="text-2xl font-bold mb-4">Children&apos;s Safety</h2>
             <Card>
               <CardContent className="p-6">
                 <Users className="w-8 h-8 text-purple-600 mb-3" />
@@ -284,7 +283,7 @@ export default function SafetyPlanPage() {
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">You're Not Alone</h4>
+                <h4 className="font-semibold mb-2">You&apos;re Not Alone</h4>
                 <p className="text-gray-700 text-sm">
                   Advocates are available 24/7 to help you plan, provide support, and 
                   connect you with resources.

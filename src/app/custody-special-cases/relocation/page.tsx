@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, MapPin, Scale, Clock, FileText, AlertTriangle, Car, Plane, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Child Relocation Cases - Arizona',
@@ -139,7 +138,7 @@ export default function RelocationPage() {
                       2
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-lg mb-2">Other Parent's Response</h3>
+                      <h3 className="font-bold text-lg mb-2">Other Parent&apos;s Response</h3>
                       <p className="text-gray-700 mb-3">
                         Within 30 days, other parent can:
                       </p>
@@ -184,8 +183,8 @@ export default function RelocationPage() {
                       </p>
                       <ul className="space-y-2 text-gray-700">
                         <li>• Reasons for and against relocation</li>
-                        <li>• Child's relationship with both parents</li>
-                        <li>• Impact on child's stability</li>
+                        <li>• Child&apos;s relationship with both parents</li>
+                        <li>• Impact on child&apos;s stability</li>
                         <li>• Educational opportunities</li>
                         <li>• Whether move is in good faith</li>
                         <li>• Feasibility of preserving relationship</li>
@@ -220,11 +219,11 @@ export default function RelocationPage() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-red-900 mb-3">Factors Against Relocation</h3>
                   <ul className="space-y-2 text-gray-700">
-                    <li>✗ Disrupts child's stability</li>
-                    <li>✗ Harms other parent's relationship</li>
+                    <li>✗ Disrupts child&apos;s stability</li>
+                    <li>✗ Harms other parent&apos;s relationship</li>
                     <li>✗ Motivated by spite</li>
                     <li>✗ No significant benefit</li>
-                    <li>✗ Child's preference (if older)</li>
+                    <li>✗ Child&apos;s preference (if older)</li>
                     <li>✗ Special needs considerations</li>
                     <li>✗ Extended family ties</li>
                   </ul>
@@ -239,10 +238,10 @@ export default function RelocationPage() {
               <div>
                 <h3 className="font-semibold mb-2">Consequences of Improper Relocation</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Court can order child's immediate return</li>
+                  <li>• Court can order child&apos;s immediate return</li>
                   <li>• May lose primary custody</li>
                   <li>• Contempt of court charges</li>
-                  <li>• Required to pay other parent's legal fees</li>
+                  <li>• Required to pay other parent&apos;s legal fees</li>
                   <li>• Criminal parental kidnapping charges possible</li>
                   <li>• Damage to credibility in future proceedings</li>
                 </ul>
@@ -263,7 +262,7 @@ export default function RelocationPage() {
                   </p>
                   <ul className="space-y-2 text-gray-700 text-sm">
                     <li>• Relocating parent has burden of proof</li>
-                    <li>• Must show move is in child's best interest</li>
+                    <li>• Must show move is in child&apos;s best interest</li>
                     <li>• Court less likely to approve</li>
                     <li>• May need compelling reasons</li>
                   </ul>

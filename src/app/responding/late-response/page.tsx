@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, AlertOctagon, Clock, Scale, FileText, Gavel } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Late Response - After 20 Days - Arizona',
@@ -282,10 +281,12 @@ export default function LateResponsePage() {
                 <Link href="/resources/legal-representation">
                   <Button className="w-full mb-2">Find Emergency Legal Help</Button>
                 </Link>
-                <Button variant="outline" className="w-full" onClick={() => window.location.href='tel:602-252-3432'}>
+                <Link href="tel:602-252-3432" className="block">
+                  <Button variant="outline" className="w-full" >
                   <FileText className="w-4 h-4 mr-2" />
                   Call Court Clerk
                 </Button>
+                </Link>
               </div>
               <div>
                 <h4 className="font-semibold mb-3">Forms You May Need:</h4>

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, CheckCircle, FileText, Clock, Users, AlertCircle, Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Uncontested Divorce With Children - Arizona',
@@ -60,7 +59,7 @@ export default function UncontestedWithChildrenPage() {
                 <FileText className="w-8 h-8 text-purple-600 mb-3" />
                 <h3 className="text-xl font-semibold mb-2">Additional Documents</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• <GlossaryContent>Parenting Plan</GlossaryContent></li>
+                  <li>• Parenting Plan</li>
                   <li>• Child Support Worksheet</li>
                   <li>• Order of Assignment (wage garnishment)</li>
                   <li>• Parenting class certificates</li>
@@ -80,8 +79,8 @@ export default function UncontestedWithChildrenPage() {
                       Parenting Plan Agreement
                     </h3>
                     <ul className="space-y-2 text-gray-600 ml-7">
-                      <li>• <GlossaryContent>Legal Decision Making</GlossaryContent> (joint or sole)</li>
-                      <li>• <GlossaryContent>Parenting Time</GlossaryContent> schedule</li>
+                      <li>• Legal Decision Making (joint or sole)</li>
+                      <li>• Parenting Time schedule</li>
                       <li>• Holiday and vacation schedules</li>
                       <li>• Transportation arrangements</li>
                       <li>• Communication methods</li>

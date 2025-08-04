@@ -5,6 +5,7 @@ import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, FileText, Calculator, HelpCircle, AlertCircle, Filter } from 'lucide-react';
 import { searchContent, SearchResult } from '@/data/searchIndex';
+
 import SearchBar from '@/components/SearchBar';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

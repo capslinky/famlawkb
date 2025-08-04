@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, AlertTriangle, Clock, Shield, FileText, Gavel, Phone } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, Shield, FileText, Gavel, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Responding to Emergency Protection Order - Arizona',
@@ -216,7 +215,7 @@ export default function RespondingEmergencyPage() {
                       <li>• Any contact (calls, texts, emails, social media)</li>
                       <li>• Having someone else contact for you</li>
                       <li>• Going to prohibited places</li>
-                      <li>• "Accidental" encounters you don't immediately leave</li>
+                      <li>• &quot;Accidental&quot; encounters you don&apos;t immediately leave</li>
                       <li>• Sending gifts or messages</li>
                     </ul>
                   </div>
@@ -246,7 +245,7 @@ export default function RespondingEmergencyPage() {
                   <FileText className="w-8 h-8 text-green-600 mb-3" />
                   <h3 className="font-semibold mb-3">Important Notes</h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• Order doesn't mean guilt</li>
+                    <li>• Order doesn&apos;t mean guilt</li>
                     <li>• Standard is preponderance</li>
                     <li>• Can request mutual order</li>
                     <li>• May affect other cases</li>
@@ -263,7 +262,7 @@ export default function RespondingEmergencyPage() {
               <div>
                 <h3 className="font-semibold mb-2">Critical Warnings</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Do NOT try to "work it out" with protected person</li>
+                  <li>• Do NOT try to &quot;work it out&quot; with protected person</li>
                   <li>• Do NOT respond if they contact you - report it</li>
                   <li>• Keep proof of compliance (receipts, witnesses)</li>
                   <li>• Understand this may affect gun rights</li>
@@ -305,14 +304,12 @@ export default function RespondingEmergencyPage() {
           </section>
 
           <div className="mt-8 grid sm:grid-cols-2 gap-4">
-            <Button 
-              className="w-full" 
-              size="lg"
-              onClick={() => window.location.href='tel:602-257-4434'}
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Legal Referral Service
-            </Button>
+            <Link href="tel:602-257-4434" className="block w-full">
+              <Button className="w-full" size="lg">
+                <Phone className="w-5 h-5 mr-2" />
+                Legal Referral Service
+              </Button>
+            </Link>
             <Link href="/resources/emergency-legal-help">
               <Button variant="outline" className="w-full" size="lg">
                 Find Emergency Legal Help

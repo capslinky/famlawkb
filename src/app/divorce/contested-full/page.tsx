@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, AlertTriangle, Clock, DollarSign, Scale, FileText, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Contested Divorce Process - Arizona',
@@ -95,8 +94,8 @@ export default function ContestedDivorcePage() {
                       <div>
                         <h3 className="font-semibold mb-2">Filing and Service (Month 1)</h3>
                         <p className="text-gray-600 mb-2">
-                          <GlossaryContent>Petitioner</GlossaryContent> files divorce papers. 
-                          <GlossaryContent>Respondent</GlossaryContent> must be formally served.
+                          Petitioner files divorce papers. 
+                          Respondent must be formally served.
                         </p>
                         <ul className="text-sm text-gray-600 space-y-1">
                           <li>• File Petition for Dissolution</li>
@@ -117,7 +116,7 @@ export default function ContestedDivorcePage() {
                       <div>
                         <h3 className="font-semibold mb-2">Response and Temporary Orders (Months 1-3)</h3>
                         <p className="text-gray-600 mb-2">
-                          Respondent files answer. Either party can request <GlossaryContent>temporary orders</GlossaryContent>.
+                          Respondent files answer. Either party can request temporary orders.
                         </p>
                         <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Response due within 20 days (in-state)</li>
@@ -141,7 +140,7 @@ export default function ContestedDivorcePage() {
                           Exchange financial information and gather evidence.
                         </p>
                         <ul className="text-sm text-gray-600 space-y-1">
-                          <li>• Mandatory <GlossaryContent>disclosure</GlossaryContent> statements</li>
+                          <li>• Mandatory disclosure statements</li>
                           <li>• Interrogatories and depositions</li>
                           <li>• Subpoenas for documents</li>
                           <li>• Expert evaluations (custody, property)</li>
@@ -160,7 +159,7 @@ export default function ContestedDivorcePage() {
                       <div>
                         <h3 className="font-semibold mb-2">Settlement Attempts (Months 6-10)</h3>
                         <p className="text-gray-600 mb-2">
-                          Court often requires <GlossaryContent>mediation</GlossaryContent> or settlement conferences.
+                          Court often requires mediation or settlement conferences.
                         </p>
                         <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Mandatory mediation for custody</li>
@@ -236,7 +235,7 @@ export default function ContestedDivorcePage() {
                     <Users className="w-6 h-6 text-green-600 mb-2" />
                     <h3 className="font-semibold mb-2">Focus on Children</h3>
                     <p className="text-gray-600 text-sm">
-                      Courts prioritize <GlossaryContent>best interests</GlossaryContent> of children. 
+                      Courts prioritize best interests of children. 
                       Show you&apos;re the cooperative parent.
                     </p>
                   </CardContent>

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, Users, Clock, TrendingDown, FileText, AlertCircle, Scale, Calendar, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Spousal Support Modification - Arizona',
@@ -52,7 +51,7 @@ export default function SpousalSupportModificationPage() {
                 <div className="bg-white rounded-lg p-4 border border-indigo-200">
                   <h3 className="font-semibold mb-2">Check Your Decree First:</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• Some orders are "non-modifiable" by agreement</li>
+                    <li>• Some orders are &quot;non-modifiable&quot; by agreement</li>
                     <li>• Others may limit modification circumstances</li>
                     <li>• Duration and amount may have different rules</li>
                     <li>• Review exact language with an attorney</li>
@@ -75,7 +74,7 @@ export default function SpousalSupportModificationPage() {
                   <ul className="space-y-2 text-gray-700">
                     <li>• Court can modify amount and/or duration</li>
                     <li>• Must show substantial and continuing change</li>
-                    <li>• Changes weren't contemplated at divorce</li>
+                    <li>• Changes weren&apos;t contemplated at divorce</li>
                     <li>• Burden on party seeking modification</li>
                   </ul>
                 </CardContent>
@@ -95,7 +94,7 @@ export default function SpousalSupportModificationPage() {
                   </ul>
                   <div className="bg-red-50 rounded-lg p-3 mt-3">
                     <p className="text-sm text-red-800 font-semibold">
-                      If your decree says "non-modifiable," consult an attorney before proceeding
+                      If your decree says &quot;non-modifiable,&quot; consult an attorney before proceeding
                     </p>
                   </div>
                 </CardContent>
@@ -110,7 +109,7 @@ export default function SpousalSupportModificationPage() {
               <Card className="border-2 border-indigo-300">
                 <CardContent className="p-6">
                   <TrendingDown className="w-8 h-8 text-indigo-600 mb-3" />
-                  <h3 className="font-bold text-lg mb-3">Payor's Circumstances</h3>
+                  <h3 className="font-bold text-lg mb-3">Payor&apos;s Circumstances</h3>
                   <h4 className="font-semibold text-sm mb-2 text-indigo-700">May Decrease Support:</h4>
                   <ul className="space-y-1 text-gray-700 text-sm mb-3">
                     <li>• Job loss (not voluntary)</li>
@@ -118,7 +117,7 @@ export default function SpousalSupportModificationPage() {
                     <li>• Actual retirement</li>
                     <li>• Significant income decrease</li>
                   </ul>
-                  <h4 className="font-semibold text-sm mb-2 text-orange-700">Won't Decrease Support:</h4>
+                  <h4 className="font-semibold text-sm mb-2 text-orange-700">Won&apos;t Decrease Support:</h4>
                   <ul className="space-y-1 text-gray-700 text-sm">
                     <li>• Voluntary unemployment</li>
                     <li>• Early retirement</li>
@@ -131,7 +130,7 @@ export default function SpousalSupportModificationPage() {
               <Card className="border-2 border-purple-300">
                 <CardContent className="p-6">
                   <Heart className="w-8 h-8 text-purple-600 mb-3" />
-                  <h3 className="font-bold text-lg mb-3">Recipient's Circumstances</h3>
+                  <h3 className="font-bold text-lg mb-3">Recipient&apos;s Circumstances</h3>
                   <h4 className="font-semibold text-sm mb-2 text-purple-700">May Reduce/Terminate:</h4>
                   <ul className="space-y-1 text-gray-700 text-sm mb-3">
                     <li>• Remarriage (usually terminates)</li>
@@ -168,7 +167,7 @@ export default function SpousalSupportModificationPage() {
                       </p>
                       <ul className="space-y-2 text-gray-700">
                         <li>• Find spousal maintenance section</li>
-                        <li>• Check for "non-modifiable" language</li>
+                        <li>• Check for &quot;non-modifiable&quot; language</li>
                         <li>• Review termination conditions</li>
                         <li>• Understand current obligations</li>
                         <li>• Consult attorney if unclear</li>
@@ -325,8 +324,8 @@ export default function SpousalSupportModificationPage() {
                   <li>✓ Medical disability documentation</li>
                   <li>✓ Retirement account statements</li>
                   <li>✓ Job search records</li>
-                  <li>✓ Recipient's new marriage/partner</li>
-                  <li>✓ Recipient's increased income</li>
+                  <li>✓ Recipient&apos;s new marriage/partner</li>
+                  <li>✓ Recipient&apos;s increased income</li>
                 </ul>
               </div>
               <div>
@@ -334,7 +333,7 @@ export default function SpousalSupportModificationPage() {
                 <ul className="space-y-1 text-gray-700 text-sm">
                   <li>✓ Failed self-sufficiency efforts</li>
                   <li>✓ Medical conditions developed</li>
-                  <li>✓ Payor's increased income</li>
+                  <li>✓ Payor&apos;s increased income</li>
                   <li>✓ Cost of living documentation</li>
                   <li>✓ Job market analysis</li>
                   <li>✓ Education/training attempts</li>

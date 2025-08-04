@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, Shield, Calendar, FileCheck, AlertCircle, Book } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Child Custody in Arizona - Parenting Time & Legal Decision Making',
@@ -31,12 +30,8 @@ export default function ChildCustodyPage() {
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
             <h2 className="text-lg font-semibold mb-2">Arizona Custody Basics</h2>
             <div className="space-y-2 text-gray-700">
-              <GlossaryContent>
-                Legal Decision Making = authority to make major decisions
-              </GlossaryContent>
-              <GlossaryContent>
-                Parenting Time = physical custody schedule
-              </GlossaryContent>
+              <div>• Legal Decision Making = authority to make major decisions</div>
+              <div>• Parenting Time = physical custody schedule</div>
               <div>• Courts prioritize the child&apos;s best interests</div>
               <div>• Both parents have equal rights unless proven otherwise</div>
             </div>

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, Shield, Users, User, Scale, Clock, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Types of Protection Orders - Arizona',
@@ -85,7 +84,7 @@ export default function TypesPage() {
                         <div>
                           <h4 className="font-semibold mb-2 text-purple-900">Requirements:</h4>
                           <ul className="space-y-1 text-gray-700 text-sm">
-                            <li>• Act of <GlossaryContent term="domestic violence" /></li>
+                            <li>• Act of domestic violence</li>
                             <li>• Within past year (usually)</li>
                             <li>• Reasonable fear of future harm</li>
                             <li>• No filing fee</li>

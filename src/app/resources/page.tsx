@@ -288,7 +288,7 @@ export default function ResourcesPage() {
 
           <div className="mt-8 text-center">
             <p className="text-gray-600 mb-4">
-              Can't find what you're looking for? Contact the court self-help center 
+              Can&apos;t find what you&apos;re looking for? Contact the court self-help center 
               or consult with a family law attorney.
             </p>
             <div className="flex justify-center gap-4">

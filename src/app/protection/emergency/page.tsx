@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, AlertTriangle, Phone, Shield, MapPin, Clock, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Emergency Protection and Safety - Arizona',
@@ -46,26 +45,28 @@ export default function EmergencyPage() {
                   If You Are in Immediate Danger
                 </h2>
                 <div className="grid sm:grid-cols-2 gap-3">
-                  <Button 
-                    className="bg-red-600 hover:bg-red-700 text-white" 
+                  <Link href="tel:911" className="block">
+                  <Button className="bg-red-600 hover:bg-red-700 text-white" 
                     size="lg"
-                    onClick={() => window.location.href='tel:911'}
+                    
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Call 911
                   </Button>
-                  <Button 
-                    variant="outline" 
+                </Link>
+                  <Link href="tel:1-800-799-7233" className="block">
+                  <Button variant="outline" 
                     size="lg"
                     className="border-red-600 text-red-600 hover:bg-red-50"
-                    onClick={() => window.location.href='tel:1-800-799-7233'}
+                    
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     National DV Hotline
                   </Button>
+                </Link>
                 </div>
                 <p className="text-sm text-gray-700 mt-3">
-                  National Domestic Violence Hotline: 1-800-799-SAFE (7233) • Text "START" to 88788
+                  National Domestic Violence Hotline: 1-800-799-SAFE (7233) • Text &quot;START&quot; to 88788
                 </p>
               </div>
             </div>
@@ -80,25 +81,27 @@ export default function EmergencyPage() {
                   <div className="space-y-3">
                     <div>
                       <p className="font-semibold">Sojourner Center</p>
-                      <Button 
-                        variant="outline" 
+                      <Link href="tel:602-276-3599" className="block">
+                  <Button variant="outline" 
                         className="w-full mt-1"
-                        onClick={() => window.location.href='tel:602-276-3599'}
+                        
                       >
                         <Phone className="w-4 h-4 mr-2" />
                         602-276-3599
                       </Button>
+                </Link>
                     </div>
                     <div>
                       <p className="font-semibold">Chrysalis Shelter</p>
-                      <Button 
-                        variant="outline" 
+                      <Link href="tel:602-955-9059" className="block">
+                  <Button variant="outline" 
                         className="w-full mt-1"
-                        onClick={() => window.location.href='tel:602-955-9059'}
+                        
                       >
                         <Phone className="w-4 h-4 mr-2" />
                         602-955-9059
                       </Button>
+                </Link>
                     </div>
                   </div>
                 </CardContent>
@@ -110,25 +113,27 @@ export default function EmergencyPage() {
                   <div className="space-y-3">
                     <div>
                       <p className="font-semibold">Emerge! Center</p>
-                      <Button 
-                        variant="outline" 
+                      <Link href="tel:520-795-4266" className="block">
+                  <Button variant="outline" 
                         className="w-full mt-1"
-                        onClick={() => window.location.href='tel:520-795-4266'}
+                        
                       >
                         <Phone className="w-4 h-4 mr-2" />
                         520-795-4266
                       </Button>
+                </Link>
                     </div>
                     <div>
                       <p className="font-semibold">TMM Family Services</p>
-                      <Button 
-                        variant="outline" 
+                      <Link href="tel:520-322-9155" className="block">
+                  <Button variant="outline" 
                         className="w-full mt-1"
-                        onClick={() => window.location.href='tel:520-322-9155'}
+                        
                       >
                         <Phone className="w-4 h-4 mr-2" />
                         520-322-9155
                       </Button>
+                </Link>
                     </div>
                   </div>
                 </CardContent>
@@ -155,7 +160,7 @@ export default function EmergencyPage() {
                         <ul className="space-y-1 text-gray-700">
                           <li>• Safe, confidential housing</li>
                           <li>• Food and clothing</li>
-                          <li>• Children's programs</li>
+                          <li>• Children&apos;s programs</li>
                           <li>• Case management</li>
                         </ul>
                         <ul className="space-y-1 text-gray-700">
@@ -180,7 +185,7 @@ export default function EmergencyPage() {
                         <div>
                           <p className="font-semibold text-sm mb-2">Essential Documents:</p>
                           <ul className="space-y-1 text-gray-700 text-sm">
-                            <li>• ID/driver's license</li>
+                            <li>• ID/driver&apos;s license</li>
                             <li>• Birth certificates</li>
                             <li>• Social Security cards</li>
                             <li>• Insurance cards</li>
@@ -193,13 +198,13 @@ export default function EmergencyPage() {
                             <li>• Medications</li>
                             <li>• Cash/cards</li>
                             <li>• Phone/charger</li>
-                            <li>• Children's items</li>
+                            <li>• Children&apos;s items</li>
                             <li>• Change of clothes</li>
                           </ul>
                         </div>
                       </div>
                       <p className="text-sm text-amber-700 mt-3 font-semibold">
-                        Don't delay leaving if gathering items puts you at risk!
+                        Don&apos;t delay leaving if gathering items puts you at risk!
                       </p>
                     </div>
                   </div>

@@ -49,13 +49,14 @@ export default function LegalRepresentationPage() {
                   options available regardless of your financial situation.
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <Button 
-                    className="bg-blue-600 hover:bg-blue-700"
-                    onClick={() => window.location.href='tel:602-257-4434'}
+                  <Link href="tel:602-257-4434" className="block">
+                  <Button className="bg-blue-600 hover:bg-blue-700"
+                    
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     State Bar Referral: 602-257-4434
                   </Button>
+                </Link>
                   <Button variant="outline">
                     <Phone className="w-4 h-4 mr-2" />
                     Legal Aid: 866-637-5341
@@ -160,26 +161,28 @@ export default function LegalRepresentationPage() {
                         <div>
                           <h4 className="font-semibold mb-2">Community Legal Services</h4>
                           <p className="text-sm text-gray-600 mb-2">Phoenix area</p>
-                          <Button 
-                            variant="outline" 
+                          <Link href="tel:602-258-3434" className="block">
+                  <Button variant="outline" 
                             size="sm" 
                             className="w-full"
-                            onClick={() => window.location.href='tel:602-258-3434'}
+                            
                           >
                             602-258-3434
                           </Button>
+                </Link>
                         </div>
                         <div>
                           <h4 className="font-semibold mb-2">Southern AZ Legal Aid</h4>
                           <p className="text-sm text-gray-600 mb-2">Tucson area</p>
-                          <Button 
-                            variant="outline" 
+                          <Link href="tel:520-623-9465" className="block">
+                  <Button variant="outline" 
                             size="sm" 
                             className="w-full"
-                            onClick={() => window.location.href='tel:520-623-9465'}
+                            
                           >
                             520-623-9465
                           </Button>
+                </Link>
                         </div>
                       </div>
                       <div className="mt-4 p-3 bg-white rounded border border-green-300">
@@ -303,13 +306,14 @@ export default function LegalRepresentationPage() {
                       </div>
                       <div>
                         <p className="font-semibold mb-1">Domestic Violence Legal Help:</p>
-                        <Button 
-                          size="sm"
+                        <Link href="tel:1-800-799-7233" className="block">
+                  <Button size="sm"
                           className="bg-red-600 hover:bg-red-700"
-                          onClick={() => window.location.href='tel:1-800-799-7233'}
+                          
                         >
                           National Hotline: 1-800-799-7233
                         </Button>
+                </Link>
                       </div>
                     </div>
                   </div>
@@ -323,12 +327,13 @@ export default function LegalRepresentationPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-semibold mb-3">For Income-Qualified:</h4>
-                <Button 
-                  className="w-full mb-2"
-                  onClick={() => window.location.href='tel:866-637-5341'}
+                <Link href="tel:866-637-5341" className="block">
+                  <Button className="w-full mb-2"
+                  
                 >
                   Call Legal Aid: 866-637-5341
                 </Button>
+                </Link>
                 <Link href="/resources/financial-assistance">
                   <Button variant="outline" className="w-full">
                     Financial Help Resources
@@ -337,12 +342,13 @@ export default function LegalRepresentationPage() {
               </div>
               <div>
                 <h4 className="font-semibold mb-3">For Paid Services:</h4>
-                <Button 
-                  className="w-full mb-2"
-                  onClick={() => window.location.href='tel:602-257-4434'}
+                <Link href="tel:602-257-4434" className="block">
+                  <Button className="w-full mb-2"
+                  
                 >
                   Lawyer Referral: 602-257-4434
                 </Button>
+                </Link>
                 <Link href="/resources/choosing-attorney">
                   <Button variant="outline" className="w-full">
                     How to Choose Attorney
@@ -354,7 +360,7 @@ export default function LegalRepresentationPage() {
 
           <div className="mt-8 p-4 bg-blue-800 text-white rounded-lg text-center">
             <p className="font-bold">
-              Don't let cost prevent you from getting help. There are options for every 
+              Don&apos;t let cost prevent you from getting help. There are options for every 
               budget, including free services for those who qualify.
             </p>
           </div>

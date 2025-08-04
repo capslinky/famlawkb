@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLeft, Calculator, TrendingUp, FileText, AlertCircle, Scale, Clock, DollarSign } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import GlossaryContent from '@/components/GlossaryContent';
 
 export const metadata = {
   title: 'Child Support Modification - Arizona',
@@ -46,7 +45,7 @@ export default function ChildSupportModificationPage() {
                   When Can You Modify Child Support?
                 </h2>
                 <p className="text-green-800 mb-3">
-                  Arizona law allows modification when there's a substantial and continuing change 
+                  Arizona law allows modification when there&apos;s a substantial and continuing change 
                   in circumstances.
                 </p>
                 <div className="bg-white rounded-lg p-4 border border-green-200">
@@ -100,7 +99,7 @@ export default function ChildSupportModificationPage() {
                   <DollarSign className="w-8 h-8 text-purple-600 mb-3" />
                   <h3 className="font-bold text-lg mb-3">Child-Related Changes</h3>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Child's medical needs change</li>
+                    <li>• Child&apos;s medical needs change</li>
                     <li>• Special education requirements</li>
                     <li>• Childcare costs change significantly</li>
                     <li>• Health insurance changes</li>
@@ -241,7 +240,7 @@ export default function ChildSupportModificationPage() {
                   <li>• Continue paying current amount until new order is signed</li>
                   <li>• Both increases and decreases use same standards</li>
                   <li>• Voluntary unemployment/underemployment may not qualify</li>
-                  <li>• Criminal conviction doesn't automatically reduce support</li>
+                  <li>• Criminal conviction doesn&apos;t automatically reduce support</li>
                   <li>• Past due support (arrears) cannot be modified or forgiven</li>
                 </ul>
               </div>

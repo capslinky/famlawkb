@@ -98,7 +98,7 @@ export default function DivorcePetitionChildrenPage() {
                     <h3 className="font-semibold mb-2">Requirements to File</h3>
                     <ul className="space-y-2 text-gray-700">
                       <li>• You OR your spouse must have lived in Arizona for at least 90 days</li>
-                      <li>• Your marriage must be "irretrievably broken" (no chance of reconciliation)</li>
+                      <li>• Your marriage must be &quot;irretrievably broken&quot; (no chance of reconciliation)</li>
                       <li>• You must include all minor children of the marriage</li>
                       <li>• If wife is pregnant, include unborn child information</li>
                     </ul>
@@ -107,7 +107,7 @@ export default function DivorcePetitionChildrenPage() {
               </CardContent>
             </Card>
 
-            <h2 className="text-2xl font-bold">What You'll Need</h2>
+            <h2 className="text-2xl font-bold">What You&apos;ll Need</h2>
             
             <div className="grid md:grid-cols-2 gap-6">
               <Card>
@@ -218,7 +218,7 @@ export default function DivorcePetitionChildrenPage() {
                   <ul className="space-y-2 text-gray-700">
                     <li>• Type or print clearly in black ink</li>
                     <li>• Answer all questions completely</li>
-                    <li>• Use "N/A" if something doesn't apply</li>
+                    <li>• Use &quot;N/A&quot; if something doesn&apos;t apply</li>
                     <li>• Be honest - forms are signed under oath</li>
                     <li>• Attach additional pages if needed</li>
                   </ul>

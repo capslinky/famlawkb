@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { AlertTriangle, Home, Search, HelpCircle, ArrowLeft } from 'lucide-react';
+import { AlertTriangle, Home, HelpCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -11,7 +11,7 @@ export default function NotFound() {
           <AlertTriangle className="w-16 h-16 text-amber-500 mx-auto mb-4" />
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Page Not Found</h1>
           <p className="text-xl text-gray-600">
-            We couldn't find the page you're looking for.
+            We couldn&apos;t find the page you&apos;re looking for.
           </p>
         </div>
 
@@ -19,7 +19,7 @@ export default function NotFound() {
           <CardContent className="p-8">
             <p className="text-gray-700 mb-6 text-center">
               The page may have been moved, deleted, or you may have typed the address incorrectly. 
-              Let's help you find what you need.
+              Let&apos;s help you find what you need.
             </p>
             
             <div className="space-y-4">
@@ -99,7 +99,7 @@ export default function NotFound() {
         </div>
 
         <div className="text-center text-gray-600">
-          <p className="mb-2">Still can't find what you're looking for?</p>
+          <p className="mb-2">Still can&apos;t find what you&apos;re looking for?</p>
           <p className="text-sm">
             Try using the search bar at the top of the page or contact the court for assistance.
           </p>

@@ -46,12 +46,12 @@ export default function SelfRepresentationGuidePage() {
                 </h2>
                 <p className="text-purple-800 mb-3">
                   While attorneys can be helpful, you have the constitutional right to represent 
-                  yourself (called "pro se" or "pro per" representation). This guide will help 
+                  yourself (called &quot;pro se&quot; or &quot;pro per&quot; representation). This guide will help 
                   you navigate the process effectively.
                 </p>
                 <div className="bg-white rounded-lg p-4 border border-purple-200">
                   <p className="text-sm font-semibold text-purple-900">
-                    Remember: You're held to the same standards as attorneys. The court cannot 
+                    Remember: You&apos;re held to the same standards as attorneys. The court cannot 
                     give you legal advice or special treatment.
                   </p>
                 </div>
@@ -158,7 +158,7 @@ export default function SelfRepresentationGuidePage() {
                     <li>• Always be respectful to judge and court staff</li>
                     <li>• Stick to facts, not emotions</li>
                     <li>• Be concise and organized in presentations</li>
-                    <li>• Listen carefully to judge's questions</li>
+                    <li>• Listen carefully to judge&apos;s questions</li>
                     <li>• Never interrupt anyone in court</li>
                   </ul>
                 </CardContent>
@@ -202,7 +202,7 @@ export default function SelfRepresentationGuidePage() {
                   <ul className="space-y-2 text-gray-700">
                     <li>• <strong>Relevance:</strong> Evidence must relate to the issues</li>
                     <li>• <strong>Foundation:</strong> Establish what, when, where, who</li>
-                    <li>• <strong>Hearsay:</strong> Generally can't repeat what others said</li>
+                    <li>• <strong>Hearsay:</strong> Generally can&apos;t repeat what others said</li>
                     <li>• <strong>Authentication:</strong> Prove documents are real</li>
                     <li>• <strong>Best Evidence:</strong> Use originals when possible</li>
                   </ul>
@@ -224,7 +224,7 @@ export default function SelfRepresentationGuidePage() {
                     <li>• Dress professionally</li>
                     <li>• Turn off phone completely</li>
                     <li>• Stand when speaking</li>
-                    <li>• Address judge as "Your Honor"</li>
+                    <li>• Address judge as &quot;Your Honor&quot;</li>
                     <li>• Wait your turn to speak</li>
                     <li>• Remain calm and respectful</li>
                   </ul>
@@ -241,7 +241,7 @@ export default function SelfRepresentationGuidePage() {
                     <li>• Reference exhibits clearly</li>
                     <li>• Stick to relevant facts</li>
                     <li>• Answer questions directly</li>
-                    <li>• Admit when you don't know</li>
+                    <li>• Admit when you don&apos;t know</li>
                     <li>• Summarize key points</li>
                   </ul>
                 </CardContent>
@@ -319,13 +319,13 @@ export default function SelfRepresentationGuidePage() {
                   <li>✓ Be over-prepared</li>
                   <li>✓ Follow all rules exactly</li>
                   <li>✓ Keep emotions in check</li>
-                  <li>✓ Focus on children's best interests</li>
+                  <li>✓ Focus on children&apos;s best interests</li>
                   <li>✓ Document everything</li>
                   <li>✓ Ask for clarification when needed</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">Don't:</h4>
+                <h4 className="font-semibold mb-2">Don&apos;t:</h4>
                 <ul className="space-y-1 text-gray-700 text-sm">
                   <li>✗ Wing it in court</li>
                   <li>✗ Interrupt anyone</li>
