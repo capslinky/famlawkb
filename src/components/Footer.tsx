@@ -78,8 +78,13 @@ export default function Footer() {
             <h4 className="font-medium text-gray-900 mb-3">Site Information</h4>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link href="/sitemap-dev" className="text-gray-600 hover:text-gray-800">
+                  Developer Sitemap
+                </Link>
+              </li>
+              <li>
                 <Link href="/sitemap.xml" className="text-gray-600 hover:text-gray-800 inline-flex items-center gap-1">
-                  Sitemap
+                  XML Sitemap
                   <ExternalLink className="w-3 h-3" />
                 </Link>
               </li>
@@ -127,8 +132,8 @@ export default function Footer() {
           </p>
           
           <div className="flex items-center gap-4 text-xs text-gray-500">
-            <Link href="/sitemap.xml" className="hover:text-gray-700">
-              Sitemap
+            <Link href="/sitemap-dev" className="hover:text-gray-700">
+              Developer Sitemap
             </Link>
             <span>•</span>
             <span>Information only — not legal advice</span>
