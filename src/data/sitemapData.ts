@@ -337,10 +337,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/topics/spousal-maintenance',
     title: 'Spousal Maintenance',
     description: 'Alimony and spousal support in Arizona',
-    status: 'planned',
-    category: 'Missing - Core Topics',
+    status: 'complete',
+    category: 'Core Topics',
     priority: 'high',
-    notes: 'Critical missing content from MkDocs'
+    notes: 'Complete with comprehensive legal information, eligibility factors, 2023 guidelines, modification procedures, and enforcement options'
   },
   {
     path: '/reference/faq',
