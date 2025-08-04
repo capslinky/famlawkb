@@ -278,6 +278,82 @@ Automatically at:
 - ❌ Use net income
 - ❌ Include adult expenses
 
+## 🖩 Interactive Calculator
+
+<div class="calculator-container" data-calculator="child-support">
+    <h3>Quick Child Support Estimator</h3>
+    <p class="calculator-intro">Get an instant estimate of child support obligations. This calculator provides a simplified calculation based on Arizona guidelines.</p>
+    
+    <div class="calculator-form">
+        <div class="form-section">
+            <h4>Parent 1 Information</h4>
+            <div class="form-group">
+                <label for="income1">Monthly Gross Income ($)</label>
+                <input type="number" id="income1" min="0" max="50000" step="100" placeholder="e.g., 5000">
+                <span class="field-help">Include all sources of income</span>
+            </div>
+            <div class="form-group">
+                <label for="days1">Annual Overnights with Children</label>
+                <input type="number" id="days1" min="0" max="365" placeholder="e.g., 110">
+                <span class="field-help">Number of nights children stay with Parent 1</span>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <h4>Parent 2 Information</h4>
+            <div class="form-group">
+                <label for="income2">Monthly Gross Income ($)</label>
+                <input type="number" id="income2" min="0" max="50000" step="100" placeholder="e.g., 3500">
+            </div>
+            <div class="form-group">
+                <label for="days2">Annual Overnights with Children</label>
+                <input type="number" id="days2" min="0" max="365" placeholder="e.g., 255">
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <h4>Children Information</h4>
+            <div class="form-group">
+                <label for="children">Number of Children</label>
+                <select id="children">
+                    <option value="">Select...</option>
+                    <option value="1">1 child</option>
+                    <option value="2">2 children</option>
+                    <option value="3">3 children</option>
+                    <option value="4">4 children</option>
+                    <option value="5">5 children</option>
+                    <option value="6">6+ children</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <h4>Additional Expenses (Optional)</h4>
+            <div class="form-group">
+                <label for="health">Children's Health Insurance ($/month)</label>
+                <input type="number" id="health" min="0" max="2000" step="10" placeholder="0">
+                <span class="field-help">Only the children's portion</span>
+            </div>
+            <div class="form-group">
+                <label for="childcare">Childcare Costs ($/month)</label>
+                <input type="number" id="childcare" min="0" max="3000" step="50" placeholder="0">
+                <span class="field-help">Work-related childcare only</span>
+            </div>
+        </div>
+        
+        <button type="button" class="calculate-button" onclick="AZLawCalculators.updateCalculation(this.closest('.calculator-container'))">
+            Calculate Support
+        </button>
+    </div>
+    
+    <div class="calculation-results" style="display: none;"></div>
+    <div class="calculation-viz" style="display: none;"></div>
+    <div class="calculator-controls" style="display: none;"></div>
+</div>
+
+!!! warning "Important Disclaimer"
+    This is a simplified estimator for educational purposes only. The actual child support amount may vary based on many factors not included here. Always use the [official Arizona calculator](https://www.azcourts.gov/familylaw/2022-Child-Support-Calculator) for accurate calculations and consult with an attorney for specific situations.
+
 ## 🔗 Related Resources
 
 - [Child Support Guidelines (PDF)](https://www.azcourts.gov/familylaw/Child-Support-Guidelines)
