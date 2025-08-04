@@ -18,6 +18,7 @@ export const modules: ModuleMeta[] = [
     slug: "starting-case",
     title: "Starting Your Case / Initial Pleadings",
     description: "Find the correct court, complete initial forms, and file them.",
+    hasComprehensiveContent: true,
   },
   {
     slug: "responding",
