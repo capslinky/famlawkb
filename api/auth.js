@@ -2,6 +2,10 @@ const fs = require('fs').promises;
 const path = require('path');
 
 module.exports = async (req, res) => {
+  // AUTHENTICATION TEMPORARILY DISABLED FOR PUBLIC ACCESS
+  // To re-enable authentication, uncomment the code block below
+  
+  /*
   // Get authorization header
   const authHeader = req.headers.authorization;
   
@@ -66,6 +70,7 @@ module.exports = async (req, res) => {
     `);
     return;
   }
+  */
   
   // If authenticated, serve the requested file
   try {
