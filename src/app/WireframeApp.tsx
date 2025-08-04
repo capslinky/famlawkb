@@ -12,7 +12,7 @@ import MobileNav from "@/components/MobileNav";
 
 export default function WireframeApp() {
   return (
-    <main className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="bg-gray-50 flex flex-col">
       {/* Emergency Help Button */}
       <EmergencyHelpButton />
       
@@ -67,10 +67,6 @@ export default function WireframeApp() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-100 p-6 text-xs text-gray-500 text-center">
-        Information only — not legal advice. © {new Date().getFullYear()} Anthony Paradise, PLLC
-      </footer>
-    </main>
+    </div>
   );
 } 
