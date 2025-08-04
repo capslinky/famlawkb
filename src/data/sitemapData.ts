@@ -328,10 +328,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/topics/property-division',
     title: 'Property Division',
     description: 'Community property division in Arizona divorce',
-    status: 'planned',
-    category: 'Missing - Core Topics',
+    status: 'complete',
+    category: 'Core Topics',
     priority: 'high',
-    notes: 'Critical missing content from MkDocs'
+    notes: 'Complete with comprehensive community property laws, asset valuation, debt division, and professional guidance'
   },
   {
     path: '/topics/spousal-maintenance',
