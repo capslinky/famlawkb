@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import fs from "fs";
 import path from "path";
 import ContentMetadata from "@/components/ContentMetadata";
+import PreFilingContent from "@/components/modules/PreFilingContent";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -52,7 +53,9 @@ export default async function ModulePage({ params }: Props) {
         />
         
         <div className="prose max-w-none">
-          {legacyContent ? (
+          {moduleData.hasComprehensiveContent && moduleData.slug === 'pre-filing' ? (
+            <PreFilingContent />
+          ) : legacyContent ? (
             <div dangerouslySetInnerHTML={{ __html: legacyContent }} />
           ) : (
             <>

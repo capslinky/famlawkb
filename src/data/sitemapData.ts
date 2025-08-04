@@ -60,10 +60,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/child-custody',
     title: 'Child Custody',
     description: 'Comprehensive guide to Arizona child custody laws and procedures',
-    status: 'partial',
+    status: 'complete',
     category: 'Core Topics',
     priority: 'high',
-    notes: 'Has basic content, needs comprehensive legal information'
+    notes: 'Complete with comprehensive legal information, best interests factors, process guide, and resources'
   },
   {
     path: '/getting-divorced',
@@ -386,10 +386,12 @@ export const getModulePages = (): SitemapPage[] => {
     path: `/modules/${module.slug}`,
     title: module.title,
     description: module.description,
-    status: 'partial' as PageStatus,
+    status: module.hasComprehensiveContent ? 'complete' as PageStatus : 'partial' as PageStatus,
     category: 'Process Modules',
     priority: 'medium' as const,
-    notes: 'Framework exists, needs comprehensive content'
+    notes: module.hasComprehensiveContent 
+      ? 'Complete with comprehensive content covering all aspects of the process'
+      : 'Framework exists, needs comprehensive content'
   }));
 };
 

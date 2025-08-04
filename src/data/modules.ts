@@ -2,14 +2,17 @@ export interface ModuleMeta {
   slug: string;
   title: string;
   description: string;
+  content?: React.ReactNode;
+  hasComprehensiveContent?: boolean;
 }
 
 export const modules: ModuleMeta[] = [
   {
     slug: "pre-filing",
-    title: "Pre-Filing Considerations",
+    title: "Pre-Filing Considerations", 
     description:
       "Decide if legal action is right for you and gather essential documents.",
+    hasComprehensiveContent: true,
   },
   {
     slug: "starting-case",
