@@ -422,7 +422,7 @@ export default function ChildSupportContent() {
                 <div>
                   <h3 className="font-semibold text-orange-800 mb-2">15% Rule for Modifications</h3>
                   <p className="text-orange-700 text-sm">
-                    Support can be modified when the new calculation differs from the current order by 15% or more, or $100/month minimum.
+                    Support can be modified when the new calculation differs from the current order by 15% or more, or $50/month minimum, whichever is less.
                   </p>
                 </div>
               </div>
@@ -465,7 +465,7 @@ export default function ChildSupportContent() {
                       },
                       {
                         step: "Compare to Existing",
-                        details: "Must be 15%+ different or $100/month minimum"
+                        details: "Must be 15% different or $50/month minimum, whichever is less"
                       },
                       {
                         step: "File Petition",

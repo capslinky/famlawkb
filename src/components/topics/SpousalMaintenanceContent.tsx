@@ -36,6 +36,21 @@ export default function SpousalMaintenanceContent() {
           </div>
         </div>
 
+        {/* 2025 Guidelines Update Warning */}
+        <div className="bg-amber-50 border border-amber-300 rounded-lg p-6 mb-8">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="h-6 w-6 text-amber-600 flex-shrink-0 mt-1" />
+            <div>
+              <h2 className="text-xl font-semibold text-amber-900 mb-3">⚠️ Important Update Coming</h2>
+              <div className="space-y-3 text-amber-800">
+                <p><strong>2025 Spousal Maintenance Guidelines:</strong> New guidelines will be effective <strong>September 1, 2025</strong> by Arizona Supreme Court Administrative Order 2025-101.</p>
+                <p><strong>Current Information:</strong> This page reflects the 2023 guidelines (effective July 10, 2023). If you're filing after September 1, 2025, check with the court or calculator for updated formulas.</p>
+                <p><strong>Recommendation:</strong> Always verify current guidelines with the <a href="https://www.superiorcourt.maricopa.gov/app/selfsuffcalc/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">official Arizona Spousal Maintenance Calculator</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Key Takeaways */}
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
