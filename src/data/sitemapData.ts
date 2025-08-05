@@ -355,19 +355,19 @@ export const sitemapData: SitemapPage[] = [
     path: '/procedures/court-procedures',
     title: 'Court Procedures',
     description: 'How family court works in Arizona',
-    status: 'planned',
-    category: 'Missing - Procedures',
+    status: 'complete',
+    category: 'Procedures',
     priority: 'high',
-    notes: 'Essential for self-represented litigants'
+    notes: 'Complete with comprehensive court procedures guide including filing, service, deadlines, hearings, disclosure requirements, motion practice, trial preparation, and local rules'
   },
   {
     path: '/procedures/emergency-orders',
     title: 'Emergency Orders',
     description: 'Getting emergency court orders',
-    status: 'planned',
-    category: 'Missing - Procedures',
+    status: 'complete',
+    category: 'Procedures',
     priority: 'high',
-    notes: 'Critical for urgent situations'
+    notes: 'Complete with comprehensive emergency orders guide including legal standards, types of orders, evidence requirements, filing procedures, and enforcement options'
   },
   {
     path: '/legal-disclaimer',
