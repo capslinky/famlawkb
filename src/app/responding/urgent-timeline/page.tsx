@@ -256,7 +256,7 @@ export default function UrgentTimelinePage() {
                   <Link href="/forms/response-petition">
                     <Button className="w-full">Response to Petition Form</Button>
                   </Link>
-                  <Link href="/forms/response-motion">
+                  <Link href="/forms">
                     <Button variant="outline" className="w-full">Response to Motion Form</Button>
                   </Link>
                 </div>

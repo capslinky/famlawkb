@@ -1197,9 +1197,9 @@ export default function SpousalMaintenanceContent() {
           </h2>
           <div className="grid md:grid-cols-2 gap-2 text-sm">
             <Link href="/topics/property-division" className="text-blue-600 hover:text-blue-800 hover:underline">• Property Division - Trade property for support</Link>
-            <Link href="/process/divorce" className="text-blue-600 hover:text-blue-800 hover:underline">• Divorce Process - How to request</Link>
-            <Link href="/issues/financial" className="text-blue-600 hover:text-blue-800 hover:underline">• Financial Issues - Budgeting help</Link>
-            <Link href="/post-decree/modifications" className="text-blue-600 hover:text-blue-800 hover:underline">• Post-Decree Issues - Modifications</Link>
+            <Link href="/getting-divorced" className="text-blue-600 hover:text-blue-800 hover:underline">• Divorce Process - How to request</Link>
+            <Link href="/modules/disclosures" className="text-blue-600 hover:text-blue-800 hover:underline">• Financial Issues - Budgeting help</Link>
+            <Link href="/modules/modifications" className="text-blue-600 hover:text-blue-800 hover:underline">• Post-Decree Issues - Modifications</Link>
           </div>
         </div>
 
@@ -1273,7 +1273,7 @@ export default function SpousalMaintenanceContent() {
                 className="flex items-center gap-2 text-blue-600 hover:text-blue-800 hover:underline">
             ← Property Division
           </Link>
-          <Link href="/issues/financial" 
+          <Link href="/modules/disclosures" 
                 className="flex items-center gap-2 text-blue-600 hover:text-blue-800 hover:underline">
             Financial Issues →
           </Link>

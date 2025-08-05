@@ -84,7 +84,7 @@ export default function NotFound() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resources/self-help-centers" className="text-blue-600 hover:text-blue-800 text-sm">
+                  <Link href="/resources" className="text-blue-600 hover:text-blue-800 text-sm">
                     → Court Self-Help
                   </Link>
                 </li>

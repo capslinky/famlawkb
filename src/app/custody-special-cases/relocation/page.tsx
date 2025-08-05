@@ -350,18 +350,18 @@ export default function RelocationPage() {
           <section className="mt-8">
             <h3 className="font-bold text-lg mb-4">Next Steps</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/forms/relocation-notice">
+              <Link href="/forms">
                 <Button className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Relocation Notice Form
                 </Button>
               </Link>
-              <Link href="/forms/petition-relocate">
+              <Link href="/forms">
                 <Button variant="outline" className="w-full">
                   Petition to Relocate
                 </Button>
               </Link>
-              <Link href="/resources/parenting-plan-long-distance">
+              <Link href="/resources">
                 <Button variant="outline" className="w-full">
                   Long-Distance Parenting
                 </Button>

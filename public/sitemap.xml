@@ -295,19 +295,6 @@
 
   <!-- PHASE 2: Complete Process Module System (100% COMPLETE) -->
   <!-- All 8 modules have comprehensive content components -->
-  <url>
-    <loc>https://azfamilylaw.wiki/modules/pre-filing</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://azfamilylaw.wiki/modules/starting-case</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
   <url>
     <loc>https://azfamilylaw.wiki/modules/responding</loc>

@@ -289,7 +289,7 @@ export default function TypesPage() {
                   Create Safety Plan
                 </Button>
               </Link>
-              <Link href="/forms/protection-order-packet">
+              <Link href="/forms">
                 <Button variant="outline" className="w-full">
                   Download Forms
                 </Button>

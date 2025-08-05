@@ -354,18 +354,18 @@ export default function PaternityPage() {
           <section className="mt-8">
             <h3 className="font-bold text-lg mb-4">Next Steps</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/forms/petition-establish-paternity">
+              <Link href="/forms">
                 <Button className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Paternity Forms
                 </Button>
               </Link>
-              <Link href="/resources/paternity-acknowledgment">
+              <Link href="/resources">
                 <Button variant="outline" className="w-full">
                   Acknowledgment Process
                 </Button>
               </Link>
-              <Link href="/child-custody/establish-order">
+              <Link href="/custody/establish-order">
                 <Button variant="outline" className="w-full">
                   Custody After Paternity
                 </Button>

@@ -172,7 +172,7 @@ export default function PersonalizedHero() {
               <CardContent className="p-6">
                 <BookOpen className="w-8 h-8 text-blue-600 mb-3 mx-auto" />
                 <h3 className="font-semibold mb-2">Learning Modules</h3>
-                <Link href="/modules/pre-filing">
+                <Link href="/getting-divorced">
                   <Button variant="outline" size="sm">Browse Modules</Button>
                 </Link>
               </CardContent>

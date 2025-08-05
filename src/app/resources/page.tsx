@@ -180,10 +180,10 @@ export default function ResourcesPage() {
                   <Link href="/forms" className="text-blue-600 hover:text-blue-800 text-sm block">
                     → Court Forms Library
                   </Link>
-                  <Link href="/resources/child-support-calculator" className="text-blue-600 hover:text-blue-800 text-sm block">
+                  <Link href="/support/calculator" className="text-blue-600 hover:text-blue-800 text-sm block">
                     → Child Support Calculator
                   </Link>
-                  <Link href="/resources/self-help-centers" className="text-blue-600 hover:text-blue-800 text-sm block">
+                  <Link href="/resources" className="text-blue-600 hover:text-blue-800 text-sm block">
                     → Find Help Near You
                   </Link>
                 </div>
@@ -195,13 +195,13 @@ export default function ResourcesPage() {
                 <Download className="w-8 h-8 text-green-600 mb-3" />
                 <h3 className="font-semibold mb-2">Popular Downloads</h3>
                 <div className="space-y-2">
-                  <Link href="/resources/divorce-checklist" className="text-green-600 hover:text-green-800 text-sm block">
+                  <Link href="/resources" className="text-green-600 hover:text-green-800 text-sm block">
                     → Divorce Checklist PDF
                   </Link>
-                  <Link href="/resources/parenting-plan-template" className="text-green-600 hover:text-green-800 text-sm block">
+                  <Link href="/resources" className="text-green-600 hover:text-green-800 text-sm block">
                     → Parenting Plan Template
                   </Link>
-                  <Link href="/resources/financial-worksheet" className="text-green-600 hover:text-green-800 text-sm block">
+                  <Link href="/resources" className="text-green-600 hover:text-green-800 text-sm block">
                     → Financial Worksheet
                   </Link>
                 </div>
@@ -292,7 +292,7 @@ export default function ResourcesPage() {
               or consult with a family law attorney.
             </p>
             <div className="flex justify-center gap-4">
-              <Link href="/resources/self-help-centers">
+              <Link href="/resources">
                 <Button>
                   Find Self-Help Center
                 </Button>

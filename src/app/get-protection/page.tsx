@@ -53,7 +53,7 @@ export default function GetProtectionPage() {
                   <Link href="/protection/how-to-file">
                     <Button className="w-full">How to File</Button>
                   </Link>
-                  <Link href="/protection/forms">
+                  <Link href="/forms">
                     <Button variant="outline" className="w-full">Get Forms</Button>
                   </Link>
                 </div>
@@ -103,7 +103,7 @@ export default function GetProtectionPage() {
                 <p className="text-gray-600 mb-4">
                   Shelters, counseling, and support services in Arizona.
                 </p>
-                <Link href="/protection/resources">
+                <Link href="/resources">
                   <Button variant="outline">Find Resources</Button>
                 </Link>
               </CardContent>

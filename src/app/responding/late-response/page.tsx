@@ -290,12 +290,12 @@ export default function LateResponsePage() {
               </div>
               <div>
                 <h4 className="font-semibold mb-3">Forms You May Need:</h4>
-                <Link href="/forms/motion-set-aside-default">
+                <Link href="/forms">
                   <Button variant="outline" className="w-full mb-2">
                     Motion to Set Aside Default
                   </Button>
                 </Link>
-                <Link href="/forms/late-response-packet">
+                <Link href="/forms">
                   <Button variant="outline" className="w-full">
                     Late Response Forms
                   </Button>

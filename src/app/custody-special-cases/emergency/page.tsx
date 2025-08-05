@@ -355,13 +355,13 @@ export default function EmergencyCustodyPage() {
                 Call 911 if Immediate Danger
               </Button>
                 </Link>
-              <Link href="/forms/emergency-motion">
+              <Link href="/forms">
                 <Button className="w-full" size="lg">
                   <FileText className="w-5 h-5 mr-2" />
                   Emergency Motion Forms
                 </Button>
               </Link>
-              <Link href="/resources/emergency-legal-help">
+              <Link href="/resources">
                 <Button variant="outline" className="w-full">
                   Find Emergency Legal Help
                 </Button>

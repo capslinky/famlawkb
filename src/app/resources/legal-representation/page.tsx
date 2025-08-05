@@ -334,7 +334,7 @@ export default function LegalRepresentationPage() {
                   Call Legal Aid: 866-637-5341
                 </Button>
                 </Link>
-                <Link href="/resources/financial-assistance">
+                <Link href="/resources">
                   <Button variant="outline" className="w-full">
                     Financial Help Resources
                   </Button>
@@ -349,7 +349,7 @@ export default function LegalRepresentationPage() {
                   Lawyer Referral: 602-257-4434
                 </Button>
                 </Link>
-                <Link href="/resources/choosing-attorney">
+                <Link href="/resources/legal-representation">
                   <Button variant="outline" className="w-full">
                     How to Choose Attorney
                   </Button>

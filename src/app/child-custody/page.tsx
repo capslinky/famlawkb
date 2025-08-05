@@ -126,7 +126,7 @@ export default function ChildCustodyPage() {
                 <p className="text-gray-600 mb-4">
                   File for custody orders if you don't have any court orders yet.
                 </p>
-                <Link href="/modules/starting-case">
+                <Link href="/custody/establish-order">
                   <Button variant="outline" size="sm">Start Process</Button>
                 </Link>
               </CardContent>

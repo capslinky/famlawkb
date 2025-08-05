@@ -14,7 +14,7 @@ export const searchIndex: SearchResult[] = [
     id: 'module-pre-filing',
     title: 'Pre-Filing Considerations',
     description: 'Decide if legal action is right for you and gather essential documents.',
-    path: '/modules/pre-filing',
+    path: '/assessment',
     category: 'module',
     tags: ['preparation', 'documents', 'before filing', 'getting started'],
     synonyms: ['prefiling', 'pre filing', 'before divorce', 'should i file']
@@ -23,7 +23,7 @@ export const searchIndex: SearchResult[] = [
     id: 'module-starting-case',
     title: 'Starting Your Case',
     description: 'Find the correct court, complete initial forms, and file them.',
-    path: '/modules/starting-case',
+    path: '/forms',
     category: 'module',
     tags: ['filing', 'petition', 'forms', 'court', 'begin'],
     synonyms: ['file for divorce', 'start divorce', 'divorce papers']
@@ -117,7 +117,7 @@ export const searchIndex: SearchResult[] = [
     id: 'form-parenting-plan',
     title: 'Parenting Plan Forms',
     description: 'Create a detailed parenting time schedule.',
-    path: '/forms/parenting-plan',
+    path: '/forms',
     category: 'form',
     tags: ['forms', 'parenting plan', 'custody forms', 'schedule'],
     synonyms: ['custody agreement', 'visitation schedule']
@@ -128,7 +128,7 @@ export const searchIndex: SearchResult[] = [
     id: 'timeline-divorce',
     title: 'Divorce Timeline',
     description: 'How long does divorce take in Arizona?',
-    path: '/process/divorce-timeline',
+    path: '/getting-divorced',
     category: 'topic',
     tags: ['timeline', 'how long', 'duration', 'process'],
     synonyms: ['divorce time', 'how long divorce takes', 'divorce duration']
@@ -137,7 +137,7 @@ export const searchIndex: SearchResult[] = [
     id: 'cost-divorce',
     title: 'Divorce Costs',
     description: 'Filing fees and typical costs for divorce in Arizona.',
-    path: '/process/divorce-costs',
+    path: '/reference/faq',
     category: 'topic',
     tags: ['cost', 'fees', 'price', 'money', 'afford'],
     synonyms: ['how much divorce costs', 'divorce fees', 'filing fee']

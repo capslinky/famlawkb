@@ -257,13 +257,13 @@ export default function ResponsePetitionPage() {
           <section className="mt-8">
             <h3 className="font-bold text-lg mb-4">Related Forms & Resources</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/forms/financial-affidavit">
+              <Link href="/forms">
                 <Button variant="outline" className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Financial Affidavit
                 </Button>
               </Link>
-              <Link href="/forms/motion-temporary-orders">
+              <Link href="/forms">
                 <Button variant="outline" className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Temporary Orders Motion
@@ -274,7 +274,7 @@ export default function ResponsePetitionPage() {
                   Urgent Response Help
                 </Button>
               </Link>
-              <Link href="/resources/response-checklist">
+              <Link href="/resources">
                 <Button variant="outline" className="w-full">
                   Response Checklist
                 </Button>

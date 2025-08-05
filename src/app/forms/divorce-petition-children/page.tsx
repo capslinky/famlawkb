@@ -270,25 +270,25 @@ export default function DivorcePetitionChildrenPage() {
           <section className="mt-8">
             <h3 className="font-bold text-lg mb-4">Related Forms & Resources</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/forms/parenting-plan">
+              <Link href="/forms">
                 <Button variant="outline" className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Parenting Plan Form
                 </Button>
               </Link>
-              <Link href="/forms/child-support-worksheet">
+              <Link href="/forms">
                 <Button variant="outline" className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Child Support Worksheet
                 </Button>
               </Link>
-              <Link href="/forms/summons-divorce">
+              <Link href="/forms">
                 <Button variant="outline" className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Summons Form
                 </Button>
               </Link>
-              <Link href="/resources/divorce-checklist">
+              <Link href="/resources">
                 <Button variant="outline" className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Divorce Checklist

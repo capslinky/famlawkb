@@ -310,7 +310,7 @@ export default function RespondingEmergencyPage() {
                 Legal Referral Service
               </Button>
             </Link>
-            <Link href="/resources/emergency-legal-help">
+            <Link href="/resources">
               <Button variant="outline" className="w-full" size="lg">
                 Find Emergency Legal Help
               </Button>

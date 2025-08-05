@@ -333,13 +333,13 @@ export default function ChildSupportModificationPage() {
           <section className="mt-8">
             <h3 className="font-bold text-lg mb-4">Next Steps</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/forms/petition-modify-child-support">
+              <Link href="/forms">
                 <Button className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Download Modification Forms
                 </Button>
               </Link>
-              <Link href="/resources/child-support-calculator">
+              <Link href="/support/calculator">
                 <Button variant="outline" className="w-full">
                   <Calculator className="w-4 h-4 mr-2" />
                   Calculate New Amount

@@ -284,7 +284,7 @@ export default function FormsPage() {
                   <p className="text-gray-600 text-sm mb-4">
                     Free assistance with forms and procedures at courthouse
                   </p>
-                  <Link href="/resources/self-help-centers">
+                  <Link href="/resources">
                     <Button variant="outline" size="sm" className="w-full">
                       Find Locations
                     </Button>
@@ -298,7 +298,7 @@ export default function FormsPage() {
                   <p className="text-gray-600 text-sm mb-4">
                     Step-by-step guides for completing each form correctly
                   </p>
-                  <Link href="/resources/form-instructions">
+                  <Link href="/resources">
                     <Button variant="outline" size="sm" className="w-full">
                       View Guides
                     </Button>

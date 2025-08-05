@@ -128,7 +128,7 @@ export default function GettingDivorcedPage() {
                   <p className="text-gray-600 mb-4">
                     Gather documents, understand your rights, and prepare for the process.
                   </p>
-                  <Link href="/modules/pre-filing">
+                  <Link href="/assessment">
                     <Button variant="outline">Start Here</Button>
                   </Link>
                 </CardContent>
@@ -141,7 +141,7 @@ export default function GettingDivorcedPage() {
                   <p className="text-gray-600 mb-4">
                     Complete forms, file with the court, and serve your spouse.
                   </p>
-                  <Link href="/modules/starting-case">
+                  <Link href="/forms/divorce-petition-children">
                     <Button variant="outline">File Your Petition</Button>
                   </Link>
                 </CardContent>

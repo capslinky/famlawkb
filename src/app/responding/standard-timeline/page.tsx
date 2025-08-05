@@ -257,7 +257,7 @@ export default function StandardTimelinePage() {
           <section className="mt-8 bg-gray-50 rounded-lg p-6">
             <h3 className="font-bold text-lg mb-4">Resources & Next Steps</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/forms/response-packet">
+              <Link href="/forms">
                 <Button className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Download Response Forms

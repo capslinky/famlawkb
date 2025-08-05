@@ -345,7 +345,7 @@ export default function SpousalSupportModificationPage() {
           <section className="mt-8">
             <h3 className="font-bold text-lg mb-4">Next Steps</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/forms/petition-modify-spousal-maintenance">
+              <Link href="/forms">
                 <Button className="w-full">
                   <FileText className="w-4 h-4 mr-2" />
                   Download Modification Forms
@@ -361,7 +361,7 @@ export default function SpousalSupportModificationPage() {
                   Child Support Modification
                 </Button>
               </Link>
-              <Link href="/resources/financial-affidavit-guide">
+              <Link href="/resources">
                 <Button variant="outline" className="w-full">
                   Financial Affidavit Help
                 </Button>

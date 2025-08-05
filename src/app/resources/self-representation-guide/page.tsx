@@ -281,7 +281,7 @@ export default function SelfRepresentationGuidePage() {
                     <li>• Court forms assistance</li>
                     <li>• Volunteer lawyer programs</li>
                   </ul>
-                  <Link href="/resources/self-help-centers">
+                  <Link href="/resources">
                     <Button className="w-full mt-4" size="sm">
                       Find Help Centers
                     </Button>
@@ -300,7 +300,7 @@ export default function SelfRepresentationGuidePage() {
                     <li>• Courtroom observation</li>
                     <li>• Online tutorials</li>
                   </ul>
-                  <Link href="/resources/court-preparation">
+                  <Link href="/resources">
                     <Button className="w-full mt-4" size="sm">
                       Court Prep Guide
                     </Button>

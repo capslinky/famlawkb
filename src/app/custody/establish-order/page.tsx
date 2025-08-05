@@ -92,7 +92,7 @@ export default function EstablishCustodyPage() {
                       Must establish paternity first. Mother has sole custody 
                       until court order.
                     </p>
-                    <Link href="/special-situations/paternity">
+                    <Link href="/custody-special-cases/paternity">
                       <Button variant="outline" size="sm">Paternity Info</Button>
                     </Link>
                   </CardContent>
@@ -105,7 +105,7 @@ export default function EstablishCustodyPage() {
                       Grandparents or others must prove parents are unfit or 
                       it would harm child to be with parents.
                     </p>
-                    <Link href="/special-situations/grandparent-rights">
+                    <Link href="/child-custody">
                       <Button variant="outline" size="sm">Third Party Rights</Button>
                     </Link>
                   </CardContent>
@@ -301,13 +301,13 @@ export default function EstablishCustodyPage() {
             <section className="bg-blue-50 rounded-lg p-6">
               <h3 className="font-semibold mb-3">Next Steps</h3>
               <div className="grid sm:grid-cols-2 gap-4">
-                <Link href="/forms/custody-petition">
+                <Link href="/forms">
                   <Button className="w-full">
                     <FileText className="w-4 h-4 mr-2" />
                     Get Custody Forms
                   </Button>
                 </Link>
-                <Link href="/resources/parenting-plan-flowchart">
+                <Link href="/resources">
                   <Button variant="outline" className="w-full">
                     Create Parenting Plan
                   </Button>
