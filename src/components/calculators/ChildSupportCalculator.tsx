@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Calculator, DollarSign, Users, FileText, AlertCircle, CheckCircle, PrinterIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -484,7 +484,7 @@ export default function ChildSupportCalculator() {
                   <ul className="space-y-1 text-xs">
                     <li>• This is an estimate only. Actual court orders may differ.</li>
                     <li>• Arizona courts may deviate from guidelines based on specific circumstances.</li>
-                    <li>• This calculator uses a simplified version of Arizona's guidelines.</li>
+                    <li>• This calculator uses a simplified version of Arizona&apos;s guidelines.</li>
                     <li>• Consult with a family law attorney for advice on your specific situation.</li>
                     <li>• All support orders must be approved by the court to be legally binding.</li>
                   </ul>
@@ -509,7 +509,7 @@ export default function ChildSupportCalculator() {
                 <li>• Use gross income before taxes and deductions</li>
                 <li>• Include all sources: wages, self-employment, benefits</li>
                 <li>• Average irregular income over 12 months</li>
-                <li>• Include overtime if it's regular and consistent</li>
+                <li>• Include overtime if it&apos;s regular and consistent</li>
               </ul>
             </div>
             <div>
