@@ -49,6 +49,7 @@ export const modules: ModuleMeta[] = [
     slug: "mediation",
     title: "Mediation & Alternative Dispute Resolution (ADR)",
     description: "Explore collaborative options to resolve disputes without trial.",
+    hasComprehensiveContent: true,
   },
   {
     slug: "trial-prep",

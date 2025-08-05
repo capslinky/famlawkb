@@ -9,6 +9,7 @@ import RespondingContent from "@/components/modules/RespondingContent";
 import FirstAppearanceContent from "@/components/modules/FirstAppearanceContent";
 import DisclosuresContent from "@/components/modules/DisclosuresContent";
 import TemporaryOrdersContent from "@/components/modules/TemporaryOrdersContent";
+import MediationContent from "@/components/modules/MediationContent";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -70,6 +71,8 @@ export default async function ModulePage({ params }: Props) {
             <DisclosuresContent />
           ) : moduleData.hasComprehensiveContent && moduleData.slug === 'temporary-orders' ? (
             <TemporaryOrdersContent />
+          ) : moduleData.hasComprehensiveContent && moduleData.slug === 'mediation' ? (
+            <MediationContent />
           ) : legacyContent ? (
             <div dangerouslySetInnerHTML={{ __html: legacyContent }} />
           ) : (
