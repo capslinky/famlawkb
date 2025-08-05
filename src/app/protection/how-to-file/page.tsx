@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 import { ArrowLeft, Shield, FileText, MapPin, AlertCircle, Phone, Clock, CheckCircle, Users, Scale, Eye, UserCheck, Calendar, Gavel, AlertTriangle, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';

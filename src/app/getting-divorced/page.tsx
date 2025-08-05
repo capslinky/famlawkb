@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 import { ArrowLeft, FileText, Calculator, Users, Clock, Scale, AlertTriangle, CheckCircle, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';

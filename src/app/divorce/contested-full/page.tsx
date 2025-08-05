@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
-import { ArrowLeft, AlertTriangle, Clock, DollarSign, Scale, FileText, Users, BookOpen, Calculator, Heart, CheckCircle, Shield } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, Clock, DollarSign, Scale, FileText, Users, BookOpen, Heart, CheckCircle, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
