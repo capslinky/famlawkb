@@ -72,68 +72,151 @@ export default function EmergencyPage() {
             </div>
           </div>
 
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold">Arizona Crisis Hotlines</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              <Card className="border-2 border-blue-300">
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">Arizona Local Crisis Hotlines</h2>
+            <p className="text-gray-600 mb-6">
+              Local organizations provide specialized support, emergency shelter, legal advocacy, and know your community resources.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-4">Phoenix Area</h3>
-                  <div className="space-y-3">
-                    <div>
-                      <p className="font-semibold">Sojourner Center</p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <MapPin className="w-6 h-6 text-blue-600" />
+                    <h3 className="font-bold text-lg">Phoenix Metro Area</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">Sojourner Center</p>
+                      <p className="text-sm text-gray-600 mb-2">24/7 crisis line, emergency shelter, legal advocacy</p>
                       <Link href="tel:602-276-3599" className="block">
-                  <Button variant="outline" 
-                        className="w-full mt-1"
-                        
-                      >
-                        <Phone className="w-4 h-4 mr-2" />
-                        602-276-3599
-                      </Button>
-                </Link>
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          602-276-3599
+                        </Button>
+                      </Link>
                     </div>
-                    <div>
-                      <p className="font-semibold">Chrysalis Shelter</p>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">Chrysalis Shelter</p>
+                      <p className="text-sm text-gray-600 mb-2">Emergency shelter, transitional housing, children's programs</p>
                       <Link href="tel:602-955-9059" className="block">
-                  <Button variant="outline" 
-                        className="w-full mt-1"
-                        
-                      >
-                        <Phone className="w-4 h-4 mr-2" />
-                        602-955-9059
-                      </Button>
-                </Link>
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          602-955-9059
+                        </Button>
+                      </Link>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">New Life Center</p>
+                      <p className="text-sm text-gray-600 mb-2">Bilingual services, emergency shelter</p>
+                      <Link href="tel:480-835-5555" className="block">
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          480-835-5555
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-blue-300">
+              <Card className="border-l-4 border-l-green-500 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-4">Tucson Area</h3>
-                  <div className="space-y-3">
-                    <div>
-                      <p className="font-semibold">Emerge! Center</p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <MapPin className="w-6 h-6 text-green-600" />
+                    <h3 className="font-bold text-lg">Tucson Area</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">Emerge! Center Against Domestic Abuse</p>
+                      <p className="text-sm text-gray-600 mb-2">24/7 crisis line, emergency shelter, legal services</p>
                       <Link href="tel:520-795-4266" className="block">
-                  <Button variant="outline" 
-                        className="w-full mt-1"
-                        
-                      >
-                        <Phone className="w-4 h-4 mr-2" />
-                        520-795-4266
-                      </Button>
-                </Link>
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          520-795-4266
+                        </Button>
+                      </Link>
                     </div>
-                    <div>
-                      <p className="font-semibold">TMM Family Services</p>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">TMM Family Services</p>
+                      <p className="text-sm text-gray-600 mb-2">Crisis intervention, counseling, safe housing</p>
                       <Link href="tel:520-322-9155" className="block">
-                  <Button variant="outline" 
-                        className="w-full mt-1"
-                        
-                      >
-                        <Phone className="w-4 h-4 mr-2" />
-                        520-322-9155
-                      </Button>
-                </Link>
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          520-322-9155
+                        </Button>
+                      </Link>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">Domestic Violence Legal Clinic</p>
+                      <p className="text-sm text-gray-600 mb-2">Free legal help with protection orders</p>
+                      <Link href="tel:520-623-9461" className="block">
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          520-623-9461
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-l-4 border-l-orange-500 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <MapPin className="w-6 h-6 text-orange-600" />
+                    <h3 className="font-bold text-lg">Northern Arizona</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-orange-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">Northland Family Help Center</p>
+                      <p className="text-sm text-gray-600 mb-2">Crisis support, emergency shelter (Flagstaff area)</p>
+                      <Link href="tel:928-527-1900" className="block">
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          928-527-1900
+                        </Button>
+                      </Link>
+                    </div>
+                    <div className="bg-orange-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">Women's Transitional Living Services</p>
+                      <p className="text-sm text-gray-600 mb-2">24/7 crisis line, shelter services (Prescott)</p>
+                      <Link href="tel:928-772-4673" className="block">
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          928-772-4673
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-purple-500 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <MapPin className="w-6 h-6 text-purple-600" />
+                    <h3 className="font-bold text-lg">Statewide Resources</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">Arizona Coalition to End Sexual & Domestic Violence</p>
+                      <p className="text-sm text-gray-600 mb-2">Statewide advocacy, training, policy work</p>
+                      <Link href="tel:602-279-2900" className="block">
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          602-279-2900
+                        </Button>
+                      </Link>
+                    </div>
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">Military Family Crisis Line</p>
+                      <p className="text-sm text-gray-600 mb-2">Support for military families statewide</p>
+                      <Link href="tel:800-336-4592" className="block">
+                        <Button variant="outline" className="w-full">
+                          <Phone className="w-4 h-4 mr-2" />
+                          800-336-4592
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </CardContent>

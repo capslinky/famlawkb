@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { ArrowLeft, Shield, Phone, MapPin, Package, CreditCard, Users, FileText, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Shield, Phone, MapPin, Package, CreditCard, Users, FileText, AlertCircle, Clock, Eye, Lock, Car, Home, Briefcase, Heart, CheckCircle, Download, UserX, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata = {
-  title: 'Create a Safety Plan - Arizona',
-  description: 'Comprehensive safety planning guide for domestic violence situations. Create a personalized plan to protect yourself and your children.',
+  title: 'Complete Safety Planning Guide - Arizona',
+  description: 'Comprehensive, personalized safety planning guide for domestic violence situations. Step-by-step strategies to protect yourself, your children, and your future.',
 };
 
 export default function SafetyPlanPage() {
@@ -38,66 +38,224 @@ export default function SafetyPlanPage() {
       <div className="py-8">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-purple-50 border-2 border-purple-300 rounded-lg p-6 mb-8">
-            <h2 className="text-xl font-bold mb-3">What is a Safety Plan?</h2>
-            <p className="text-gray-700 mb-3">
-              A safety plan is a personalized, practical plan to improve your safety while 
-              experiencing abuse, preparing to leave, or after you leave. Having a plan 
-              increases your safety and helps you think through options during stressful times.
-            </p>
-            <p className="text-sm text-purple-800 font-semibold">
-              This guide helps you create your own plan. Consider printing or saving it somewhere safe.
-            </p>
-          </div>
-
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold">Safety During a Violent Incident</h2>
-            
-            <Card className="border-2 border-red-300">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="font-bold text-lg mb-3 text-red-900">If Violence Seems Likely</h3>
-                    <ul className="space-y-2 text-gray-700">
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-600">•</span>
-                        <div>
-                          <span className="font-semibold">Avoid dangerous rooms:</span> Stay out of 
-                          kitchens, bathrooms, garages where weapons might be available
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-600">•</span>
-                        <div>
-                          <span className="font-semibold">Get to safe room:</span> Go to a room with 
-                          a door or window to escape
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-600">•</span>
-                        <div>
-                          <span className="font-semibold">Have phone accessible:</span> Keep charged 
-                          phone hidden but accessible
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-600">•</span>
-                        <div>
-                          <span className="font-semibold">Create a code word:</span> With children, 
-                          family, friends to signal need for help
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-red-600">•</span>
-                        <div>
-                          <span className="font-semibold">Practice escape routes:</span> Know all 
-                          exits from your home
-                        </div>
-                      </li>
+            <div className="flex items-start gap-4">
+              <Shield className="w-8 h-8 text-purple-600 mt-1" />
+              <div className="flex-1">
+                <h2 className="text-xl font-bold mb-3">What is a Safety Plan?</h2>
+                <p className="text-gray-700 mb-4">
+                  A safety plan is a personalized, practical strategy that helps improve your safety whether you're currently experiencing abuse, preparing to leave an abusive situation, or have already left. Research shows that having a detailed safety plan significantly reduces the risk of future violence and helps you respond more effectively during dangerous situations.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-white rounded-lg p-3 border border-purple-200">
+                    <h3 className="font-semibold text-purple-900 mb-2">Safety Planning Helps You:</h3>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Think clearly during crisis situations</li>
+                      <li>• Identify safe places and trusted people</li>
+                      <li>• Recognize warning signs of escalation</li>
+                      <li>• Prepare practical escape strategies</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 border border-purple-200">
+                    <h3 className="font-semibold text-purple-900 mb-2">Important Reminders:</h3>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• You know your situation best</li>
+                      <li>• No plan guarantees complete safety</li>
+                      <li>• Plans should be updated regularly</li>
+                      <li>• Trust your instincts above all else</li>
                     </ul>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="bg-amber-100 rounded-lg p-3 border border-amber-300">
+                  <p className="text-sm text-amber-800 font-semibold">
+                    🔒 <strong>Privacy Note:</strong> Consider printing this guide or saving it on a safe device. Clear your browser history after visiting this page if your internet activity might be monitored.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">Types of Safety Planning</h2>
+            <p className="text-gray-600 mb-6">
+              Different situations require different safety strategies. Choose the sections most relevant to your current circumstances, but consider reviewing all areas as your situation may change.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="border-l-4 border-l-red-500 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <Clock className="w-8 h-8 text-red-600 mb-3" />
+                  <h3 className="font-bold text-lg mb-2">Crisis Safety</h3>
+                  <p className="text-gray-600 text-sm mb-3">
+                    Immediate safety strategies during violent incidents or escalating situations.
+                  </p>
+                  <div className="text-xs text-gray-500">
+                    Best for: Currently in dangerous situation
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <Package className="w-8 h-8 text-blue-600 mb-3" />
+                  <h3 className="font-bold text-lg mb-2">Leaving Preparation</h3>
+                  <p className="text-gray-600 text-sm mb-3">
+                    Planning and preparation strategies for safely leaving an abusive relationship.
+                  </p>
+                  <div className="text-xs text-gray-500">
+                    Best for: Planning to leave relationship
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-green-500 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <Home className="w-8 h-8 text-green-600 mb-3" />
+                  <h3 className="font-bold text-lg mb-2">Post-Separation Safety</h3>
+                  <p className="text-gray-600 text-sm mb-3">
+                    Ongoing safety strategies after leaving, including workplace and home security.
+                  </p>
+                  <div className="text-xs text-gray-500">
+                    Best for: After leaving abusive relationship
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
+          <section className="space-y-6">
+            <h2 className="text-2xl font-bold">Crisis Safety: During Violent Incidents</h2>
+            <p className="text-gray-600">
+              These strategies can help protect you when violence seems imminent or is occurring. Remember: your safety is the priority, not fighting back or "winning" an argument.
+            </p>
+            
+            <div className="space-y-6">
+              <Card className="border-2 border-red-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <AlertCircle className="w-8 h-8 text-red-600" />
+                    <h3 className="font-bold text-lg text-red-900">Recognizing Escalation Warning Signs</h3>
+                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Learn to identify behaviors that typically happen before violence occurs in your situation:
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-red-50 rounded-lg p-4">
+                      <h4 className="font-semibold mb-2 text-red-700">Common Warning Signs:</h4>
+                      <ul className="text-sm text-gray-600 space-y-1">
+                        <li>• Increased yelling or verbal abuse</li>
+                        <li>• Throwing or breaking objects</li>
+                        <li>• Pacing, clenched fists, intense staring</li>
+                        <li>• Increased alcohol or drug use</li>
+                        <li>• Bringing up past grievances repeatedly</li>
+                        <li>• Extreme jealousy or accusations</li>
+                      </ul>
+                    </div>
+                    <div className="bg-amber-50 rounded-lg p-4">
+                      <h4 className="font-semibold mb-2 text-amber-700">Your Personal Signs:</h4>
+                      <p className="text-sm text-gray-600 mb-2">Think about patterns in your situation:</p>
+                      <ul className="text-sm text-gray-600 space-y-1">
+                        <li>• What happens right before violence?</li>
+                        <li>• Are there certain triggers or topics?</li>
+                        <li>• Does the abuser's mood change gradually?</li>
+                        <li>• Are there time patterns (day/week/month)?</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-orange-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Eye className="w-8 h-8 text-orange-600" />
+                    <h3 className="font-bold text-lg text-orange-900">When Violence Seems Likely</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="bg-orange-50 rounded-lg p-4">
+                        <h4 className="font-semibold mb-2 text-orange-700">Room Safety:</h4>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• <strong>Avoid:</strong> Kitchen, bathroom, garage, basement</li>
+                          <li>• <strong>Avoid:</strong> Rooms with weapons or hard surfaces</li>
+                          <li>• <strong>Go to:</strong> Room with phone access</li>
+                          <li>• <strong>Go to:</strong> Room with outside door or low window</li>
+                          <li>• <strong>Go to:</strong> Room where neighbors might hear</li>
+                        </ul>
+                      </div>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <h4 className="font-semibold mb-2 text-blue-700">Communication Strategies:</h4>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• Stay calm, speak in low, soothing voice</li>
+                          <li>• Agree with abuser to de-escalate if possible</li>
+                          <li>• Don't argue about the abuse or "facts"</li>
+                          <li>• Avoid eye contact if it increases anger</li>
+                          <li>• Give the abuser space and time to cool down</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="bg-red-50 rounded-lg p-4">
+                      <h4 className="font-semibold mb-2 text-red-700">Emergency Preparations:</h4>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• Keep cell phone charged and nearby</li>
+                          <li>• Memorize 911 and crisis hotline numbers</li>
+                          <li>• Have car keys easily accessible</li>
+                          <li>• Know locations of weapons in home</li>
+                        </ul>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• Keep important documents in grab bag</li>
+                          <li>• Have cash and credit cards accessible</li>
+                          <li>• Plan multiple escape routes from home</li>
+                          <li>• Identify safe neighbors who would help</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-purple-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Phone className="w-8 h-8 text-purple-600" />
+                    <h3 className="font-bold text-lg text-purple-900">Communication & Code Words</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <h4 className="font-semibold mb-2 text-purple-700">Establish Code Words/Signals:</h4>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• <strong>For children:</strong> "Pack your backpack" = go to safe room</li>
+                          <li>• <strong>For family/friends:</strong> "I need to borrow your car" = send help</li>
+                          <li>• <strong>For texting:</strong> "Can you pick up milk?" = call 911</li>
+                          <li>• <strong>For social media:</strong> Specific photo or post = I'm in danger</li>
+                        </ul>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          <li>• <strong>Visual signals:</strong> Light on/off, curtain position</li>
+                          <li>• <strong>For neighbors:</strong> "Play music loud" = call police</li>
+                          <li>• <strong>At work:</strong> "I'm sick" = danger at home</li>
+                          <li>• <strong>Email subject:</strong> Specific phrase = emergency</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <h4 className="font-semibold mb-2 text-blue-700">Important Numbers to Memorize:</h4>
+                      <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+                        <div>
+                          <p><strong>Emergency:</strong> 911</p>
+                          <p><strong>National DV Hotline:</strong> 1-800-799-7233</p>
+                          <p><strong>Crisis Text Line:</strong> Text HOME to 741741</p>
+                        </div>
+                        <div>
+                          <p><strong>Trusted friend/family:</strong> _______________</p>
+                          <p><strong>Local police:</strong> _______________</p>
+                          <p><strong>Workplace security:</strong> _______________</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </section>
 
           <section className="mt-8">
