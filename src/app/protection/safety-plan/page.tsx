@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
-import { ArrowLeft, Shield, Phone, MapPin, Package, CreditCard, Users, FileText, AlertCircle, Clock, Eye, Home } from 'lucide-react';
+import { ArrowLeft, Shield, Phone, MapPin, Package, CreditCard, Users, FileText, AlertCircle, Clock, Eye, Home, CheckSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import SafetyPlanChecklist from '@/components/SafetyPlanChecklist';
 
 export const metadata = {
   title: 'Complete Safety Planning Guide - Arizona',
@@ -463,6 +464,25 @@ export default function SafetyPlanPage() {
                 </p>
               </div>
             </div>
+          </section>
+
+          <section className="mt-12">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mb-8">
+              <div className="flex items-center gap-3 mb-4">
+                <CheckSquare className="w-8 h-8 text-blue-600" />
+                <h2 className="text-2xl font-bold text-gray-900">Interactive Safety Plan Checklist</h2>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Use this personalized checklist to track your safety planning progress. Your progress is saved locally on your device, and you can print it anytime.
+              </p>
+              <div className="bg-white rounded-lg p-4 border-2 border-blue-200">
+                <p className="text-sm text-blue-800 font-medium">
+                  💡 <strong>Tip:</strong> You don't need to complete everything at once. Focus on high-priority items first, and work through the list at your own pace. Your safety and well-being are what matter most.
+                </p>
+              </div>
+            </div>
+            
+            <SafetyPlanChecklist />
           </section>
 
           <div className="mt-8 space-y-4">

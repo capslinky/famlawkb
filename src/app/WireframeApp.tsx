@@ -9,6 +9,8 @@ import Link from "next/link";
 import PersonalizedHero from "@/components/PersonalizedHero";
 import EmergencyHelpButton from "@/components/EmergencyHelpButton";
 import MobileNav from "@/components/MobileNav";
+import { ProgressTracker, RandomEncouragement } from "@/components/EmotionalSupport";
+import DecisionTreeWizard from "@/components/DecisionTreeWizard";
 
 export default function WireframeApp() {
   return (
@@ -27,6 +29,17 @@ export default function WireframeApp() {
 
       {/* Hero Section */}
       <PersonalizedHero />
+
+      {/* Progress and Encouragement Section */}
+      <section className="px-6 py-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <DecisionTreeWizard />
+          <ProgressTracker />
+          <div className="text-center mb-4">
+            <RandomEncouragement />
+          </div>
+        </div>
+      </section>
 
       {/* Modules - Below the Fold */}
       <section className="px-6 py-16 bg-gray-50">

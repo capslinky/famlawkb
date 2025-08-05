@@ -27,7 +27,7 @@ export default function GlossaryContent({ children, className = '' }: GlossaryCo
           replacements.push({
             original: match,
             replacement: (
-              <GlossaryTooltip key={uniqueKey} termKey={key}>
+              <GlossaryTooltip key={uniqueKey} term={key}>
                 {match}
               </GlossaryTooltip>
             ),

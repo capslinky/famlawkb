@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
+import CrisisSafetyFeatures from "@/components/CrisisSafetyFeatures";
+import { ReassuranceWidget } from "@/components/EmotionalSupport";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +31,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <CrisisSafetyFeatures />
         <Breadcrumb />
         <main className="flex-1">
           {children}
         </main>
         <Footer />
+        <ReassuranceWidget />
       </body>
     </html>
   );
