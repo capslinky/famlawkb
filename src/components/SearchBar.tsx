@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Search, X, FileText, Calculator, HelpCircle, AlertCircle } from 'lucide-react';
+import { Search, X, FileText, Calculator, HelpCircle, AlertCircle, Clock, TrendingUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { searchContent, getSearchSuggestions, SearchResult } from '@/data/searchIndex';
 import Link from 'next/link';
@@ -29,6 +29,20 @@ const categoryColors = {
   emergency: 'text-red-600'
 };
 
+// Popular searches based on common user needs
+const popularSearches = [
+  'child custody',
+  'divorce process',
+  'child support calculator',
+  'spousal maintenance',
+  'property division',
+  'order of protection',
+  'parenting time',
+  'temporary orders',
+  'court forms',
+  'legal separation'
+];
+
 export default function SearchBar({ 
   className = '', 
   placeholder = 'Search for answers... (e.g., "child custody", "divorce process")',
@@ -39,9 +53,20 @@ export default function SearchBar({
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+
+  // Load recent searches from localStorage on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('recentSearches');
+      if (saved) {
+        setRecentSearches(JSON.parse(saved));
+      }
+    }
+  }, []);
 
   // Handle clicks outside to close dropdown
   useEffect(() => {
@@ -55,6 +80,16 @@ export default function SearchBar({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Save search to recent searches
+  const saveSearch = (searchQuery: string) => {
+    if (typeof window !== 'undefined' && searchQuery.trim()) {
+      const trimmed = searchQuery.trim();
+      const updated = [trimmed, ...recentSearches.filter(s => s !== trimmed)].slice(0, 5);
+      setRecentSearches(updated);
+      localStorage.setItem('recentSearches', JSON.stringify(updated));
+    }
+  };
+
   // Update suggestions and results as user types
   useEffect(() => {
     if (query.trim().length >= 2) {
@@ -62,6 +97,11 @@ export default function SearchBar({
       const newResults = searchContent(query, { limit: 5 });
       setSuggestions(newSuggestions);
       setResults(newResults);
+      setIsOpen(true);
+    } else if (query.trim().length === 0) {
+      // Show recent and popular searches when input is empty but focused
+      setSuggestions([]);
+      setResults([]);
       setIsOpen(true);
     } else {
       setSuggestions([]);
@@ -74,6 +114,7 @@ export default function SearchBar({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
+      saveSearch(query);
       router.push(`/search?q=${encodeURIComponent(query)}`);
       setIsOpen(false);
       if (onSearch) onSearch(query);
@@ -81,6 +122,7 @@ export default function SearchBar({
   };
 
   const handleSuggestionClick = (suggestion: string) => {
+    saveSearch(suggestion);
     setQuery(suggestion);
     router.push(`/search?q=${encodeURIComponent(suggestion)}`);
     setIsOpen(false);
@@ -164,7 +206,7 @@ export default function SearchBar({
 
       {/* Search Dropdown */}
       <AnimatePresence>
-        {isOpen && (suggestions.length > 0 || results.length > 0) && (
+        {isOpen && (suggestions.length > 0 || results.length > 0 || (query.length === 0 && (recentSearches.length > 0 || popularSearches.length > 0))) && (
           <motion.div
             id="search-dropdown"
             initial={{ opacity: 0, y: -10 }}
@@ -173,6 +215,54 @@ export default function SearchBar({
             transition={{ duration: 0.2 }}
             className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50 max-h-96 overflow-y-auto"
           >
+            {/* Recent Searches */}
+            {query.length === 0 && recentSearches.length > 0 && (
+              <div className="border-b border-gray-100">
+                <p className="px-4 py-2 text-sm font-medium text-gray-500 flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  Recent Searches
+                </p>
+                {recentSearches.map((search, index) => (
+                  <button
+                    key={search}
+                    onClick={() => handleSuggestionClick(search)}
+                    className={`w-full text-left px-4 py-3 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none transition-colors ${
+                      selectedIndex === index ? 'bg-gray-50' : ''
+                    }`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-gray-400" />
+                      <span className="text-gray-700">{search}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Popular Searches */}
+            {query.length === 0 && (
+              <div className="border-b border-gray-100">
+                <p className="px-4 py-2 text-sm font-medium text-gray-500 flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4" />
+                  Popular Searches
+                </p>
+                {popularSearches.slice(0, 6).map((search, index) => (
+                  <button
+                    key={search}
+                    onClick={() => handleSuggestionClick(search)}
+                    className={`w-full text-left px-4 py-3 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none transition-colors ${
+                      selectedIndex === (recentSearches.length + index) ? 'bg-gray-50' : ''
+                    }`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <TrendingUp className="w-4 h-4 text-gray-400" />
+                      <span className="text-gray-700">{search}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+
             {/* Suggestions */}
             {suggestions.length > 0 && (
               <div className="border-b border-gray-100">
