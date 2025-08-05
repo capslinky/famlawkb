@@ -36,6 +36,7 @@ export const modules: ModuleMeta[] = [
     slug: "disclosures",
     title: "Initial Disclosures & Basic Discovery",
     description: "Exchange required information and documents effectively.",
+    hasComprehensiveContent: true,
   },
   {
     slug: "temporary-orders",
