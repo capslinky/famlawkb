@@ -43,6 +43,7 @@ export const modules: ModuleMeta[] = [
     title: "Temporary Orders",
     description:
       "Seek interim custody, support, or property arrangements while the case proceeds.",
+    hasComprehensiveContent: true,
   },
   {
     slug: "mediation",
