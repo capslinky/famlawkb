@@ -78,7 +78,6 @@ const PATH_MAPPINGS: Record<string, string> = {
   'relocation': 'Relocation',
   'support-modification': 'Support Modification',
   'spousal-support': 'Spousal Support',
-  'responding': 'Responding',
   'late-response': 'Late Response',
   'standard-timeline': 'Standard Timeline',
   'urgent-timeline': 'Urgent Timeline'
