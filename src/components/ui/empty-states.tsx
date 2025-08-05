@@ -18,7 +18,7 @@ import {
   MessageCircle
 } from 'lucide-react';
 import { Button } from './button';
-import { Card } from './card';
+// Removed Card import to avoid circular dependencies
 import { cn } from '@/lib/utils';
 
 // Types

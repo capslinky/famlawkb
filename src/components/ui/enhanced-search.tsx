@@ -18,7 +18,7 @@ import {
   Shield
 } from 'lucide-react';
 import { Button } from './button';
-import { Card } from './card';
+// Removed Card import to avoid circular dependencies
 import { cn } from '@/lib/utils';
 
 // Types
@@ -599,7 +599,7 @@ export function ContentRecommendations({
   if (recommendations.length === 0) return null;
 
   return (
-    <Card className={cn('p-6', className)}>
+    <div className={cn('rounded-lg border bg-white shadow-sm p-6', className)}>
       <div className="flex items-center gap-2 mb-4">
         <Star className="w-5 h-5 text-yellow-500" />
         <h3 className="font-semibold text-gray-900">Recommended for You</h3>
@@ -627,7 +627,7 @@ export function ContentRecommendations({
           </div>
         ))}
       </div>
-    </Card>
+    </div>
   );
 }
 

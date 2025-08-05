@@ -16,7 +16,7 @@ import {
   ArrowUp
 } from 'lucide-react';
 import { Button } from './button';
-import { Card } from './card';
+// Removed Card import to avoid circular dependencies
 import { cn } from '@/lib/utils';
 
 // Types
@@ -316,8 +316,8 @@ export function MobileCard({
   onTap 
 }: MobileCardProps) {
   return (
-    <Card
-      className={cn('p-4 touch-manipulation', className)}
+    <div
+      className={cn('rounded-lg border bg-white shadow-sm p-4 touch-manipulation', className)}
       onClick={onTap}
       role={onTap ? 'button' : undefined}
       tabIndex={onTap ? 0 : undefined}
@@ -343,7 +343,7 @@ export function MobileCard({
         </div>
       </div>
       {children}
-    </Card>
+    </div>
   );
 }
 
