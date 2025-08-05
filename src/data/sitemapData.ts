@@ -261,10 +261,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/support/calculator',
     title: 'Child Support Calculator',
     description: 'Arizona child support calculation tool',
-    status: 'placeholder',
+    status: 'complete',
     category: 'Forms & Tools',
     priority: 'high',
-    notes: 'Page exists but needs interactive calculator'
+    notes: 'Complete with interactive Arizona Income Shares Model calculator, parenting time adjustments, and printable results'
   },
   {
     path: '/support-modification/child-support',
