@@ -30,6 +30,7 @@ export const modules: ModuleMeta[] = [
     slug: "first-appearance",
     title: "First Court Appearances / Next Steps",
     description: "Know what to expect at initial hearings and case conferences.",
+    hasComprehensiveContent: true,
   },
   {
     slug: "disclosures",
