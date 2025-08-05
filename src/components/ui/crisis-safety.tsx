@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, AlertTriangle, Eye, EyeOff, Phone, ExternalLink, X } from 'lucide-react';
-import { Button, IconButton } from './button';
+import { Button } from './button';
 import { cn } from '@/lib/utils';
 
 interface CrisisSafetyContextType {
@@ -337,7 +337,7 @@ export function PanicButton({
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <IconButton
+        <Button
           icon={<ExternalLink className="w-5 h-5" />}
           onClick={panicExit}
           variant="danger"
@@ -536,7 +536,7 @@ export function EmergencyHelpButton({ className = '' }: { className?: string }) 
 
   return (
     <>
-      <IconButton
+      <Button
         icon={<Phone className="w-4 h-4" />}
         onClick={() => setIsOpen(true)}
         variant="danger"

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, Shield, Phone, MapPin, Package, CreditCard, Users, FileText, AlertCircle, Clock, Eye, Home, CheckSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import SafetyPlanChecklist from '@/components/SafetyPlanChecklist';
+// import SafetyPlanChecklist from '@/components/SafetyPlanChecklist';
 
 export const metadata = {
   title: 'Complete Safety Planning Guide - Arizona',
@@ -482,7 +482,7 @@ export default function SafetyPlanPage() {
               </div>
             </div>
             
-            <SafetyPlanChecklist />
+            {/* <SafetyPlanChecklist /> */}
           </section>
 
           <div className="mt-8 space-y-4">

@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Moon, Sun, Monitor, Type, Contrast, Accessibility } from 'lucide-react';
-import { Button, IconButton } from './button';
+import { Button } from './button';
 import { cn } from '@/lib/utils';
 
 type Theme = 'light' | 'dark' | 'system';
@@ -191,7 +191,7 @@ export function ThemeToggle({ className = '' }: { className?: string }) {
   };
 
   return (
-    <IconButton
+    <Button
       icon={getIcon()}
       onClick={toggleTheme}
       variant="ghost"
@@ -396,7 +396,7 @@ export function AccessibilityTrigger({ className = '' }: { className?: string })
 
   return (
     <>
-      <IconButton
+      <Button
         icon={<Accessibility className="w-4 h-4" />}
         onClick={() => setIsOpen(true)}
         variant="ghost"
