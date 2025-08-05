@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import { AlertTriangle, Home, HelpCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 
 export default function NotFound() {
   return (
@@ -15,94 +13,52 @@ export default function NotFound() {
           </p>
         </div>
 
-        <Card className="mb-8">
-          <CardContent className="p-8">
-            <p className="text-gray-700 mb-6 text-center">
-              The page may have been moved, deleted, or you may have typed the address incorrectly. 
-              Let&apos;s help you find what you need.
-            </p>
-            
-            <div className="space-y-4">
-              <Link href="/" className="block">
-                <Button className="w-full" size="lg">
-                  <Home className="w-5 h-5 mr-2" />
-                  Go to Homepage
-                </Button>
-              </Link>
-              
-              <Link href="/assessment" className="block">
-                <Button variant="outline" className="w-full" size="lg">
-                  <HelpCircle className="w-5 h-5 mr-2" />
-                  Take Assessment
-                </Button>
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
+        <div className="bg-white rounded-lg shadow-sm border p-8 mb-8">
+          <p className="text-gray-700 mb-6 text-center">
+            The page you requested may have been moved or doesn&apos;t exist. 
+            Here are some helpful links to get you back on track:
+          </p>
 
-        <div className="grid md:grid-cols-2 gap-4 mb-8">
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="font-semibold mb-3">Popular Pages</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/getting-divorced" className="text-blue-600 hover:text-blue-800 text-sm">
-                    → Getting Divorced
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/child-custody" className="text-blue-600 hover:text-blue-800 text-sm">
-                    → Child Custody
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/forms" className="text-blue-600 hover:text-blue-800 text-sm">
-                    → Court Forms
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/resources" className="text-blue-600 hover:text-blue-800 text-sm">
-                    → Resources & Tools
-                  </Link>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="font-semibold mb-3">Need Help?</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/emergency-help" className="text-blue-600 hover:text-blue-800 text-sm">
-                    → Emergency Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/resources/legal-representation" className="text-blue-600 hover:text-blue-800 text-sm">
-                    → Find Legal Help
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/resources" className="text-blue-600 hover:text-blue-800 text-sm">
-                    → Court Self-Help
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/get-protection" className="text-blue-600 hover:text-blue-800 text-sm">
-                    → Protection Orders
-                  </Link>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link 
+              href="/" 
+              className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            >
+              <Home className="w-4 h-4" />
+              Go to Homepage
+            </Link>
+            <Link 
+              href="/emergency-help" 
+              className="flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 bg-white text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
+            >
+              <HelpCircle className="w-4 h-4" />
+              Emergency Help
+            </Link>
+          </div>
         </div>
 
-        <div className="text-center text-gray-600">
-          <p className="mb-2">Still can&apos;t find what you&apos;re looking for?</p>
-          <p className="text-sm">
-            Try using the search bar at the top of the page or contact the court for assistance.
-          </p>
+        <div className="bg-white rounded-lg shadow-sm border p-6">
+          <h2 className="font-semibold mb-4">Quick Links</h2>
+          <div className="grid grid-cols-2 gap-3 text-sm">
+            <Link href="/getting-divorced" className="text-blue-600 hover:text-blue-800">
+              Getting Divorced
+            </Link>
+            <Link href="/child-custody" className="text-blue-600 hover:text-blue-800">
+              Child Custody
+            </Link>
+            <Link href="/protection/emergency" className="text-blue-600 hover:text-blue-800">
+              Protection Orders
+            </Link>
+            <Link href="/forms" className="text-blue-600 hover:text-blue-800">
+              Court Forms
+            </Link>
+            <Link href="/resources" className="text-blue-600 hover:text-blue-800">
+              Resources
+            </Link>
+            <Link href="/glossary" className="text-blue-600 hover:text-blue-800">
+              Legal Terms
+            </Link>
+          </div>
         </div>
       </div>
     </main>
