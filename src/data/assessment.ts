@@ -130,7 +130,7 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       {
         id: 'divorce-agree-partial',
         label: 'We agree on some things',
-        resultPath: '/divorce/contested-partial'
+        resultPath: '/divorce/contested-full'
       },
       {
         id: 'divorce-agree-no',
@@ -152,7 +152,7 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       {
         id: 'divorce-property-no',
         label: 'No, we have disagreements',
-        resultPath: '/divorce/contested-property'
+        resultPath: '/divorce/contested-full'
       }
     ]
   },
@@ -192,12 +192,12 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       {
         id: 'custody-both-no',
         label: 'No, only one parent',
-        resultPath: '/custody/paternity-first'
+        resultPath: '/custody-special-cases/paternity'
       },
       {
         id: 'custody-unsure',
         label: 'Not sure',
-        resultPath: '/custody/determine-paternity'
+        resultPath: '/custody-special-cases/paternity'
       }
     ]
   },
@@ -209,7 +209,7 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       {
         id: 'custody-work-yes',
         label: 'Yes, but want it formalized',
-        resultPath: '/custody/formalize-agreement'
+        resultPath: '/custody/establish-order'
       },
       {
         id: 'custody-work-no',
@@ -226,12 +226,12 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       {
         id: 'custody-danger',
         label: 'Child is in danger',
-        resultPath: '/custody/emergency-order'
+        resultPath: '/custody-special-cases/emergency'
       },
       {
         id: 'custody-moved',
         label: 'Someone relocated',
-        resultPath: '/custody/relocation'
+        resultPath: '/custody-special-cases/relocation'
       },
       {
         id: 'custody-circumstances',
@@ -304,12 +304,12 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       {
         id: 'modify-support',
         label: 'Child support',
-        resultPath: '/support/modification'
+        resultPath: '/support-modification/child-support'
       },
       {
         id: 'modify-spousal',
         label: 'Spousal maintenance',
-        resultPath: '/support/spousal-modification'
+        resultPath: '/support-modification/spousal-support'
       }
     ]
   },
@@ -459,7 +459,7 @@ export const assessmentQuestions: AssessmentQuestion[] = [
       {
         id: 'enforcement-protection',
         label: 'Order of Protection being violated',
-        resultPath: '/enforcement-protection-order'
+        resultPath: '/modules/enforcement-appeals'
       },
       {
         id: 'enforcement-property',
@@ -805,6 +805,36 @@ export const assessmentResults: Record<string, AssessmentResult> = {
       'Attend court hearing to present your case'
     ],
     urgencyLevel: 'medium'
+  },
+  
+  '/getting-divorced': {
+    path: '/getting-divorced',
+    title: 'Getting Divorced in Arizona',
+    description: 'Comprehensive overview of the divorce process in Arizona.',
+    recommendedActions: [
+      'Review divorce requirements and eligibility in Arizona',
+      'Understand the different types of divorce (contested vs uncontested)',
+      'Gather necessary financial documents and information',
+      'Consider whether you need legal representation',
+      'Learn about property division and support obligations',
+      'Prepare for the emotional and practical aspects of divorce'
+    ],
+    urgencyLevel: 'medium'
+  },
+
+  '/protection/types': {
+    path: '/protection/types',
+    title: 'Types of Protection Orders',
+    description: 'Understanding different protection orders available in Arizona.',
+    recommendedActions: [
+      'Learn the differences between Orders of Protection and Injunctions',
+      'Determine which type of protection order fits your situation',
+      'Understand eligibility requirements for each type',
+      'Review the protections each order can provide',
+      'Learn about duration and renewal processes',
+      'Understand enforcement and violation consequences'
+    ],
+    urgencyLevel: 'high'
   }
 };
 
