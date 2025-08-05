@@ -5,6 +5,7 @@ import path from "path";
 import ContentMetadata from "@/components/ContentMetadata";
 import PreFilingContent from "@/components/modules/PreFilingContent";
 import StartingCaseContent from "@/components/modules/StartingCaseContent";
+import RespondingContent from "@/components/modules/RespondingContent";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -58,6 +59,8 @@ export default async function ModulePage({ params }: Props) {
             <PreFilingContent />
           ) : moduleData.hasComprehensiveContent && moduleData.slug === 'starting-case' ? (
             <StartingCaseContent />
+          ) : moduleData.hasComprehensiveContent && moduleData.slug === 'responding' ? (
+            <RespondingContent />
           ) : legacyContent ? (
             <div dangerouslySetInnerHTML={{ __html: legacyContent }} />
           ) : (

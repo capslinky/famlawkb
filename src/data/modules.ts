@@ -24,6 +24,7 @@ export const modules: ModuleMeta[] = [
     slug: "responding",
     title: "Responding to Pleadings",
     description: "Understand served documents and file your timely response.",
+    hasComprehensiveContent: true,
   },
   {
     slug: "first-appearance",
