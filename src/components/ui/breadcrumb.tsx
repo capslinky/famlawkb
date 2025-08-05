@@ -10,7 +10,7 @@ import {
   ChevronDown, 
   MoreHorizontal,
   ArrowLeft,
-  X
+  // X
 } from 'lucide-react';
 import { Button } from './button';
 import { cn } from '@/lib/utils';
@@ -321,7 +321,7 @@ export function Breadcrumb({
                           'py-2'
                         )}
                       >
-                        {hiddenItems.map((hiddenItem, hiddenIndex) => (
+                        {hiddenItems.map((hiddenItem) => (
                           <Link
                             key={hiddenItem.href}
                             href={hiddenItem.href}
