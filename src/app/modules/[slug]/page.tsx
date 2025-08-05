@@ -10,6 +10,9 @@ import FirstAppearanceContent from "@/components/modules/FirstAppearanceContent"
 import DisclosuresContent from "@/components/modules/DisclosuresContent";
 import TemporaryOrdersContent from "@/components/modules/TemporaryOrdersContent";
 import MediationContent from "@/components/modules/MediationContent";
+import TrialPrepContent from "@/components/modules/TrialPrepContent";
+import ModificationsContent from "@/components/modules/ModificationsContent";
+import EnforcementAppealsContent from "@/components/modules/EnforcementAppealsContent";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -73,6 +76,12 @@ export default async function ModulePage({ params }: Props) {
             <TemporaryOrdersContent />
           ) : moduleData.hasComprehensiveContent && moduleData.slug === 'mediation' ? (
             <MediationContent />
+          ) : moduleData.hasComprehensiveContent && moduleData.slug === 'trial-prep' ? (
+            <TrialPrepContent />
+          ) : moduleData.hasComprehensiveContent && moduleData.slug === 'modifications' ? (
+            <ModificationsContent />
+          ) : moduleData.hasComprehensiveContent && moduleData.slug === 'enforcement-appeals' ? (
+            <EnforcementAppealsContent />
           ) : legacyContent ? (
             <div dangerouslySetInnerHTML={{ __html: legacyContent }} />
           ) : (

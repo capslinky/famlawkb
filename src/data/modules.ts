@@ -55,15 +55,18 @@ export const modules: ModuleMeta[] = [
     slug: "trial-prep",
     title: "Preparing for Hearings & Trial",
     description: "Organize evidence, witnesses, and present your strongest case.",
+    hasComprehensiveContent: true,
   },
   {
     slug: "modifications",
     title: "Post-Decree Modifications",
     description: "Learn when and how to modify existing court orders.",
+    hasComprehensiveContent: true,
   },
   {
     slug: "enforcement-appeals",
     title: "Enforcement & Appeals",
     description: "Ensure compliance with orders and challenge unfavorable rulings.",
+    hasComprehensiveContent: true,
   },
 ]; 
