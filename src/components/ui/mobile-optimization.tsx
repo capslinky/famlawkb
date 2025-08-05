@@ -543,8 +543,8 @@ export function MobileNavigationExample() {
     }
   };
 
-  const handleRefresh = async () => {
-    return new Promise(resolve => {
+  const handleRefresh = async (): Promise<void> => {
+    return new Promise<void>(resolve => {
       setTimeout(resolve, 2000);
     });
   };

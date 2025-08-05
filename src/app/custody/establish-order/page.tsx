@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, FileText, Scale, Users, Clock, Heart, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 
 export const metadata = {
   title: 'Establish Custody Order - Arizona',
@@ -43,7 +43,7 @@ export default function EstablishCustodyPage() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Card>
-              <CardContent className="p-6">
+              <div className="p-6">
                 <Users className="w-8 h-8 text-purple-600 mb-3" />
                 <h3 className="text-xl font-semibold mb-2">Who Can File</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -52,11 +52,11 @@ export default function EstablishCustodyPage() {
                   <li>• Some third parties (limited)</li>
                   <li>• Child must live in AZ 6+ months</li>
                 </ul>
-              </CardContent>
+              </div>
             </Card>
 
             <Card>
-              <CardContent className="p-6">
+              <div className="p-6">
                 <Clock className="w-8 h-8 text-blue-600 mb-3" />
                 <h3 className="text-xl font-semibold mb-2">Timeline</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -65,7 +65,7 @@ export default function EstablishCustodyPage() {
                   <li>• Emergency: 24-72 hours</li>
                   <li>• Temporary orders: 30-60 days</li>
                 </ul>
-              </CardContent>
+              </div>
             </Card>
           </div>
 
@@ -74,7 +74,7 @@ export default function EstablishCustodyPage() {
               <h2 className="text-2xl font-semibold mb-4">Types of Cases</h2>
               <div className="space-y-4">
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <h3 className="font-semibold mb-3">Parents Were Married</h3>
                     <p className="text-gray-600 mb-3">
                       File as part of divorce or legal separation. Both parents have equal rights initially.
@@ -82,11 +82,11 @@ export default function EstablishCustodyPage() {
                     <Link href="/getting-divorced">
                       <Button variant="outline" size="sm">Divorce Process</Button>
                     </Link>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <h3 className="font-semibold mb-3">Parents Never Married</h3>
                     <p className="text-gray-600 mb-3">
                       Must establish paternity first. Mother has sole custody 
@@ -95,11 +95,11 @@ export default function EstablishCustodyPage() {
                     <Link href="/custody-special-cases/paternity">
                       <Button variant="outline" size="sm">Paternity Info</Button>
                     </Link>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <h3 className="font-semibold mb-3">Third Party (Non-Parent)</h3>
                     <p className="text-gray-600 mb-3">
                       Grandparents or others must prove parents are unfit or 
@@ -108,7 +108,7 @@ export default function EstablishCustodyPage() {
                     <Link href="/child-custody">
                       <Button variant="outline" size="sm">Third Party Rights</Button>
                     </Link>
-                  </CardContent>
+                  </div>
                 </Card>
               </div>
             </section>
@@ -117,7 +117,7 @@ export default function EstablishCustodyPage() {
               <h2 className="text-2xl font-semibold mb-4">Step-by-Step Process</h2>
               <div className="space-y-4">
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">
                         1
@@ -132,11 +132,11 @@ export default function EstablishCustodyPage() {
                         </ul>
                       </div>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">
                         2
@@ -151,11 +151,11 @@ export default function EstablishCustodyPage() {
                         </ul>
                       </div>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">
                         3
@@ -172,11 +172,11 @@ export default function EstablishCustodyPage() {
                         </ul>
                       </div>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">
                         4
@@ -189,11 +189,11 @@ export default function EstablishCustodyPage() {
                         </p>
                       </div>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">
                         5
@@ -206,11 +206,11 @@ export default function EstablishCustodyPage() {
                         </p>
                       </div>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold">
                         6
@@ -223,7 +223,7 @@ export default function EstablishCustodyPage() {
                         </p>
                       </div>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
               </div>
             </section>
@@ -234,7 +234,7 @@ export default function EstablishCustodyPage() {
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <Heart className="w-6 h-6 text-red-600 mb-2" />
                     <h3 className="font-semibold mb-2">Parent-Child Relationship</h3>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -242,11 +242,11 @@ export default function EstablishCustodyPage() {
                       <li>• Emotional bonds</li>
                       <li>• Parent&apos;s involvement</li>
                     </ul>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <Users className="w-6 h-6 text-blue-600 mb-2" />
                     <h3 className="font-semibold mb-2">Cooperation</h3>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -254,11 +254,11 @@ export default function EstablishCustodyPage() {
                       <li>• Supporting other parent&apos;s relationship</li>
                       <li>• Communication ability</li>
                     </ul>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <FileText className="w-6 h-6 text-green-600 mb-2" />
                     <h3 className="font-semibold mb-2">Stability</h3>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -266,11 +266,11 @@ export default function EstablishCustodyPage() {
                       <li>• School/community ties</li>
                       <li>• Work schedules</li>
                     </ul>
-                  </CardContent>
+                  </div>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <AlertCircle className="w-6 h-6 text-orange-600 mb-2" />
                     <h3 className="font-semibold mb-2">Safety Concerns</h3>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -278,7 +278,7 @@ export default function EstablishCustodyPage() {
                       <li>• Substance abuse</li>
                       <li>• Mental health issues</li>
                     </ul>
-                  </CardContent>
+                  </div>
                 </Card>
               </div>
             </section>

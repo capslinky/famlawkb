@@ -47,11 +47,10 @@ const nextConfig: NextConfig = {
     return config;
   },
 
-  // Enable experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['framer-motion', 'lucide-react'],
-  },
+  // Experimental features disabled for compatibility
+  // experimental: {
+  //   optimizePackageImports: ['framer-motion', 'lucide-react'],
+  // },
 
   // Images configuration
   images: {

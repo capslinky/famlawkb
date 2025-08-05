@@ -205,11 +205,11 @@ export function Breadcrumb({
     );
 
     const pillClasses = cn(
-      variant === 'pills' && [
+      variant === 'pills' && (
         isLast 
           ? 'bg-primary-100 text-primary-800 border border-primary-200'
           : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-200'
-      ]
+      )
     );
 
     const content = (

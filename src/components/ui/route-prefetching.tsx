@@ -9,7 +9,7 @@ export function useRoutePrefetching() {
   const router = useRouter();
   const prefetchedRoutes = useRef(new Set<string>());
   const isHovering = useRef(false);
-  const hoverTimer = useRef<NodeJS.Timeout>();
+  const hoverTimer = useRef<NodeJS.Timeout | null>(null);
 
   const prefetchRoute = useCallback((href: string) => {
     if (prefetchedRoutes.current.has(href)) {
@@ -254,7 +254,7 @@ export function SmartNavigation({ children, className = '' }: SmartNavigationPro
 
     const handleMouseEnter = (e: Event) => {
       const target = e.target as HTMLAnchorElement;
-      if (target.href && prefetchStrategy !== 'disabled') {
+      if (target.href && (prefetchStrategy === 'aggressive' || prefetchStrategy === 'conservative')) {
         const url = new URL(target.href);
         setTimeout(() => prefetchRoute(url.pathname), 100);
       }

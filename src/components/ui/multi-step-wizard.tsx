@@ -133,7 +133,7 @@ export function MultiStepWizard({
   };
 
   const updateData = (newData: any) => {
-    setData(prevData => ({ ...prevData, ...newData }));
+    setData((prevData: any) => ({ ...prevData, ...newData }));
   };
 
   const setError = (field: string, message: string) => {

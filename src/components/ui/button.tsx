@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { LoadingSpinner } from "./skeleton";
+// Simple loading spinner component
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "default" | "outline" | "ghost" | "success" | "warning" | "danger";
@@ -65,10 +65,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {loading && (
-          <LoadingSpinner 
-            size={size === 'xs' || size === 'sm' ? 'sm' : 'md'} 
-            className="text-current" 
-          />
+          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current"></div>
         )}
         
         {!loading && leftIcon && (

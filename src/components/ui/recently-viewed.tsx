@@ -270,7 +270,7 @@ export function RecentlyViewedCarousel({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const autoScrollRef = useRef<NodeJS.Timeout>();
+  const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
   const displayItems = viewedItems.slice(0, maxItems);
   const hasItems = displayItems.length > 0;

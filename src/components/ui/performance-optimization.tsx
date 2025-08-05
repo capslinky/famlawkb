@@ -171,7 +171,7 @@ export function LazyImage({
 
 // Intersection Observer Hook for Lazy Loading
 export function useIntersectionObserver(
-  ref: React.RefObject<Element>,
+  ref: React.RefObject<HTMLElement | null>,
   options: IntersectionObserverInit = {}
 ) {
   const [isIntersecting, setIsIntersecting] = useState(false);

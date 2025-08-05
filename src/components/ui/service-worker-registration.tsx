@@ -103,7 +103,7 @@ export function useServiceWorker() {
         resolve(event.data);
       };
 
-      registration.active.postMessage(
+      registration.active?.postMessage(
         { type: 'GET_CACHE_STATUS' },
         [messageChannel.port2]
       );
