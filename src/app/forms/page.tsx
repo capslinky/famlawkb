@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FileText, Download, Search, Filter, AlertCircle } from 'lucide-react';
+import { FileText, Download, Search, Filter, AlertCircle, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -189,6 +189,28 @@ export default function FormsPage() {
 
       <div className="py-8">
         <div className="max-w-6xl mx-auto px-6">
+          {/* Form Selection Wizard CTA */}
+          <Card className="mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <Sparkles className="w-8 h-8 mt-1" />
+                  <div>
+                    <h2 className="text-xl font-bold mb-2">Not Sure Which Forms You Need?</h2>
+                    <p className="text-blue-100">
+                      Use our interactive Form Selection Wizard to get a personalized list of all required forms for your specific situation.
+                    </p>
+                  </div>
+                </div>
+                <Link href="/forms/wizard">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+                    Start Wizard
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
             <div className="flex items-start gap-3">
               <AlertCircle className="w-6 h-6 text-amber-600 mt-0.5" />

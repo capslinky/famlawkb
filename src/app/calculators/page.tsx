@@ -1,14 +1,17 @@
 import Link from 'next/link';
-import { ArrowLeft, Calculator, Home, TrendingUp, DollarSign, FileText, PieChart } from 'lucide-react';
+import { ArrowLeft, Calculator, Home, TrendingUp, DollarSign, FileText, PieChart, AlertTriangle, CreditCard, Receipt } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import SpousalMaintenanceCalculator from '@/components/calculators/SpousalMaintenanceCalculator';
 import PropertyDivisionAnalyzer from '@/components/calculators/PropertyDivisionAnalyzer';
 import ModificationPredictor from '@/components/calculators/ModificationPredictor';
+import TaxImpactCalculator from '@/components/calculators/TaxImpactCalculator';
+import ArrearsCalculator from '@/components/calculators/ArrearsCalculator';
+import PaymentMethodComparator from '@/components/calculators/PaymentMethodComparator';
 
 export const metadata = {
   title: 'Financial Calculators - Arizona Family Law',
-  description: 'Advanced financial calculators for Arizona family law including spousal maintenance, property division, and modification predictions.',
+  description: 'Advanced financial calculators for Arizona family law including spousal maintenance, property division, tax impact, arrears, and payment method comparison.',
 };
 
 export default function CalculatorsPage() {
@@ -19,8 +22,8 @@ export default function CalculatorsPage() {
           <div className="flex items-center gap-3">
             <Calculator className="w-8 h-8" />
             <div>
-              <h1 className="text-3xl font-bold">Financial Calculators</h1>
-              <p className="text-green-100 mt-1">Advanced tools for financial planning in family law</p>
+              <h1 className="text-3xl font-bold">Financial Calculators Suite</h1>
+              <p className="text-green-100 mt-1">Complete set of financial planning tools for family law</p>
             </div>
           </div>
         </div>
@@ -50,7 +53,7 @@ export default function CalculatorsPage() {
       <div className="max-w-6xl mx-auto px-6 py-8">
         {/* Calculator Navigation */}
         <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">Available Calculators</h2>
+          <h2 className="text-xl font-semibold mb-4">All Financial Calculators</h2>
           <div className="grid md:grid-cols-3 gap-4">
             <a href="#spousal-maintenance">
               <Card className="hover:shadow-lg transition-shadow cursor-pointer">
@@ -108,12 +111,69 @@ export default function CalculatorsPage() {
                 </CardContent>
               </Card>
             </a>
+
+            <a href="#tax-impact">
+              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                      <Receipt className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Tax Impact</h3>
+                      <p className="text-sm text-gray-600">Divorce tax analysis</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    Compare tax implications before and after divorce
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="#arrears">
+              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                      <AlertTriangle className="w-6 h-6 text-red-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Arrears Calculator</h3>
+                      <p className="text-sm text-gray-600">Unpaid support</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    Calculate accumulated support arrears and interest
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="#payment-methods">
+              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                      <CreditCard className="w-6 h-6 text-orange-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Payment Methods</h3>
+                      <p className="text-sm text-gray-600">Compare options</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    Compare different support payment methods and costs
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
           </div>
         </div>
 
         {/* Additional Calculator Links */}
         <div className="mb-8 p-6 bg-blue-50 rounded-lg">
-          <h3 className="font-semibold mb-3">Other Financial Tools</h3>
+          <h3 className="font-semibold mb-3">Related Financial Tools</h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             <Link href="/support/calculator" className="flex items-center gap-2 text-blue-600 hover:text-blue-800">
               <Calculator className="w-4 h-4" />
@@ -170,8 +230,50 @@ export default function CalculatorsPage() {
           <ModificationPredictor />
         </div>
 
+        <div className="border-t pt-12" />
+
+        {/* Tax Impact Calculator */}
+        <div id="tax-impact" className="mb-12 scroll-mt-8">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold mb-2">Tax Impact Calculator</h2>
+            <p className="text-gray-600">
+              Compare your tax situation before and after divorce. Understand the impact of filing status changes, 
+              support payments, and asset division on your federal taxes.
+            </p>
+          </div>
+          <TaxImpactCalculator />
+        </div>
+
+        <div className="border-t pt-12" />
+
+        {/* Arrears Calculator */}
+        <div id="arrears" className="mb-12 scroll-mt-8">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold mb-2">Support Arrears Calculator</h2>
+            <p className="text-gray-600">
+              Calculate accumulated unpaid support, interest charges, and potential enforcement actions. 
+              Arizona charges 10% annual interest on unpaid support.
+            </p>
+          </div>
+          <ArrearsCalculator />
+        </div>
+
+        <div className="border-t pt-12" />
+
+        {/* Payment Method Comparator */}
+        <div id="payment-methods" className="mb-12 scroll-mt-8">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold mb-2">Payment Method Comparator</h2>
+            <p className="text-gray-600">
+              Compare different methods for paying support including direct deposit, wage garnishment, 
+              state disbursement unit, and other options to find the best method for your situation.
+            </p>
+          </div>
+          <PaymentMethodComparator />
+        </div>
+
         {/* Tax Implications Notice */}
-        <Card className="bg-yellow-50 border-yellow-200">
+        <Card className="bg-yellow-50 border-yellow-200 mb-8">
           <CardContent className="p-6">
             <h3 className="font-semibold mb-3 flex items-center gap-2">
               <PieChart className="w-5 h-5 text-yellow-600" />
