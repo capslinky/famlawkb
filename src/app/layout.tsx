@@ -5,6 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 import CrisisSafetyFeatures from "@/components/CrisisSafetyFeatures";
 import { ReassuranceWidget } from "@/components/EmotionalSupport";
+import CrisisDetection from "@/components/CrisisDetection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <CrisisSafetyFeatures />
+        <CrisisDetection />
         <Breadcrumb />
         <main className="flex-1">
           {children}
