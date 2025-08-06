@@ -1,6 +1,6 @@
-import AssessmentTool from '@/components/AssessmentTool';
+import EnhancedAssessmentTool from '@/components/EnhancedAssessmentTool';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Shield, Clock, Save, Mail } from 'lucide-react';
 
 export const metadata = {
   title: 'Legal Situation Assessment - Arizona Family Law Guide',
@@ -28,9 +28,29 @@ export default function AssessmentPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Answer a few questions about your situation, and we&apos;ll guide you to the most relevant information and resources.
           </p>
+          
+          {/* Enhanced Features */}
+          <div className="flex justify-center gap-6 mt-6">
+            <div className="flex items-center gap-2 text-sm text-gray-600">
+              <Save className="w-4 h-4 text-blue-600" />
+              <span>Save & Resume</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-gray-600">
+              <Clock className="w-4 h-4 text-blue-600" />
+              <span>Time Estimates</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-gray-600">
+              <Mail className="w-4 h-4 text-blue-600" />
+              <span>Email Results</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-gray-600">
+              <Shield className="w-4 h-4 text-blue-600" />
+              <span>Confidence Scoring</span>
+            </div>
+          </div>
         </div>
 
-        <AssessmentTool />
+        <EnhancedAssessmentTool />
       </div>
 
       <div className="mt-16 py-8 bg-gray-100">
