@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, TrendingUp } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -78,8 +78,9 @@ export default function Footer() {
             <h4 className="font-medium text-gray-900 mb-3">Site Information</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/sitemap-dev" className="text-gray-600 hover:text-gray-800">
-                  Developer Sitemap
+                <Link href="/sitemap-dev" className="text-green-600 hover:text-green-800 inline-flex items-center gap-1 font-medium">
+                  <TrendingUp className="w-4 h-4" />
+                  Track Development Progress
                 </Link>
               </li>
               <li>
@@ -125,6 +126,22 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Development Progress Banner */}
+        <div className="mt-6 p-3 bg-gradient-to-r from-blue-50 to-green-50 border border-green-200 rounded-lg">
+          <Link href="/sitemap-dev" className="flex items-center justify-between group">
+            <div className="flex items-center gap-3">
+              <TrendingUp className="w-5 h-5 text-green-600" />
+              <div>
+                <p className="text-sm font-medium text-gray-900">Development Progress: 96% Complete</p>
+                <p className="text-xs text-gray-600">49 of 51 pages fully developed • Click to view detailed progress</p>
+              </div>
+            </div>
+            <div className="text-blue-600 group-hover:text-blue-800 text-sm font-medium">
+              View Progress →
+            </div>
+          </Link>
+        </div>
+
         {/* Bottom Bar */}
         <div className="border-t border-gray-300 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-xs text-gray-500 mb-4 md:mb-0">
@@ -132,8 +149,9 @@ export default function Footer() {
           </p>
           
           <div className="flex items-center gap-4 text-xs text-gray-500">
-            <Link href="/sitemap-dev" className="hover:text-gray-700">
-              Developer Sitemap
+            <Link href="/sitemap-dev" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center gap-1">
+              <TrendingUp className="w-3 h-3" />
+              96% Complete
             </Link>
             <span>•</span>
             <span>Information only — not legal advice</span>
