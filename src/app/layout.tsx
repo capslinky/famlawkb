@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Breadcrumb from "@/components/Breadcrumb";
-import Footer from "@/components/Footer";
+import NavigationHeader from "@/components/layout/NavigationHeader";
+import Footer from "@/components/layout/Footer";
 import CrisisSafetyFeatures from "@/components/CrisisSafetyFeatures";
 import { ReassuranceWidget } from "@/components/EmotionalSupport";
 import CrisisDetection from "@/components/CrisisDetection";
@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <CrisisSafetyFeatures />
         <CrisisDetection />
-        <Breadcrumb />
+        <NavigationHeader />
         <main className="flex-1">
           {children}
         </main>
