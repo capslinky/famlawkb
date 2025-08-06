@@ -261,10 +261,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/support/calculator',
     title: 'Child Support Calculator',
     description: 'Arizona child support calculation tool',
-    status: 'complete',
+    status: 'placeholder',
     category: 'Forms & Tools',
     priority: 'high',
-    notes: 'Complete with interactive Arizona Income Shares Model calculator, parenting time adjustments, and printable results'
+    notes: 'Currently shows "Coming Soon" placeholder (102 lines) - NEEDS IMPLEMENTATION'
   },
   {
     path: '/support-modification/child-support',
@@ -382,6 +382,19 @@ export const sitemapData: SitemapPage[] = [
 
 // Add dynamic module pages
 export const getModulePages = (): SitemapPage[] => {
+  const moduleStatusMap: Record<string, string> = {
+    'pre-filing': 'Complete with comprehensive content (Framework + PreFilingContent.tsx)',
+    'starting-case': 'Complete with comprehensive content (Framework + StartingCaseContent.tsx)',
+    'responding': 'Complete with comprehensive content (651 lines - RespondingContent.tsx)',
+    'first-appearance': 'Complete with comprehensive content (734 lines - FirstAppearanceContent.tsx)',
+    'disclosures': 'Complete with comprehensive content (858 lines - DisclosuresContent.tsx)',
+    'temporary-orders': 'Complete with comprehensive content (939 lines - TemporaryOrdersContent.tsx)',
+    'mediation': 'Complete with comprehensive content (1032 lines - MediationContent.tsx)',
+    'trial-prep': 'Complete with comprehensive content (1030 lines - TrialPrepContent.tsx)',
+    'modifications': 'Complete with comprehensive content (871 lines - ModificationsContent.tsx)',
+    'enforcement-appeals': 'Complete with comprehensive content (869 lines - EnforcementAppealsContent.tsx)'
+  };
+  
   return modules.map(module => ({
     path: `/modules/${module.slug}`,
     title: module.title,
@@ -389,9 +402,7 @@ export const getModulePages = (): SitemapPage[] => {
     status: module.hasComprehensiveContent ? 'complete' as PageStatus : 'partial' as PageStatus,
     category: 'Process Modules',
     priority: 'medium' as const,
-    notes: module.hasComprehensiveContent 
-      ? 'Complete with comprehensive content covering all aspects of the process'
-      : 'Framework exists, needs comprehensive content'
+    notes: moduleStatusMap[module.slug] || 'Framework exists, needs comprehensive content'
   }));
 };
 
@@ -409,6 +420,10 @@ export const getSitemapStats = () => {
   const placeholder = allPages.filter(p => p.status === 'placeholder').length;
   const planned = allPages.filter(p => p.status === 'planned').length;
   
+  // Calculate weighted completion rate (complete = 100%, partial = 50%, placeholder = 25%, planned = 0%)
+  const weightedScore = (complete * 1.0) + (partial * 0.5) + (placeholder * 0.25) + (planned * 0);
+  const weightedCompletionRate = Math.round((weightedScore / total) * 100);
+  
   return {
     total,
     complete,
@@ -416,6 +431,7 @@ export const getSitemapStats = () => {
     placeholder,
     planned,
     completionRate: Math.round((complete / total) * 100),
+    weightedCompletionRate,
     categories: [...new Set(allPages.map(p => p.category))].sort()
   };
 };

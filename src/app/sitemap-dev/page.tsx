@@ -3,6 +3,17 @@ import { ArrowLeft, CheckCircle, AlertCircle, Clock, FileText, TrendingUp } from
 import { Card, CardContent } from '@/components/ui/card';
 import { getAllSitemapPages, getSitemapStats, PageStatus } from '@/data/sitemapData';
 
+interface SitemapStats {
+  total: number;
+  complete: number;
+  partial: number;
+  placeholder: number;
+  planned: number;
+  completionRate: number;
+  weightedCompletionRate?: number;
+  categories: string[];
+}
+
 const StatusIcon = ({ status }: { status: PageStatus }) => {
   switch (status) {
     case 'complete':
@@ -53,7 +64,7 @@ export const metadata = {
 
 export default function DeveloperSitemapPage() {
   const allPages = getAllSitemapPages();
-  const stats = getSitemapStats();
+  const stats = getSitemapStats() as SitemapStats;
   
   // Group pages by category
   const pagesByCategory = allPages.reduce((acc, page) => {
@@ -127,7 +138,10 @@ export default function DeveloperSitemapPage() {
             <div className="flex items-center gap-4 mb-4">
               <TrendingUp className="w-6 h-6 text-blue-600" />
               <h2 className="text-xl font-semibold">Overall Progress</h2>
-              <span className="text-2xl font-bold text-blue-600">{stats.completionRate}%</span>
+              <div className="flex flex-col items-end">
+                <span className="text-2xl font-bold text-blue-600">{stats.completionRate}%</span>
+                <span className="text-sm text-gray-600">({stats.weightedCompletionRate}% weighted)</span>
+              </div>
             </div>
             
             <div className="w-full bg-gray-200 rounded-full h-3 mb-4">
