@@ -1,8 +1,10 @@
 import Link from 'next/link';
-import { ExternalLink, TrendingUp } from 'lucide-react';
+import { ExternalLink, TrendingUp, Calendar, DollarSign } from 'lucide-react';
+import { getImplementationStats } from '@/data/implementationProgress';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const stats = getImplementationStats();
 
   return (
     <footer className="bg-gray-100 border-t border-gray-200 mt-auto">
@@ -78,9 +80,9 @@ export default function Footer() {
             <h4 className="font-medium text-gray-900 mb-3">Site Information</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/sitemap-dev" className="text-green-600 hover:text-green-800 inline-flex items-center gap-1 font-medium">
-                  <TrendingUp className="w-4 h-4" />
-                  Track Development Progress
+                <Link href="/sitemap-dev" className="text-purple-600 hover:text-purple-800 inline-flex items-center gap-1 font-medium">
+                  <Calendar className="w-4 h-4" />
+                  Implementation Tracker
                 </Link>
               </li>
               <li>
@@ -126,18 +128,46 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Development Progress Banner */}
-        <div className="mt-6 p-3 bg-gradient-to-r from-blue-50 to-green-50 border border-green-200 rounded-lg">
-          <Link href="/sitemap-dev" className="flex items-center justify-between group">
-            <div className="flex items-center gap-3">
-              <TrendingUp className="w-5 h-5 text-green-600" />
-              <div>
-                <p className="text-sm font-medium text-gray-900">Development Progress: 96% Complete</p>
-                <p className="text-xs text-gray-600">49 of 51 pages fully developed • Click to view detailed progress</p>
+        {/* Implementation Plan Progress Banner */}
+        <div className="mt-6 p-4 bg-gradient-to-r from-purple-50 to-blue-50 border border-blue-200 rounded-lg">
+          <Link href="/sitemap-dev" className="block group">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center gap-3">
+                <Calendar className="w-5 h-5 text-blue-600" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">Implementation Plan Progress</p>
+                  <p className="text-xs text-gray-600">
+                    Week {stats.currentPhase === 'Not Started' ? '0' : stats.weeksRemaining} of 16 • 
+                    {stats.completedDeliverables} of {stats.totalDeliverables} features completed
+                  </p>
+                </div>
+              </div>
+              <div className="text-blue-600 group-hover:text-blue-800 text-sm font-medium">
+                Track Progress →
               </div>
             </div>
-            <div className="text-blue-600 group-hover:text-blue-800 text-sm font-medium">
-              View Progress →
+            
+            {/* Progress Bar */}
+            <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+              <div 
+                className="bg-gradient-to-r from-purple-500 to-blue-500 h-2 rounded-full transition-all duration-300"
+                style={{ width: `${stats.progressPercentage}%` }}
+              />
+            </div>
+            
+            {/* Status Pills */}
+            <div className="flex items-center gap-4 text-xs">
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                <span className="text-gray-600">Current Phase: {stats.currentPhase}</span>
+              </span>
+              <span className="flex items-center gap-1">
+                <DollarSign className="w-3 h-3 text-gray-500" />
+                <span className="text-gray-600">Budget: ${(540800 * stats.budgetPercentage / 100).toLocaleString()} / $540,800</span>
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="text-gray-600">{stats.completedSprints} of {stats.totalSprints} sprints complete</span>
+              </span>
             </div>
           </Link>
         </div>
@@ -149,9 +179,9 @@ export default function Footer() {
           </p>
           
           <div className="flex items-center gap-4 text-xs text-gray-500">
-            <Link href="/sitemap-dev" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center gap-1">
-              <TrendingUp className="w-3 h-3" />
-              96% Complete
+            <Link href="/sitemap-dev" className="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center gap-1">
+              <Calendar className="w-3 h-3" />
+              Week 0 of 16
             </Link>
             <span>•</span>
             <span>Information only — not legal advice</span>
