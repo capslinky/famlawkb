@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Gavel, Phone, Mail, MapPin, ExternalLink, 
-  Facebook, Twitter, Youtube, Linkedin,
+  Gavel, Phone, MapPin, ExternalLink,
   Heart, Shield, Clock, AlertCircle
 } from 'lucide-react';
 
@@ -10,64 +9,62 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerSections = {
-    gettingStarted: {
-      title: 'Getting Started',
+    start: {
+      title: 'Start',
       links: [
+        { label: 'Start Here', href: '/start' },
         { label: 'Assessment Tool', href: '/assessment' },
+        { label: 'Pre‑Filing Overview', href: '/modules/pre-filing' },
+        { label: 'Start a Case', href: '/modules/starting-case' },
         { label: 'Getting Divorced', href: '/getting-divorced' },
-        { label: 'Child Custody', href: '/child-custody' },
-        { label: 'Get Protection', href: '/get-protection' },
-        { label: 'Emergency Help', href: '/emergency-help' },
       ]
     },
-    legalProcesses: {
-      title: 'Legal Processes',
+    respond: {
+      title: 'Respond',
       links: [
-        { label: 'Uncontested Divorce', href: '/divorce/uncontested-simple' },
-        { label: 'Contested Divorce', href: '/divorce/contested-full' },
-        { label: 'Court Procedures', href: '/procedures/court-procedures' },
-        { label: 'Emergency Orders', href: '/procedures/emergency-orders' },
-        { label: 'Mediation', href: '/modules/mediation' },
+        { label: 'Respond Hub', href: '/responding' },
+        { label: 'Urgent Timeline', href: '/responding/urgent-timeline' },
+        { label: 'Standard Timeline', href: '/responding/standard-timeline' },
+        { label: 'File a Response', href: '/forms/response-petition' },
+        { label: 'Deadline Calculator', href: '/tools#deadline-calculator' },
       ]
     },
-    financialTools: {
-      title: 'Financial Tools',
+    supportCustody: {
+      title: 'Support & Custody',
       links: [
-        { label: 'All Calculators', href: '/calculators' },
+        { label: 'Support & Custody Hub', href: '/support-custody' },
         { label: 'Child Support Calculator', href: '/support/calculator' },
         { label: 'Child Support Info', href: '/topics/child-support' },
         { label: 'Spousal Maintenance', href: '/topics/spousal-maintenance' },
-        { label: 'Property Division', href: '/topics/property-division' },
+        { label: 'Parenting Plan Builder', href: '/tools#parenting-plan' },
+      ]
+    },
+    protection: {
+      title: 'Protection',
+      links: [
+        { label: 'Protection Hub', href: '/protection' },
+        { label: 'Emergency Help', href: '/emergency-help' },
+        { label: 'Safety Plan', href: '/protection/safety-plan' },
+        { label: 'Types of Orders', href: '/protection/types' },
+        { label: 'How to File', href: '/protection/how-to-file' },
       ]
     },
     forms: {
-      title: 'Forms & Documents',
+      title: 'Forms',
       links: [
-        { label: 'Court Forms Hub', href: '/forms' },
+        { label: 'Forms Hub', href: '/forms' },
         { label: 'Smart Form Wizard', href: '/forms/wizard' },
         { label: 'Packet Builder', href: '/forms/packet-builder' },
-        { label: 'Divorce Petition', href: '/forms/divorce-petition-children' },
-        { label: 'Response Forms', href: '/forms/response-petition' },
       ]
     },
-    tools: {
-      title: 'Tools & Features',
+    learn: {
+      title: 'Learn',
       links: [
-        { label: 'All Tools', href: '/tools' },
-        { label: 'Case Management', href: '/case-management' },
-        { label: 'Communication Hub', href: '/communication' },
-        { label: 'Learning Resources', href: '/learning' },
-        { label: 'Search', href: '/search' },
-      ]
-    },
-    resources: {
-      title: 'Resources',
-      links: [
-        { label: 'Resource Center', href: '/resources' },
-        { label: 'Self-Representation', href: '/resources/self-representation-guide' },
-        { label: 'FAQ', href: '/reference/faq' },
+        { label: 'Learning Hub', href: '/learning' },
         { label: 'Glossary', href: '/glossary' },
-        { label: 'Legal Disclaimer', href: '/legal-disclaimer' },
+        { label: 'FAQ', href: '/reference/faq' },
+        { label: 'Self-Representation Guide', href: '/resources/self-representation-guide' },
+        { label: 'Resources', href: '/resources' },
       ]
     }
   };
@@ -209,12 +206,9 @@ export default function Footer() {
             </div>
             
             <div className="flex items-center gap-6 text-sm">
-              <Link href="/legal-disclaimer" className="hover:text-white">
-                Terms & Disclaimer
-              </Link>
-              <Link href="/privacy" className="hover:text-white">
-                Privacy Policy
-              </Link>
+              <Link href="/terms" className="hover:text-white">Terms</Link>
+              <Link href="/legal-disclaimer" className="hover:text-white">Legal Disclaimer</Link>
+              <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
               <Link href="/sitemap" className="hover:text-white">
                 Sitemap
               </Link>

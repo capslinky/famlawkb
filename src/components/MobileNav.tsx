@@ -1,18 +1,19 @@
 'use client';
 
 import { useState } from "react";
-import { Menu, X, Phone, Home, BookOpen, HelpCircle } from "lucide-react";
+import { Menu, X, Phone, Home, HelpCircle, Shield, FileText, Users, Gavel, GraduationCap } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import SearchBar from "@/components/SearchBar";
 
 const navItems = [
-  { href: "/", label: "Home", icon: Home },
-  { href: "/getting-divorced", label: "Getting Divorced", icon: BookOpen },
-  { href: "/child-custody", label: "Child Custody", icon: BookOpen },
-  { href: "/get-protection", label: "Get Protection", icon: BookOpen },
-  { href: "/assessment", label: "Assessment Tool", icon: HelpCircle },
+  { href: "/start", label: "Start", icon: Home },
+  { href: "/responding", label: "Respond", icon: Gavel },
+  { href: "/support-custody", label: "Support & Custody", icon: Users },
+  { href: "/protection", label: "Protection", icon: Shield },
+  { href: "/forms", label: "Forms", icon: FileText },
+  { href: "/learning", label: "Learn", icon: GraduationCap },
 ];
 
 export default function MobileNav() {
