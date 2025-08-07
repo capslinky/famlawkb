@@ -1,7 +1,7 @@
 import * as React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "default" | "outline" | "ghost" | "danger";
+  variant?: "default" | "outline" | "ghost" | "danger" | "solidWhite" | "outlineOnDark";
   size?: "sm" | "md" | "lg";
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
@@ -28,7 +28,9 @@ export function Button({
     outline: "border border-gray-400 bg-white text-gray-800 hover:bg-gray-50 focus:bg-gray-50",
     ghost: "text-gray-800 hover:bg-gray-100 focus:bg-gray-100",
     danger: "bg-red-600 text-white hover:bg-red-700 focus:bg-red-700",
-  };
+    solidWhite: "bg-white text-blue-700 hover:bg-gray-100 focus:bg-gray-100 border border-white/0",
+    outlineOnDark: "border border-white/70 bg-transparent text-white hover:bg-white/10 focus:bg-white/10",
+  } as const;
 
   const sizes = {
     sm: "px-3 py-1.5 text-sm",

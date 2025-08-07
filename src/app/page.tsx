@@ -121,13 +121,13 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/assessment">
-                <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
+                <Button size="lg" variant="solidWhite">
                   <HelpCircle className="w-5 h-5 mr-2" />
                   Start Legal Assessment
                 </Button>
               </Link>
               <Link href="/emergency-help">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" variant="outlineOnDark">
                   <Phone className="w-5 h-5 mr-2" />
                   Emergency Help
                 </Button>
