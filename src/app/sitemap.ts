@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { modules } from '@/data/modules'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://azfamilylaw.wiki'
+  const baseUrl = 'https://azfamilylaw.info'
   const currentDate = new Date()
   
   // Static pages with high priority
@@ -249,6 +249,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    },
+    // Legal pages (Privacy and Terms)
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.6,
     },
   ]
 

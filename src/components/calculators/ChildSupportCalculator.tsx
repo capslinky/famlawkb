@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 
 import React, { useState } from 'react';
@@ -205,63 +206,73 @@ export default function ChildSupportCalculator() {
               <h3 className="font-medium text-gray-900">Parent 1 (Petitioner)</h3>
               
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Gross Monthly Income <span className="text-red-500">*</span>
+                <label htmlFor="parent1-income" className="block text-sm font-medium text-gray-700 mb-1">
+                  Gross Monthly Income <span className="text-red-500" aria-label="required">*</span>
                 </label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
                   <input
+                    id="parent1-income"
                     type="number"
                     value={inputs.parent1Income}
                     onChange={(e) => handleInputChange('parent1Income', e.target.value)}
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="0.00"
+                    aria-required="true"
+                    aria-describedby="parent1-income-help"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="parent1-parenting-days" className="block text-sm font-medium text-gray-700 mb-1">
                   Parenting Days per Year
                 </label>
                 <input
+                  id="parent1-parenting-days"
                   type="number"
                   value={inputs.parent1ParentingDays}
                   onChange={(e) => handleInputChange('parent1ParentingDays', e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="0"
                   max="365"
+                  min="0"
+                  aria-describedby="parenting-days-help"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="parent1-health-insurance" className="block text-sm font-medium text-gray-700 mb-1">
                   Health Insurance Premium (monthly)
                 </label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
                   <input
+                    id="parent1-health-insurance"
                     type="number"
                     value={inputs.parent1HealthInsurance}
                     onChange={(e) => handleInputChange('parent1HealthInsurance', e.target.value)}
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="0.00"
+                    min="0"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="parent1-other-support" className="block text-sm font-medium text-gray-700 mb-1">
                   Other Child Support Obligations
                 </label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
                   <input
+                    id="parent1-other-support"
                     type="number"
                     value={inputs.parent1OtherSupport}
                     onChange={(e) => handleInputChange('parent1OtherSupport', e.target.value)}
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="0.00"
+                    min="0"
                   />
                 </div>
               </div>
@@ -271,63 +282,73 @@ export default function ChildSupportCalculator() {
               <h3 className="font-medium text-gray-900">Parent 2 (Respondent)</h3>
               
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Gross Monthly Income <span className="text-red-500">*</span>
+                <label htmlFor="parent2-income" className="block text-sm font-medium text-gray-700 mb-1">
+                  Gross Monthly Income <span className="text-red-500" aria-label="required">*</span>
                 </label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
                   <input
+                    id="parent2-income"
                     type="number"
                     value={inputs.parent2Income}
                     onChange={(e) => handleInputChange('parent2Income', e.target.value)}
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="0.00"
+                    aria-required="true"
+                    aria-describedby="parent2-income-help"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="parent2-parenting-days" className="block text-sm font-medium text-gray-700 mb-1">
                   Parenting Days per Year
                 </label>
                 <input
+                  id="parent2-parenting-days"
                   type="number"
                   value={inputs.parent2ParentingDays}
                   onChange={(e) => handleInputChange('parent2ParentingDays', e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="0"
                   max="365"
+                  min="0"
+                  aria-describedby="parenting-days-help"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="parent2-health-insurance" className="block text-sm font-medium text-gray-700 mb-1">
                   Health Insurance Premium (monthly)
                 </label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
                   <input
+                    id="parent2-health-insurance"
                     type="number"
                     value={inputs.parent2HealthInsurance}
                     onChange={(e) => handleInputChange('parent2HealthInsurance', e.target.value)}
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="0.00"
+                    min="0"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="parent2-other-support" className="block text-sm font-medium text-gray-700 mb-1">
                   Other Child Support Obligations
                 </label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
                   <input
+                    id="parent2-other-support"
                     type="number"
                     value={inputs.parent2OtherSupport}
                     onChange={(e) => handleInputChange('parent2OtherSupport', e.target.value)}
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="0.00"
+                    min="0"
                   />
                 </div>
               </div>
@@ -342,13 +363,15 @@ export default function ChildSupportCalculator() {
             
             <div className="grid md:grid-cols-3 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Number of Children <span className="text-red-500">*</span>
+                <label htmlFor="num-children" className="block text-sm font-medium text-gray-700 mb-1">
+                  Number of Children <span className="text-red-500" aria-label="required">*</span>
                 </label>
                 <select
+                  id="num-children"
                   value={inputs.numChildren}
                   onChange={(e) => handleInputChange('numChildren', parseInt(e.target.value))}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  aria-required="true"
                 >
                   {[1, 2, 3, 4, 5].map(num => (
                     <option key={num} value={num}>{num}</option>
@@ -357,17 +380,19 @@ export default function ChildSupportCalculator() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="childcare-expenses" className="block text-sm font-medium text-gray-700 mb-1">
                   Monthly Childcare Expenses
                 </label>
                 <div className="relative">
-                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
                   <input
+                    id="childcare-expenses"
                     type="number"
                     value={inputs.childcareExpenses}
                     onChange={(e) => handleInputChange('childcareExpenses', e.target.value)}
                     className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="0.00"
+                    min="0"
                   />
                 </div>
               </div>
@@ -392,12 +417,12 @@ export default function ChildSupportCalculator() {
 
       {/* Results */}
       {showResults && result && (
-        <Card className="border-2 border-green-200 bg-green-50">
+        <Card className="border-2 border-green-200 bg-green-50" role="region" aria-labelledby="results-heading">
           <CardContent className="p-6">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <CheckCircle className="w-6 h-6 text-green-600" />
-                <h2 className="text-xl font-semibold text-green-900">Calculation Results</h2>
+                <CheckCircle className="w-6 h-6 text-green-600" aria-hidden="true" />
+                <h2 id="results-heading" className="text-xl font-semibold text-green-900">Calculation Results</h2>
               </div>
               <Button variant="outline" size="sm" onClick={printResults}>
                 <PrinterIcon className="w-4 h-4 mr-2" />
@@ -460,7 +485,7 @@ export default function ChildSupportCalculator() {
             </div>
 
             <div className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 text-center">
-              <h3 className="text-lg font-semibold mb-2">Estimated Monthly Child Support</h3>
+              <h3 className="text-lg font-semibold mb-2" role="heading" aria-level={3}>Estimated Monthly Child Support</h3>
               {result.payingParent === 'none' ? (
                 <div>
                   <div className="text-3xl font-bold text-gray-600 mb-2">$0</div>
@@ -478,7 +503,7 @@ export default function ChildSupportCalculator() {
 
             <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
               <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
+                <AlertCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
                 <div className="text-sm text-amber-800">
                   <p className="font-semibold mb-1">Important Disclaimers:</p>
                   <ul className="space-y-1 text-xs">
@@ -496,11 +521,11 @@ export default function ChildSupportCalculator() {
       )}
 
       {/* Help Information */}
-      <Card>
+      <Card role="region" aria-labelledby="help-heading">
         <CardContent className="p-6">
           <div className="flex items-center gap-3 mb-4">
-            <FileText className="w-5 h-5 text-blue-600" />
-            <h3 className="font-semibold">Need Help?</h3>
+            <FileText className="w-5 h-5 text-blue-600" aria-hidden="true" />
+            <h3 id="help-heading" className="font-semibold">Need Help?</h3>
           </div>
           <div className="grid md:grid-cols-2 gap-6 text-sm">
             <div>
