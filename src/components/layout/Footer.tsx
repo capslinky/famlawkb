@@ -215,7 +215,7 @@ export default function Footer() {
               <Link href="/privacy" className="hover:text-white">
                 Privacy Policy
               </Link>
-              <Link href="/sitemap-dev" className="hover:text-white">
+              <Link href="/sitemap" className="hover:text-white">
                 Sitemap
               </Link>
               <Link href="/content-audit" className="hover:text-white">

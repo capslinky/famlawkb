@@ -377,6 +377,129 @@ export const sitemapData: SitemapPage[] = [
     category: 'Legal',
     priority: 'high',
     notes: 'Complete with comprehensive legal disclaimers, Arizona Bar compliance, liability limitations, and professional responsibility guidelines'
+  },
+
+  // NEW SPRINT FEATURES - Tools & Calculators
+  {
+    path: '/calculators',
+    title: 'Financial Calculators Hub',
+    description: 'All financial calculators including support, tax, and payment tools',
+    status: 'complete',
+    category: 'Financial Tools',
+    priority: 'high',
+    notes: 'Sprint 4: Complete with tax impact, arrears, and payment method calculators'
+  },
+  {
+    path: '/tools',
+    title: 'Tools Dashboard',
+    description: 'Central hub for all interactive tools and features',
+    status: 'complete',
+    category: 'Tools',
+    priority: 'high',
+    notes: 'Complete with comprehensive tool directory and quick access'
+  },
+  {
+    path: '/case-management',
+    title: 'Case Management System',
+    description: 'Track deadlines, tasks, and documents for your case',
+    status: 'complete',
+    category: 'Case Management',
+    priority: 'high',
+    notes: 'Sprint 8: Complete with timeline view, task manager, and document tracking'
+  },
+  {
+    path: '/communication',
+    title: 'Communication Hub',
+    description: 'Secure messaging and document sharing platform',
+    status: 'complete',
+    category: 'Communication',
+    priority: 'medium',
+    notes: 'Sprint 7: Complete with messaging, notifications, and document sharing'
+  },
+  {
+    path: '/learning',
+    title: 'Learning Resources',
+    description: 'Video tutorials and interactive learning guides',
+    status: 'complete',
+    category: 'Learning',
+    priority: 'medium',
+    notes: 'Sprint 6: Complete with video player, interactive guides, and practice scenarios'
+  },
+
+  // NEW SPRINT FEATURES - Forms & Automation
+  {
+    path: '/forms/wizard',
+    title: 'Smart Form Wizard',
+    description: 'Intelligent form completion with auto-fill and validation',
+    status: 'complete',
+    category: 'Forms & Tools',
+    priority: 'high',
+    notes: 'Sprint 5: Complete with smart form completion and validation'
+  },
+  {
+    path: '/forms/packet-builder',
+    title: 'Form Packet Builder',
+    description: 'Build complete form packets for filing',
+    status: 'complete',
+    category: 'Forms & Tools',
+    priority: 'high',
+    notes: 'Sprint 5: Complete with packet assembly and instructions'
+  },
+  {
+    path: '/forms/smart/divorce-petition',
+    title: 'Smart Divorce Petition',
+    description: 'AI-assisted divorce petition form completion',
+    status: 'complete',
+    category: 'Forms & Tools',
+    priority: 'high',
+    notes: 'Sprint 5: Complete with intelligent form assistance'
+  },
+
+  // NEW SPRINT FEATURES - Admin & System
+  {
+    path: '/launch',
+    title: 'Launch Dashboard',
+    description: 'Pre-launch checklist and readiness monitoring',
+    status: 'complete',
+    category: 'Admin',
+    priority: 'high',
+    notes: 'Sprint 10: Complete with launch readiness tracking and monitoring'
+  },
+  {
+    path: '/content-audit',
+    title: 'Content Audit Dashboard',
+    description: 'Content quality monitoring and audit system',
+    status: 'complete',
+    category: 'Admin',
+    priority: 'medium',
+    notes: 'Post-Sprint: Complete audit system with scoring and issue tracking'
+  },
+  {
+    path: '/integration',
+    title: 'Integration Hub',
+    description: 'External service integrations and API connections',
+    status: 'complete',
+    category: 'Admin',
+    priority: 'medium',
+    notes: 'Sprint 9: Complete with search, help, and export services'
+  },
+  {
+    path: '/sitemap-dev',
+    title: 'Developer Sitemap',
+    description: 'Development progress tracking and site structure',
+    status: 'complete',
+    category: 'Admin',
+    priority: 'low',
+    notes: 'Complete with implementation tracking and progress monitoring'
+  },
+  {
+    path: '/offline',
+    title: 'Offline Mode',
+    description: 'Offline access to critical resources',
+    status: 'complete',
+    category: 'System',
+    priority: 'low',
+    notes: 'Sprint 10: Complete with offline caching and PWA features'
   }
 ];
 
