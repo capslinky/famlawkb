@@ -181,7 +181,7 @@ export default function NavigationHeader() {
   };
 
   return (
-    <header id="primary-navigation" className="bg-white shadow-md sticky top-0 z-50" role="banner">
+    <header id="primary-navigation" className="bg-white/95 backdrop-blur shadow-md sticky top-0 z-50" role="banner">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary" role="navigation">
         <div ref={containerRef} className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -300,13 +300,13 @@ export default function NavigationHeader() {
           <div className="hidden lg:flex items-center gap-2">
             <Link
               href="/assessment"
-              className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 transition-colors"
+              className="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
             >
               Start Assessment
             </Link>
             <Link
               href="/emergency-help"
-              className="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
+              className="bg-red-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
             >
               Emergency
             </Link>
@@ -324,7 +324,7 @@ export default function NavigationHeader() {
         </div>
       </nav>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation (drawer still available; BottomNav provides primary mobile nav) */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1">
