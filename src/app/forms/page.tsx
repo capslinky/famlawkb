@@ -3,6 +3,7 @@ import { FileText, Download, Search, Filter, AlertCircle, Sparkles } from 'lucid
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { BreadcrumbCompact } from '@/components/ui/breadcrumb';
 
 export const metadata = {
   title: 'Arizona Family Law Forms - Free Court Forms',
@@ -164,15 +165,16 @@ const formCategories: FormCategory[] = [
 export default function FormsPage() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <div className="bg-blue-700 text-white">
+      <div className="bg-primary-700 text-white">
         <div className="max-w-6xl mx-auto px-6 py-8">
           <div className="flex items-center gap-3 mb-4">
             <FileText className="w-10 h-10" />
             <div>
               <h1 className="text-3xl font-bold">Arizona Family Law Forms</h1>
-              <p className="text-blue-100 text-lg">Free court forms with instructions</p>
+              <p className="text-primary-100 text-lg">Free court forms with instructions</p>
             </div>
           </div>
+          <BreadcrumbCompact className="mt-2" />
           
           <div className="mt-6 max-w-2xl">
             <div className="relative">
@@ -190,25 +192,25 @@ export default function FormsPage() {
       <div className="py-8">
         <div className="max-w-6xl mx-auto px-6">
           {/* Form Selection Wizard CTA */}
-          <Card className="mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
+          <Card className="mb-8 bg-gradient-to-r from-primary-600 to-purple-600 text-white border-0">
             <CardContent className="p-6">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-start gap-4">
                   <Sparkles className="w-8 h-8 mt-1" />
                   <div>
                     <h2 className="text-xl font-bold mb-2">Not Sure Which Forms You Need?</h2>
-                    <p className="text-blue-100">
-                      Use our interactive Form Selection Wizard to get a personalized list of all required forms for your specific situation.
-                    </p>
-                  </div>
+                  <p className="text-primary-100">
+                    Use our interactive Form Selection Wizard to get a personalized list of all required forms for your specific situation.
+                  </p>
                 </div>
-                <Link href="/forms/wizard">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+              </div>
+              <Link href="/forms/wizard">
+                  <Button size="lg" className="bg-white text-primary-600 hover:bg-primary-50">
                     Start Wizard
                   </Button>
-                </Link>
-              </div>
-            </CardContent>
+              </Link>
+            </div>
+          </CardContent>
           </Card>
 
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
@@ -265,7 +267,7 @@ export default function FormsPage() {
                           <div className="flex items-start justify-between gap-4">
                             <div className="flex-1">
                               <div className="flex items-start gap-3">
-                                <FileText className="w-5 h-5 text-blue-600 mt-0.5" />
+                                <FileText className="w-5 h-5 text-primary-600 mt-0.5" />
                                 <div>
                                   <h3 className="font-semibold">
                                     {form.name}
@@ -297,7 +299,7 @@ export default function FormsPage() {
             </div>
           </div>
 
-          <section className="mt-12 bg-blue-50 rounded-lg p-8">
+          <section className="mt-12 bg-primary-50 rounded-lg p-8">
             <h2 className="text-2xl font-bold mb-4">Need Help with Forms?</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Card>

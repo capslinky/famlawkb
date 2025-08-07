@@ -34,14 +34,14 @@ export default function CalculatorsPage() {
           <div className="flex justify-between items-center">
             <Link 
               href="/" 
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+              className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
             </Link>
             <Link 
               href="/tools" 
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+              className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800"
             >
               <FileText className="w-4 h-4" />
               View All Tools

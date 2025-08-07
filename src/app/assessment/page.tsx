@@ -1,6 +1,7 @@
 import EnhancedAssessmentTool from '@/components/EnhancedAssessmentTool';
 import Link from 'next/link';
 import { ArrowLeft, Shield, Clock, Save, Mail } from 'lucide-react';
+import { BreadcrumbCompact } from '@/components/ui/breadcrumb';
 
 export const metadata = {
   title: 'Legal Situation Assessment - Arizona Family Law Guide',
@@ -14,11 +15,14 @@ export default function AssessmentPage() {
         <div className="max-w-4xl mx-auto px-6 py-4">
           <Link 
             href="/" 
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
+          <div className="mt-2">
+            <BreadcrumbCompact />
+          </div>
         </div>
       </div>
 
@@ -32,19 +36,19 @@ export default function AssessmentPage() {
           {/* Enhanced Features */}
           <div className="flex justify-center gap-6 mt-6">
             <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Save className="w-4 h-4 text-blue-600" />
+              <Save className="w-4 h-4 text-primary-600" />
               <span>Save & Resume</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Clock className="w-4 h-4 text-blue-600" />
+              <Clock className="w-4 h-4 text-primary-600" />
               <span>Time Estimates</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Mail className="w-4 h-4 text-blue-600" />
+              <Mail className="w-4 h-4 text-primary-600" />
               <span>Email Results</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Shield className="w-4 h-4 text-blue-600" />
+              <Shield className="w-4 h-4 text-primary-600" />
               <span>Confidence Scoring</span>
             </div>
           </div>
