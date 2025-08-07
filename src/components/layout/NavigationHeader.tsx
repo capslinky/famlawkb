@@ -20,6 +20,7 @@ interface NavItem {
 export default function NavigationHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
 
   const navigation: NavItem[] = [
@@ -118,7 +119,16 @@ export default function NavigationHeader() {
   const isActive = (href: string) => pathname === href;
 
   const toggleDropdown = (label: string) => {
-    setOpenDropdown(openDropdown === label ? null : label);
+    const next = openDropdown === label ? null : label;
+    setOpenDropdown(next);
+    if (next) {
+      // Focus first menu item after open
+      setTimeout(() => {
+        const menu = containerRef.current?.querySelector('[role="menu"]');
+        const firstItem = menu?.querySelector('[role="menuitem"]') as HTMLElement | null;
+        firstItem?.focus();
+      }, 0);
+    }
   };
 
   // Close dropdowns on Escape key
@@ -128,6 +138,18 @@ export default function NavigationHeader() {
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  // Close on click outside
+  useEffect(() => {
+    const onDocClick = (e: MouseEvent) => {
+      if (!containerRef.current) return;
+      if (!containerRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', onDocClick);
+    return () => document.removeEventListener('mousedown', onDocClick);
   }, []);
 
   // Keyboard navigation within open dropdown menu
@@ -152,13 +174,23 @@ export default function NavigationHeader() {
     } else if (e.key === 'End') {
       e.preventDefault();
       items[items.length - 1]?.focus();
+    } else if (e.key === 'Tab') {
+      // trap focus within dropdown
+      e.preventDefault();
+      if (e.shiftKey) {
+        const prev = items[(currentIndex - 1 + items.length) % items.length];
+        prev?.focus();
+      } else {
+        const next = items[(currentIndex + 1 + items.length) % items.length];
+        next?.focus();
+      }
     }
   };
 
   return (
     <header id="primary-navigation" className="bg-white shadow-md sticky top-0 z-50" role="banner">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary" role="navigation">
-        <div className="flex justify-between items-center h-16">
+        <div ref={containerRef} className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2">
@@ -180,9 +212,21 @@ export default function NavigationHeader() {
                       onClick={() => toggleDropdown(item.label)}
                       aria-haspopup="menu"
                       aria-expanded={openDropdown === item.label}
+                      onKeyDown={(e) => {
+                        if (e.key === 'ArrowDown') {
+                          e.preventDefault();
+                          if (openDropdown !== item.label) {
+                            toggleDropdown(item.label);
+                          } else {
+                            const menu = containerRef.current?.querySelector('[role="menu"]');
+                            const firstItem = menu?.querySelector('[role="menuitem"]') as HTMLElement | null;
+                            firstItem?.focus();
+                          }
+                        }
+                      }}
                       className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                         openDropdown === item.label
-                          ? 'bg-blue-50 text-blue-700'
+                          ? 'bg-primary-50 text-primary-700'
                           : 'text-gray-700 hover:bg-gray-100'
                       }`}
                     >
@@ -213,12 +257,12 @@ export default function NavigationHeader() {
                                     key={subChild.label}
                                     href={subChild.href || '#'}
                                     onClick={() => setOpenDropdown(null)}
-                                    className={`block px-4 py-2 text-sm hover:bg-gray-50 ${
-                                      isActive(subChild.href || '') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'
+                                className={`block px-4 py-2 text-sm hover:bg-gray-50 ${
+                                      isActive(subChild.href || '') ? 'text-primary-600 bg-primary-50' : 'text-gray-700'
                                     }`}
-                                    role="menuitem"
-                                    tabIndex={-1}
-                                  >
+                                role="menuitem"
+                                tabIndex={-1}
+                              >
                                     <span className="ml-4">{subChild.label}</span>
                                   </Link>
                                 ))}
@@ -228,7 +272,7 @@ export default function NavigationHeader() {
                                 href={child.href || '#'}
                                 onClick={() => setOpenDropdown(null)}
                                 className={`flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-50 ${
-                                  isActive(child.href || '') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'
+                                  isActive(child.href || '') ? 'text-primary-600 bg-primary-50' : 'text-gray-700'
                                 }`}
                                 role="menuitem"
                                 tabIndex={-1}
@@ -263,7 +307,7 @@ export default function NavigationHeader() {
           <div className="hidden lg:flex items-center gap-2">
             <Link
               href="/assessment"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 transition-colors"
             >
               Start Assessment
             </Link>
