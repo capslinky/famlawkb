@@ -18,6 +18,7 @@ import {
   Shield
 } from 'lucide-react';
 import { Button } from './button';
+import { SearchAnnouncements } from '@/components/ui/screen-reader-announcements';
 // Removed Card import to avoid circular dependencies
 import { cn } from '@/lib/utils';
 
@@ -106,6 +107,7 @@ export function EnhancedSearch({
   const [isLoading, setIsLoading] = useState(false);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [showFiltersPanel, setShowFiltersPanel] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
   
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -171,6 +173,7 @@ export function EnhancedSearch({
     } else {
       setResults([]);
     }
+    setActiveIndex(-1);
   }, [query, filters, performSearch]);
 
   // Handle search input
@@ -226,22 +229,76 @@ export function EnhancedSearch({
     }
   };
 
+  // Global '/' shortcut to focus search (ignore if typing in inputs/textarea)
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) {
+        const target = e.target as HTMLElement;
+        const tag = target?.tagName?.toLowerCase();
+        if (tag !== 'input' && tag !== 'textarea' && tag !== 'select' && inputRef.current) {
+          e.preventDefault();
+          inputRef.current.focus();
+          setIsOpen(true);
+        }
+      }
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+        setActiveIndex(-1);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  // Keyboard navigation within results from the input
+  const onInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!isOpen) return;
+    const visible = results.slice(0, 8);
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = activeIndex + 1;
+      setActiveIndex(next >= visible.length ? 0 : next);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = activeIndex - 1;
+      setActiveIndex(prev < 0 ? visible.length - 1 : prev);
+    } else if (e.key === 'Enter' && activeIndex >= 0 && activeIndex < visible.length) {
+      e.preventDefault();
+      handleResultSelect(visible[activeIndex]);
+    }
+  };
+
+  const listboxId = 'search-results-listbox';
+
   return (
-    <div ref={searchRef} className={cn('relative w-full max-w-2xl', className)}>
+    <div
+      ref={searchRef}
+      id="search"
+      className={cn('relative w-full max-w-2xl', className)}
+      role="search"
+      aria-label="Site search"
+    >
       {/* Search Input */}
       <div className="relative">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-gray-400" />
+          <Search className="h-5 w-5 text-gray-400" aria-hidden="true" />
         </div>
         
         <input
           ref={inputRef}
           type="text"
+          id="search-input"
           value={query}
           onChange={(e) => handleSearch(e.target.value)}
           onFocus={() => setIsOpen(true)}
+          onKeyDown={onInputKeyDown}
           placeholder={placeholder}
           className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+          role="combobox"
+          aria-expanded={isOpen}
+          aria-controls={isOpen ? listboxId : undefined}
+          aria-activedescendant={activeIndex >= 0 && results[activeIndex] ? `search-option-${results[activeIndex].id}` : undefined}
+          aria-autocomplete="list"
         />
         
         <div className="absolute inset-y-0 right-0 flex items-center">
@@ -312,13 +369,15 @@ export function EnhancedSearch({
                 <p className="text-sm text-gray-500 mt-2">Searching...</p>
               </div>
             ) : results.length > 0 ? (
-              <div className="py-2">
-                {results.slice(0, 8).map((result) => (
+              <div className="py-2" role="listbox" id={listboxId} aria-label="Search results">
+                {results.slice(0, 8).map((result, idx) => (
                   <SearchResultItem
                     key={result.id}
                     result={result}
                     onSelect={handleResultSelect}
                     query={query}
+                    id={`search-option-${result.id}`}
+                    active={idx === activeIndex}
                   />
                 ))}
                 
@@ -358,6 +417,13 @@ export function EnhancedSearch({
           </motion.div>
         )}
       </AnimatePresence>
+      {/* Screen reader results announcement */}
+      <SearchAnnouncements
+        searchTerm={query}
+        resultCount={results.length}
+        isSearching={isLoading}
+        hasResults={results.length > 0}
+      />
     </div>
   );
 }
@@ -367,9 +433,11 @@ interface SearchResultItemProps {
   result: SearchResult;
   onSelect: (result: SearchResult) => void;
   query: string;
+  id: string;
+  active: boolean;
 }
 
-function SearchResultItem({ result, onSelect, query }: SearchResultItemProps) {
+function SearchResultItem({ result, onSelect, query, id, active }: SearchResultItemProps) {
   const highlightText = (text: string, highlight: string) => {
     if (!highlight.trim()) return text;
     
@@ -387,12 +455,18 @@ function SearchResultItem({ result, onSelect, query }: SearchResultItemProps) {
 
   return (
     <button
+      id={id}
+      role="option"
+      aria-selected={active}
       onClick={() => onSelect(result)}
-      className="w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-b-0"
+      className={cn(
+        'w-full px-4 py-3 text-left transition-colors border-b border-gray-50 last:border-b-0',
+        active ? 'bg-blue-50' : 'hover:bg-gray-50'
+      )}
     >
       <div className="flex items-start gap-3">
         <div className="flex-shrink-0 mt-1">
-          {getCategoryIcon(result.category)}
+          <span aria-hidden="true">{getCategoryIcon(result.category)}</span>
         </div>
         
         <div className="flex-1 min-w-0">
