@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { 
-  ArrowRight, Shield, Calculator, FileText, Users, 
-  HelpCircle, BookOpen, Briefcase, Gavel, Search, 
-  Zap, MessageSquare, GraduationCap, Clock, Heart,
-  AlertTriangle, ChevronRight, Star, TrendingUp,
-  Phone, Scale, Home, DollarSign, Baby, FileCheck
+  ArrowRight, Shield, FileText, Users, 
+  HelpCircle, BookOpen, Gavel, Search, 
+  MessageSquare, GraduationCap,
+  AlertTriangle, ChevronRight, Star,
+  Phone, Scale, Home, DollarSign, Baby
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -12,33 +12,33 @@ import { Button } from '@/components/ui/button';
 export default function HomePage() {
   const featuredTools = [
     {
-      title: 'Legal Assessment Tool',
-      description: 'Get personalized guidance based on your specific situation',
-      icon: <HelpCircle className="w-8 h-8" />,
-      href: '/assessment',
-      color: 'bg-blue-500',
+      title: 'Emergency Help',
+      description: 'Find safety resources and immediate assistance',
+      icon: <Phone className="w-8 h-8" />,
+      href: '/emergency-help',
+      color: 'bg-red-600',
       popular: true
     },
     {
-      title: 'Financial Calculators',
-      description: 'Calculate child support, spousal maintenance, and more',
-      icon: <Calculator className="w-8 h-8" />,
-      href: '/calculators',
-      color: 'bg-green-500'
-    },
-    {
-      title: 'Smart Forms Wizard',
-      description: 'Auto-fill court forms with step-by-step guidance',
+      title: 'Start a Case',
+      description: 'Pre‑filing overview and step‑by‑step guidance',
       icon: <FileText className="w-8 h-8" />,
-      href: '/forms/wizard',
-      color: 'bg-purple-500'
+      href: '/start',
+      color: 'bg-blue-600'
     },
     {
-      title: 'Case Management',
-      description: 'Track deadlines, tasks, and documents in one place',
-      icon: <Briefcase className="w-8 h-8" />,
-      href: '/case-management',
-      color: 'bg-indigo-500'
+      title: 'I Was Served',
+      description: 'See deadlines and file your response',
+      icon: <Gavel className="w-8 h-8" />,
+      href: '/responding',
+      color: 'bg-indigo-600'
+    },
+    {
+      title: 'Support & Custody',
+      description: 'Calculate support and build a parenting plan',
+      icon: <Users className="w-8 h-8" />,
+      href: '/support-custody',
+      color: 'bg-emerald-600'
     }
   ];
 
@@ -161,8 +161,8 @@ export default function HomePage() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">Powerful Legal Tools</h2>
-            <p className="text-gray-600 mt-2">Interactive tools to help you navigate your case</p>
+            <h2 className="text-3xl font-bold text-gray-900">What do you need today?</h2>
+            <p className="text-gray-600 mt-2">Choose a path to get clear, next‑step guidance</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

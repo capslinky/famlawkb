@@ -7,7 +7,7 @@ import {
   Menu, X, ChevronDown, Home, FileText, Calculator, Shield, 
   Users, HelpCircle, BookOpen, Briefcase, Gavel, Search,
   Settings, BarChart3, Zap, Globe, Rocket, FileCheck,
-  MessageSquare, GraduationCap, Phone, ChevronRight
+  MessageSquare, GraduationCap, Phone, ChevronRight, Clock
 } from 'lucide-react';
 
 interface NavItem {
@@ -25,83 +25,76 @@ export default function NavigationHeader() {
 
   const navigation: NavItem[] = [
     {
-      label: 'Getting Started',
+      label: 'Start',
       icon: <Home className="w-4 h-4" />,
       children: [
+        { label: 'Start Here (Hub)', href: '/start', icon: <Home className="w-4 h-4" /> },
         { label: 'Assessment Tool', href: '/assessment', icon: <HelpCircle className="w-4 h-4" /> },
-        { label: 'Getting Divorced', href: '/getting-divorced', icon: <FileText className="w-4 h-4" /> },
-        { label: 'Child Custody', href: '/child-custody', icon: <Users className="w-4 h-4" /> },
-        { label: 'Get Protection', href: '/get-protection', icon: <Shield className="w-4 h-4" /> },
-        { label: 'Emergency Help', href: '/emergency-help', icon: <Phone className="w-4 h-4" /> },
+        { label: 'Pre‑Filing Overview', href: '/modules/pre-filing', icon: <BookOpen className="w-4 h-4" /> },
+        { label: 'Start a Case', href: '/modules/starting-case', icon: <FileText className="w-4 h-4" /> },
+        { label: 'Getting Divorced', href: '/getting-divorced', icon: <Gavel className="w-4 h-4" /> },
       ]
     },
     {
-      label: 'Legal Processes',
+      label: 'Respond',
       icon: <Gavel className="w-4 h-4" />,
       children: [
-        { label: 'Divorce Types', icon: <FileText className="w-4 h-4" />, children: [
-          { label: 'Uncontested (Simple)', href: '/divorce/uncontested-simple' },
-          { label: 'Uncontested with Children', href: '/divorce/uncontested-with-children' },
-          { label: 'Contested Divorce', href: '/divorce/contested-full' },
-        ]},
-        { label: 'Process Modules', icon: <BookOpen className="w-4 h-4" />, children: [
-          { label: 'Responding to Divorce', href: '/modules/responding' },
-          { label: 'First Appearance', href: '/modules/first-appearance' },
-          { label: 'Financial Disclosures', href: '/modules/disclosures' },
-          { label: 'Temporary Orders', href: '/modules/temporary-orders' },
-          { label: 'Mediation', href: '/modules/mediation' },
-          { label: 'Trial Preparation', href: '/modules/trial-prep' },
-          { label: 'Modifications', href: '/modules/modifications' },
-          { label: 'Enforcement & Appeals', href: '/modules/enforcement-appeals' },
-        ]},
-        { label: 'Court Procedures', href: '/procedures/court-procedures' },
-        { label: 'Emergency Orders', href: '/procedures/emergency-orders' },
+        { label: 'Respond Hub', href: '/responding', icon: <Gavel className="w-4 h-4" /> },
+        { label: 'Urgent Timeline', href: '/responding/urgent-timeline' },
+        { label: 'Standard Timeline', href: '/responding/standard-timeline' },
+        { label: 'File a Response', href: '/forms/response-petition', icon: <FileText className="w-4 h-4" /> },
+        { label: 'Deadline Calculator', href: '/tools#deadline-calculator', icon: <Clock className="w-4 h-4" /> },
+        { label: 'Responding Module', href: '/modules/responding', icon: <BookOpen className="w-4 h-4" /> },
       ]
     },
     {
-      label: 'Financial',
-      icon: <Calculator className="w-4 h-4" />,
+      label: 'Support & Custody',
+      icon: <Users className="w-4 h-4" />,
       children: [
-        { label: 'All Calculators', href: '/calculators', icon: <Calculator className="w-4 h-4" /> },
-        { label: 'Child Support Calculator', href: '/support/calculator', icon: <Users className="w-4 h-4" /> },
-        { label: 'Child Support Info', href: '/topics/child-support' },
+        { label: 'Support & Custody Hub', href: '/support-custody', icon: <Users className="w-4 h-4" /> },
+        { label: 'Child Support Calculator', href: '/support/calculator', icon: <Calculator className="w-4 h-4" /> },
         { label: 'Spousal Maintenance', href: '/topics/spousal-maintenance' },
-        { label: 'Property Division', href: '/topics/property-division' },
+        { label: 'Parenting Plan Builder', href: '/tools#parenting-plan' },
+        { label: 'Modify Child Support', href: '/support-modification/child-support' },
+        { label: 'Modify Spousal Support', href: '/support-modification/spousal-support' },
+        { label: 'Child Support Info', href: '/topics/child-support' },
       ]
     },
     {
-      label: 'Forms & Documents',
+      label: 'Protection',
+      icon: <Shield className="w-4 h-4" />,
+      children: [
+        { label: 'Protection Hub', href: '/protection', icon: <Shield className="w-4 h-4" /> },
+        { label: 'Emergency Help', href: '/emergency-help', icon: <Phone className="w-4 h-4" /> },
+        { label: 'Get Protection', href: '/get-protection' },
+        { label: 'Safety Plan', href: '/protection/safety-plan' },
+        { label: 'Types of Orders', href: '/protection/types' },
+        { label: 'How to File', href: '/protection/how-to-file' },
+        { label: 'Responding to Emergency', href: '/protection/responding-emergency' },
+      ]
+    },
+    {
+      label: 'Forms',
       icon: <FileText className="w-4 h-4" />,
       children: [
-        { label: 'Court Forms Hub', href: '/forms', icon: <FileText className="w-4 h-4" /> },
+        { label: 'Forms Hub', href: '/forms', icon: <FileText className="w-4 h-4" /> },
         { label: 'Smart Form Wizard', href: '/forms/wizard' },
         { label: 'Packet Builder', href: '/forms/packet-builder' },
         { label: 'Divorce Petition (Children)', href: '/forms/divorce-petition-children' },
         { label: 'Response to Petition', href: '/forms/response-petition' },
-        { label: 'Smart Divorce Petition', href: '/forms/smart/divorce-petition' },
       ]
     },
     {
-      label: 'Tools',
-      icon: <Zap className="w-4 h-4" />,
-      children: [
-        { label: 'All Tools', href: '/tools', icon: <Zap className="w-4 h-4" /> },
-        { label: 'Case Management', href: '/case-management', icon: <Briefcase className="w-4 h-4" /> },
-        { label: 'Communication Hub', href: '/communication', icon: <MessageSquare className="w-4 h-4" /> },
-        { label: 'Learning Resources', href: '/learning', icon: <GraduationCap className="w-4 h-4" /> },
-        { label: 'Search', href: '/search', icon: <Search className="w-4 h-4" /> },
-      ]
-    },
-    {
-      label: 'Resources',
+      label: 'Learn',
       icon: <BookOpen className="w-4 h-4" />,
       children: [
+        { label: 'Learning Hub', href: '/learning', icon: <GraduationCap className="w-4 h-4" /> },
+        { label: 'Glossary', href: '/glossary' },
+        { label: 'FAQ', href: '/reference/faq' },
         { label: 'Resource Center', href: '/resources' },
         { label: 'Self-Representation Guide', href: '/resources/self-representation-guide' },
-        { label: 'Legal Representation', href: '/resources/legal-representation' },
-        { label: 'FAQ', href: '/reference/faq' },
-        { label: 'Glossary', href: '/glossary' },
         { label: 'Legal Disclaimer', href: '/legal-disclaimer' },
+        { label: 'Search', href: '/search', icon: <Search className="w-4 h-4" /> },
       ]
     },
     {
