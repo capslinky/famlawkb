@@ -40,10 +40,15 @@ export function Button({
     <button
       className={`inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
       disabled={disabled || loading}
+      aria-disabled={disabled || loading || undefined}
+      aria-busy={loading || undefined}
       {...props}
     >
       {loading ? (
-        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current"></div>
+        <div
+          className="animate-spin rounded-full h-4 w-4 border-b-2 border-current"
+          aria-hidden="true"
+        />
       ) : icon ? icon : (
         <>
           {leftIcon && <span className="mr-2">{leftIcon}</span>}

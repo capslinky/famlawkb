@@ -55,8 +55,8 @@ export default function CalculatorsPage() {
         <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4">All Financial Calculators</h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <a href="#spousal-maintenance">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Link href="#spousal-maintenance" className="block">
+              <Card className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -72,10 +72,10 @@ export default function CalculatorsPage() {
                   </p>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
 
-            <a href="#property-division">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Link href="#property-division" className="block">
+              <Card className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -91,10 +91,10 @@ export default function CalculatorsPage() {
                   </p>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
 
-            <a href="#modification-predictor">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Link href="#modification-predictor" className="block">
+              <Card className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
@@ -110,10 +110,10 @@ export default function CalculatorsPage() {
                   </p>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
 
-            <a href="#tax-impact">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Link href="#tax-impact" className="block">
+              <Card className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -129,10 +129,10 @@ export default function CalculatorsPage() {
                   </p>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
 
-            <a href="#arrears">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Link href="#arrears" className="block">
+              <Card className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
@@ -148,10 +148,10 @@ export default function CalculatorsPage() {
                   </p>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
 
-            <a href="#payment-methods">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Link href="#payment-methods" className="block">
+              <Card className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
@@ -167,7 +167,7 @@ export default function CalculatorsPage() {
                   </p>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
           </div>
         </div>
 

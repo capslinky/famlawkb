@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
@@ -121,9 +121,43 @@ export default function NavigationHeader() {
     setOpenDropdown(openDropdown === label ? null : label);
   };
 
+  // Close dropdowns on Escape key
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpenDropdown(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  // Keyboard navigation within open dropdown menu
+  const onMenuKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!openDropdown) return;
+    const menu = e.currentTarget;
+    const items = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
+    if (items.length === 0) return;
+    const currentIndex = items.findIndex((el) => el === document.activeElement);
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = items[(currentIndex + 1 + items.length) % items.length];
+      next?.focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = items[(currentIndex - 1 + items.length) % items.length];
+      prev?.focus();
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      items[0]?.focus();
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      items[items.length - 1]?.focus();
+    }
+  };
+
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header id="primary-navigation" className="bg-white shadow-md sticky top-0 z-50" role="banner">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary" role="navigation">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
@@ -144,6 +178,8 @@ export default function NavigationHeader() {
                   <>
                     <button
                       onClick={() => toggleDropdown(item.label)}
+                      aria-haspopup="menu"
+                      aria-expanded={openDropdown === item.label}
                       className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                         openDropdown === item.label
                           ? 'bg-blue-50 text-blue-700'
@@ -159,7 +195,12 @@ export default function NavigationHeader() {
 
                     {/* Dropdown Menu */}
                     {openDropdown === item.label && (
-                      <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                      <div
+                        className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
+                        role="menu"
+                        aria-label={item.label}
+                        onKeyDown={onMenuKeyDown}
+                      >
                         {item.children.map((child) => (
                           <div key={child.label}>
                             {child.children ? (
@@ -175,6 +216,8 @@ export default function NavigationHeader() {
                                     className={`block px-4 py-2 text-sm hover:bg-gray-50 ${
                                       isActive(subChild.href || '') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'
                                     }`}
+                                    role="menuitem"
+                                    tabIndex={-1}
                                   >
                                     <span className="ml-4">{subChild.label}</span>
                                   </Link>
@@ -187,6 +230,8 @@ export default function NavigationHeader() {
                                 className={`flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-50 ${
                                   isActive(child.href || '') ? 'text-blue-600 bg-blue-50' : 'text-gray-700'
                                 }`}
+                                role="menuitem"
+                                tabIndex={-1}
                               >
                                 {child.icon}
                                 {child.label}

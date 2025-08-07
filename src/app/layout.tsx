@@ -6,6 +6,10 @@ import Footer from "@/components/layout/Footer";
 import CrisisSafetyFeatures from "@/components/CrisisSafetyFeatures";
 import { ReassuranceWidget } from "@/components/EmotionalSupport";
 import CrisisDetection from "@/components/CrisisDetection";
+import { ThemeProvider } from "@/components/ui/theme-toggle";
+import { ToastProvider } from "@/components/ui/toast";
+import { ScreenReaderProvider } from "@/components/ui/screen-reader-announcements";
+import { SkipNavigation } from "@/components/ui/skip-navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,14 +73,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <CrisisSafetyFeatures />
-        <CrisisDetection />
-        <NavigationHeader />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-        <ReassuranceWidget />
+        <ThemeProvider>
+          <ToastProvider>
+            <ScreenReaderProvider>
+              <SkipNavigation />
+              <CrisisSafetyFeatures />
+              <CrisisDetection />
+              <NavigationHeader />
+              <main id="main-content" className="flex-1" tabIndex={-1}>
+                {children}
+              </main>
+              <Footer />
+              <ReassuranceWidget />
+            </ScreenReaderProvider>
+          </ToastProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
