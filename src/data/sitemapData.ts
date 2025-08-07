@@ -174,10 +174,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/protection/responding-emergency',
     title: 'Responding to Emergency Orders',
     description: 'How to respond when served with emergency orders',
-    status: 'placeholder',
+    status: 'complete',
     category: 'Protection',
     priority: 'medium',
-    notes: 'Page exists but needs content'
+    notes: 'Complete with step-by-step response guide'
   },
   {
     path: '/protection/safety-plan',
@@ -192,10 +192,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/protection/types',
     title: 'Types of Protection Orders',
     description: 'Different types of protection orders available in Arizona',
-    status: 'placeholder',
+    status: 'complete',
     category: 'Protection',
     priority: 'medium',
-    notes: 'Page exists but needs content'
+    notes: 'Complete with detailed explanation of all protection order types'
   },
 
   // Response Workflow Pages
@@ -261,10 +261,10 @@ export const sitemapData: SitemapPage[] = [
     path: '/support/calculator',
     title: 'Child Support Calculator',
     description: 'Arizona child support calculation tool',
-    status: 'placeholder',
+    status: 'complete',
     category: 'Forms & Tools',
     priority: 'high',
-    notes: 'Currently shows "Coming Soon" placeholder (102 lines) - NEEDS IMPLEMENTATION'
+    notes: 'COMPLETE with full Arizona Income Shares Model calculator, interactive form, detailed results breakdown, print functionality, and comprehensive guidance (420+ lines)'
   },
   {
     path: '/support-modification/child-support',
@@ -376,7 +376,25 @@ export const sitemapData: SitemapPage[] = [
     status: 'complete',
     category: 'Legal',
     priority: 'high',
-    notes: 'Complete with comprehensive legal disclaimers, Arizona Bar compliance, liability limitations, and professional responsibility guidelines'
+    notes: 'Complete with comprehensive legal disclaimers, Arizona Bar compliance, liability limitations, and professional responsibility guidelines (772 lines)'
+  },
+  {
+    path: '/privacy-policy',
+    title: 'Privacy Policy',
+    description: 'Privacy policy and data protection information',
+    status: 'complete',
+    category: 'Legal',
+    priority: 'high',
+    notes: 'Complete with GDPR/CCPA compliant privacy policy, data collection disclosure, user rights, and security measures'
+  },
+  {
+    path: '/terms',
+    title: 'Terms of Service',
+    description: 'Terms of service and usage agreement',
+    status: 'complete',
+    category: 'Legal',
+    priority: 'high',
+    notes: 'Complete with comprehensive terms, disclaimers, intellectual property rights, and liability limitations'
   },
 
   // NEW SPRINT FEATURES - Tools & Calculators
