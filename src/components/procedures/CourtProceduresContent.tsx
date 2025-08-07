@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Gavel, Building, FileText, Clock, DollarSign, Users, AlertTriangle, CheckCircle, XCircle, Info, ExternalLink, Calendar, Scale, BookOpen, HelpCircle, Target, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { BreadcrumbCompact } from '@/components/ui/breadcrumb';
 
 export default function CourtProceduresContent() {
   return (
@@ -21,6 +22,9 @@ export default function CourtProceduresContent() {
       </div>
 
       <div className="max-w-4xl mx-auto px-6 py-12">
+        <div className="mb-4">
+          <BreadcrumbCompact />
+        </div>
         {/* At a Glance */}
         <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
           <div className="flex items-start gap-3">

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
+import { BreadcrumbCompact } from '@/components/ui/breadcrumb';
 import { ArrowLeft, CheckCircle, FileText, Clock, DollarSign, AlertCircle, Users, Calculator, Scale, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -16,11 +17,14 @@ export default function UncontestedSimplePage() {
         <div className="max-w-4xl mx-auto px-6 py-4">
           <Link 
             href="/getting-divorced" 
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Divorce Overview
           </Link>
+          <div className="mt-2">
+            <BreadcrumbCompact />
+          </div>
         </div>
       </div>
 

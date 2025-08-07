@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
+import { BreadcrumbCompact } from '@/components/ui/breadcrumb';
 import { ArrowLeft, FileText, Calculator, Users, Clock, Scale, AlertTriangle, CheckCircle, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -16,11 +17,14 @@ export default function GettingDivorcedPage() {
         <div className="max-w-4xl mx-auto px-6 py-4">
           <Link 
             href="/" 
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
+          <div className="mt-2">
+            <BreadcrumbCompact />
+          </div>
         </div>
       </div>
 
@@ -28,7 +32,7 @@ export default function GettingDivorcedPage() {
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl font-bold mb-6">Getting Divorced in Arizona</h1>
           
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+          <div className="bg-primary-50 border border-primary-200 rounded-lg p-6 mb-8">
             <h2 className="text-lg font-semibold mb-4">Arizona Divorce At a Glance</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -78,9 +82,9 @@ export default function GettingDivorcedPage() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow border-blue-200">
+              <Card className="hover:shadow-lg transition-shadow border-primary-200">
                 <CardContent className="p-6">
-                  <Users className="w-8 h-8 text-blue-600 mb-3" />
+                  <Users className="w-8 h-8 text-primary-600 mb-3" />
                   <h3 className="text-xl font-semibold mb-2">Uncontested (Children)</h3>
                   <p className="text-gray-600 mb-4">
                     With children but both parties agree on custody and support.
@@ -246,17 +250,17 @@ export default function GettingDivorcedPage() {
               <div>
                 <h3 className="font-medium mb-2">Court Forms & Documents</h3>
                 <ul className="space-y-1 text-sm text-gray-600">
-                  <li>• <Link href="/forms" className="text-blue-600 hover:underline">Court Forms Hub</Link></li>
-                  <li>• <Link href="/forms/divorce-petition-children" className="text-blue-600 hover:underline">Petition Assistant</Link></li>
-                  <li>• <Link href="/forms/response-petition" className="text-blue-600 hover:underline">Response Assistant</Link></li>
+                  <li>• <Link href="/forms" className="text-primary-600 hover:underline">Court Forms Hub</Link></li>
+                  <li>• <Link href="/forms/divorce-petition-children" className="text-primary-600 hover:underline">Petition Assistant</Link></li>
+                  <li>• <Link href="/forms/response-petition" className="text-primary-600 hover:underline">Response Assistant</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-medium mb-2">Legal Support Options</h3>
                 <ul className="space-y-1 text-sm text-gray-600">
-                  <li>• <Link href="/resources/self-representation-guide" className="text-blue-600 hover:underline">Self-Representation Guide</Link></li>
-                  <li>• <Link href="/resources/legal-representation" className="text-blue-600 hover:underline">Finding an Attorney</Link></li>
-                  <li>• <Link href="/reference/faq" className="text-blue-600 hover:underline">Frequently Asked Questions</Link></li>
+                  <li>• <Link href="/resources/self-representation-guide" className="text-primary-600 hover:underline">Self-Representation Guide</Link></li>
+                  <li>• <Link href="/resources/legal-representation" className="text-primary-600 hover:underline">Finding an Attorney</Link></li>
+                  <li>• <Link href="/reference/faq" className="text-primary-600 hover:underline">Frequently Asked Questions</Link></li>
                 </ul>
               </div>
             </div>

@@ -16,13 +16,13 @@ export const metadata = {
 export default function ToolsPage() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-r from-blue-700 to-purple-700 text-white">
+      <div className="bg-gradient-to-r from-primary-700 to-purple-700 text-white">
         <div className="max-w-6xl mx-auto px-6 py-8">
           <div className="flex items-center gap-3">
             <Calculator className="w-8 h-8" />
             <div>
               <h1 className="text-3xl font-bold">Legal Tools & Calculators</h1>
-              <p className="text-blue-100 mt-1">Interactive tools to manage your family law case</p>
+              <p className="text-primary-100 mt-1">Interactive tools to manage your family law case</p>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function ToolsPage() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <Link 
             href="/" 
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
+            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
@@ -66,8 +66,8 @@ export default function ToolsPage() {
             <Card className="hover:shadow-lg transition-shadow cursor-pointer">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Users className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                    <Users className="w-6 h-6 text-primary-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Parenting Plan Builder</h3>

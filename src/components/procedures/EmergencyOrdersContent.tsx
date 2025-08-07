@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { AlertTriangle, Shield, Clock, Phone, Users, FileText, Gavel, ExternalLink, Info, CheckCircle, XCircle, Target, Zap, BookOpen, HelpCircle, Calendar, Home, DollarSign } from 'lucide-react';
 import Link from 'next/link';
+import { BreadcrumbCompact } from '@/components/ui/breadcrumb';
 
 export default function EmergencyOrdersContent() {
   return (
@@ -21,6 +22,9 @@ export default function EmergencyOrdersContent() {
       </div>
 
       <div className="max-w-4xl mx-auto px-6 py-12">
+        <div className="mb-4">
+          <BreadcrumbCompact />
+        </div>
         {/* Critical Notice */}
         <div className="bg-red-50 border-l-4 border-red-400 p-6 mb-8">
           <div className="flex items-start gap-3">
