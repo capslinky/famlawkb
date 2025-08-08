@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "verify:dev-sitemap": "node scripts/check-dev-sitemap.js",
+    "hooks:install": "node scripts/install-hooks.js",
+    "prepare": "node scripts/install-hooks.js || true",
+    "type-check": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "@types/lodash": "^4.17.20",

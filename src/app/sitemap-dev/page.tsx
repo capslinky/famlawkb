@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowLeft, CheckCircle, AlertCircle, Clock, FileText, TrendingUp, Calendar, Rocket, DollarSign, Target } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { getAllSitemapPages, getSitemapStats, PageStatus } from '@/data/sitemapData';
+import { getCategoryProgress, getMissingDeclaredPages, getUndocumentedRoutes, scanTodos } from '@/lib/devSitemap';
 import { getImplementationStats, implementationData } from '@/data/implementationProgress';
 
 interface SitemapStats {
@@ -67,6 +68,10 @@ export default function DeveloperSitemapPage() {
   const allPages = getAllSitemapPages();
   const stats = getSitemapStats() as SitemapStats;
   const implStats = getImplementationStats();
+  const categoryProgress = getCategoryProgress();
+  const undocumented = getUndocumentedRoutes();
+  const missingDeclared = getMissingDeclaredPages();
+  const todos = scanTodos(40);
   
   // Group pages by category
   const pagesByCategory = allPages.reduce((acc, page) => {
@@ -286,6 +291,34 @@ export default function DeveloperSitemapPage() {
 
         {/* Pages by Category */}
         <div className="space-y-8">
+          {/* Category Progress Overview */}
+          <Card>
+            <CardContent className="p-6">
+              <h2 className="text-xl font-semibold mb-4">Category Progress</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {categoryProgress.map(cat => (
+                  <div key={cat.category} className="border rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="font-medium">{cat.category}</div>
+                      <div className="text-sm text-gray-600">{cat.complete}/{cat.total} complete</div>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div
+                        className="bg-green-500 h-2 rounded-full"
+                        style={{ width: `${cat.completionRate}%` }}
+                      />
+                    </div>
+                    <div className="mt-2 text-xs text-gray-600 flex gap-3">
+                      <span>Partial: {cat.partial}</span>
+                      <span>Placeholder: {cat.placeholder}</span>
+                      <span>Planned: {cat.planned}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
           {Object.entries(pagesByCategory).map(([category, pages]) => (
             <Card key={category}>
               <CardContent className="p-6">
@@ -338,6 +371,85 @@ export default function DeveloperSitemapPage() {
             </Card>
           ))}
         </div>
+
+        {/* Cross-Checks */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <Card className="border-yellow-200">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-semibold mb-3">Undocumented Routes (in filesystem, not in sitemapData)</h3>
+              {undocumented.length === 0 ? (
+                <p className="text-sm text-green-700">No undocumented routes found. ✅</p>
+              ) : (
+                <ul className="space-y-2">
+                  {undocumented.map(r => (
+                    <li key={r.path} className="text-sm flex items-center justify-between">
+                      <code className="bg-gray-100 px-2 py-1 rounded">{r.path}</code>
+                      <span className="text-gray-500 truncate ml-2">{r.file.replace(process.cwd() + '/', '')}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </CardContent>
+          </Card>
+
+          <Card className="border-orange-200">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-semibold mb-3">Declared But Missing (in sitemapData, not in filesystem)</h3>
+              {missingDeclared.length === 0 ? (
+                <p className="text-sm text-green-700">All declared pages exist in the filesystem. ✅</p>
+              ) : (
+                <ul className="space-y-2">
+                  {missingDeclared.map(p => (
+                    <li key={p.path} className="text-sm flex items-center gap-2">
+                      <code className="bg-gray-100 px-2 py-1 rounded">{p.path}</code>
+                      <span className="text-gray-600">{p.title}</span>
+                      <StatusBadge status={p.status} />
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* TODO / FIXME Scanner */}
+        <Card className="mt-8">
+          <CardContent className="p-6">
+            <h3 className="text-lg font-semibold mb-3">TODO and FIXME Findings</h3>
+            {todos.length === 0 ? (
+              <p className="text-sm text-gray-600">No TODO/FIXME notes detected under <code>src/</code>.</p>
+            ) : (
+              <div className="overflow-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left text-gray-600">
+                      <th className="py-2 pr-4">File</th>
+                      <th className="py-2 pr-4">Line</th>
+                      <th className="py-2 pr-4">Type</th>
+                      <th className="py-2">Snippet</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {todos.map((t, idx) => (
+                      <tr key={idx} className="border-t">
+                        <td className="py-2 pr-4 font-mono text-xs">{t.file}</td>
+                        <td className="py-2 pr-4">{t.line}</td>
+                        <td className="py-2 pr-4">
+                          <span className={`px-2 py-1 rounded text-xs ${
+                            t.kind === 'FIXME' ? 'bg-red-100 text-red-800' :
+                            t.kind === 'TODO' ? 'bg-yellow-100 text-yellow-800' :
+                            'bg-blue-100 text-blue-800'
+                          }`}>{t.kind}</span>
+                        </td>
+                        <td className="py-2 whitespace-pre-wrap">{t.text}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </CardContent>
+        </Card>
 
         {/* Legend */}
         <Card className="mt-8">
