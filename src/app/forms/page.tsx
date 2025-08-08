@@ -205,7 +205,7 @@ export default function FormsPage() {
                 </div>
               </div>
               <Link href="/forms/wizard">
-                  <Button size="lg" className="bg-white text-primary-600 hover:bg-primary-50">
+                  <Button size="lg" variant="solidWhite">
                     Start Wizard
                   </Button>
               </Link>

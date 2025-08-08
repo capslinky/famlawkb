@@ -348,12 +348,12 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/assessment">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button size="lg" variant="solidWhite">
                 Start Free Assessment
               </Button>
             </Link>
             <Link href="/resources">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outlineOnDark">
                 Browse Resources
               </Button>
             </Link>
