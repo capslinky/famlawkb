@@ -649,7 +649,7 @@ class CaseManagementService extends EventEmitter {
 
     const { frequency, until, occurrences } = baseEvent.recurring;
     const events: CaseEvent[] = [];
-    let currentDate = new Date(baseEvent.date);
+    const currentDate = new Date(baseEvent.date);
     let count = 0;
 
     while (

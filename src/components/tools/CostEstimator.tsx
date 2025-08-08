@@ -143,7 +143,7 @@ export default function CostEstimator() {
     const template = CASE_TEMPLATES.find(t => t.name === selectedCase);
     if (!template) return;
 
-    let courtCosts: CostItem[] = template.courtCosts.map(cost => ({
+    const courtCosts: CostItem[] = template.courtCosts.map(cost => ({
       category: 'Court Fees',
       item: cost.item,
       lowEstimate: cost.lowEstimate,
