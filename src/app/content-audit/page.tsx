@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, FileText, CheckCircle, XCircle, AlertTriangle, BarChart3, Download, RefreshCw, Eye, Filter, TrendingUp, Clock, AlertCircle, ChevronRight, Search } from 'lucide-react';
+import { FileText, CheckCircle, AlertTriangle, BarChart3, Download, RefreshCw, Eye, TrendingUp, Clock, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { contentAuditService, AuditReport, ContentAuditResult, ContentPage } from '@/lib/contentAudit';
+import { contentAuditService, AuditReport, ContentAuditResult } from '@/lib/contentAudit';
 
 export default function ContentAuditDashboard() {
   const [activeTab, setActiveTab] = useState<'overview' | 'details' | 'issues' | 'actions'>('overview');
   const [auditReport, setAuditReport] = useState<AuditReport | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory] = useState<string>('all');
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [isRunningAudit, setIsRunningAudit] = useState(false);
@@ -46,7 +46,7 @@ export default function ContentAuditDashboard() {
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      results = results.filter(r => {
+      results = results.filter(() => {
         // Match category from inventory (would need to implement)
         return true; // Simplified
       });

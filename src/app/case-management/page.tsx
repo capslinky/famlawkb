@@ -2,12 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Briefcase, Calendar, CheckSquare, FileText, Users, TrendingUp, Clock, AlertTriangle, Plus, Search, Filter } from 'lucide-react';
+import { Briefcase, Calendar, CheckSquare, FileText, TrendingUp, Clock, Plus, Search } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import TimelineView from '@/components/case/TimelineView';
 import TaskManager from '@/components/case/TaskManager';
-import { caseManagementService, Case, CaseEvent, CaseTask, CaseTimeline } from '@/lib/caseManagement';
+import { caseManagementService, Case, CaseTask, CaseTimeline } from '@/lib/caseManagement';
 
 export default function CaseManagementDashboard() {
   const [activeTab, setActiveTab] = useState<'overview' | 'timeline' | 'tasks' | 'documents'>('overview');
@@ -266,7 +266,7 @@ export default function CaseManagementDashboard() {
                 
                 <select
                   value={filterType}
-                  onChange={(e) => setFilterType(e.target.value as any)}
+                  onChange={(e) => setFilterType(e.target.value as Case['type'] | 'all')}
                   className="px-3 py-2 border rounded-lg"
                 >
                   <option value="all">All Types</option>
@@ -279,7 +279,7 @@ export default function CaseManagementDashboard() {
 
                 <select
                   value={filterStatus}
-                  onChange={(e) => setFilterStatus(e.target.value as any)}
+                  onChange={(e) => setFilterStatus(e.target.value as Case['status'] | 'all')}
                   className="px-3 py-2 border rounded-lg"
                 >
                   <option value="all">All Status</option>

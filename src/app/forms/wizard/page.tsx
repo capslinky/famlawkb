@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 import { ArrowLeft, Sparkles, FileText } from 'lucide-react';
 import FormSelectionWizard from '@/components/forms/FormSelectionWizard';

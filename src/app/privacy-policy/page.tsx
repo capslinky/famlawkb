@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
-import { ArrowLeft, Shield, Lock, Eye, Database, Mail, Globe, AlertCircle, CheckCircle, FileText } from 'lucide-react';
+import { Shield, Lock, Eye, Database, Mail, Globe, AlertCircle, CheckCircle, FileText } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata = {

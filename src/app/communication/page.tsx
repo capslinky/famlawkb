@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, MessageSquare, Bell, FileText, Shield, Users, Settings, Search, Plus, Send, Paperclip, Lock, Clock, CheckCircle } from 'lucide-react';
+import { MessageSquare, Bell, FileText, Shield, Settings, Search, Plus, Send, Paperclip, Lock, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import NotificationCenter from '@/components/communication/NotificationCenter';

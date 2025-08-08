@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, AlertTriangle, Shield, FileText, Gavel, Phone } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, Shield, Gavel, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const metadata = {

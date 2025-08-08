@@ -1,8 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, GraduationCap, PlayCircle, BookOpen, Target, Award, Users, Clock, TrendingUp, ChevronRight } from 'lucide-react';
+import { ArrowLeft, GraduationCap, PlayCircle, BookOpen, Target, Award, Clock, TrendingUp, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import VideoTutorialPlayer, { VIDEO_TUTORIALS } from '@/components/learning/VideoTutorialPlayer';
@@ -30,7 +31,7 @@ export default function LearningResourcesPage() {
     // In a real app, would save to user profile
   };
 
-  const handleGuideComplete = (guideId: string, responses: Map<string, any>) => {
+  const handleGuideComplete = (guideId: string, responses: Map<string, string | number | boolean>) => {
     console.log(`Guide ${guideId} completed with responses:`, responses);
     // In a real app, would save progress
   };
