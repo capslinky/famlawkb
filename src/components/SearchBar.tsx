@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Search, X, FileText, Calculator, HelpCircle, AlertCircle, Clock, TrendingUp } from 'lucide-react';
+import { Search, X, FileText, Calculator, HelpCircle, AlertTriangle, Clock, TrendingUp, Home, Shield, DollarSign, Scale } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { searchContent, getSearchSuggestions, SearchResult } from '@/data/searchIndex';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { SearchResult } from '@/lib/searchIndex';
 
 interface SearchBarProps {
   className?: string;
@@ -13,35 +13,28 @@ interface SearchBarProps {
   onSearch?: (query: string) => void;
 }
 
-const categoryIcons = {
-  module: FileText,
-  topic: HelpCircle,
-  form: FileText,
-  calculator: Calculator,
-  emergency: AlertCircle
+const categoryIcons: Record<string, any> = {
+  divorce: Home,
+  custody: HelpCircle,
+  support: DollarSign,
+  protection: Shield,
+  property: Home,
+  forms: FileText,
+  procedures: FileText,
+  resources: FileText,
+  emergency: AlertTriangle
 };
 
-const categoryColors = {
-  module: 'text-blue-600',
-  topic: 'text-green-600',
-  form: 'text-purple-600',
-  calculator: 'text-orange-600',
-  emergency: 'text-red-600'
+const categoryColors: Record<string, string> = {
+  divorce: 'text-blue-600',
+  custody: 'text-green-600',
+  support: 'text-purple-600',
+  protection: 'text-red-600',
+  property: 'text-orange-600',
+  forms: 'text-indigo-600',
+  procedures: 'text-gray-600',
+  resources: 'text-teal-600'
 };
-
-// Popular searches based on common user needs
-const popularSearches = [
-  'child custody',
-  'divorce process',
-  'child support calculator',
-  'spousal maintenance',
-  'property division',
-  'order of protection',
-  'parenting time',
-  'temporary orders',
-  'court forms',
-  'legal separation'
-];
 
 export default function SearchBar({ 
   className = '', 
@@ -54,11 +47,14 @@ export default function SearchBar({
   const [results, setResults] = useState<SearchResult[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [popularSearches, setPopularSearches] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+  const debounceTimer = useRef<NodeJS.Timeout | undefined>(undefined);
 
-  // Load recent searches from localStorage on mount
+  // Load recent searches and popular searches on mount
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('recentSearches');
@@ -66,7 +62,29 @@ export default function SearchBar({
         setRecentSearches(JSON.parse(saved));
       }
     }
+    
+    // Fetch popular searches
+    fetchPopularSearches();
   }, []);
+
+  // Fetch popular searches from API
+  const fetchPopularSearches = async () => {
+    try {
+      const response = await fetch('/api/search/suggestions?q=');
+      const data = await response.json();
+      setPopularSearches(data.suggestions || []);
+    } catch (error) {
+      console.error('Error fetching popular searches:', error);
+      // Fallback to default popular searches
+      setPopularSearches([
+        'divorce process',
+        'child custody',
+        'child support calculator',
+        'protection order',
+        'spousal maintenance'
+      ]);
+    }
+  };
 
   // Handle clicks outside to close dropdown
   useEffect(() => {
@@ -90,25 +108,67 @@ export default function SearchBar({
     }
   };
 
-  // Update suggestions and results as user types
-  useEffect(() => {
-    if (query.trim().length >= 2) {
-      const newSuggestions = getSearchSuggestions(query);
-      const newResults = searchContent(query, { limit: 5 });
-      setSuggestions(newSuggestions);
-      setResults(newResults);
+  // Fetch search results and suggestions from API
+  const fetchSearchData = async (searchQuery: string) => {
+    if (searchQuery.trim().length < 2) {
+      setSuggestions([]);
+      setResults([]);
+      return;
+    }
+
+    setIsLoading(true);
+    
+    try {
+      // Fetch both suggestions and search results in parallel
+      const [suggestionsRes, searchRes] = await Promise.all([
+        fetch(`/api/search/suggestions?q=${encodeURIComponent(searchQuery)}`),
+        fetch(`/api/search?q=${encodeURIComponent(searchQuery)}&limit=5`)
+      ]);
+
+      const suggestionsData = await suggestionsRes.json();
+      const searchData = await searchRes.json();
+
+      setSuggestions(suggestionsData.suggestions || []);
+      setResults(searchData.results || []);
       setIsOpen(true);
+    } catch (error) {
+      console.error('Error fetching search data:', error);
+      setSuggestions([]);
+      setResults([]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Debounced search as user types
+  useEffect(() => {
+    if (debounceTimer.current) {
+      clearTimeout(debounceTimer.current);
+    }
+
+    if (query.trim().length >= 2) {
+      debounceTimer.current = setTimeout(() => {
+        fetchSearchData(query);
+      }, 300);
     } else if (query.trim().length === 0) {
       // Show recent and popular searches when input is empty but focused
       setSuggestions([]);
       setResults([]);
-      setIsOpen(true);
+      if (document.activeElement === inputRef.current) {
+        setIsOpen(true);
+      }
     } else {
       setSuggestions([]);
       setResults([]);
       setIsOpen(false);
     }
     setSelectedIndex(-1);
+
+    return () => {
+      if (debounceTimer.current) {
+        clearTimeout(debounceTimer.current);
+      }
+    };
   }, [query]);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -135,7 +195,8 @@ export default function SearchBar({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    const totalItems = suggestions.length + results.length;
+    const totalItems = suggestions.length + results.length + 
+      (query.length === 0 ? recentSearches.length + Math.min(6, popularSearches.length) : 0);
     
     if (e.key === 'ArrowDown') {
       e.preventDefault();
@@ -145,12 +206,24 @@ export default function SearchBar({
       setSelectedIndex(prev => (prev - 1 + totalItems) % totalItems);
     } else if (e.key === 'Enter' && selectedIndex >= 0) {
       e.preventDefault();
-      if (selectedIndex < suggestions.length) {
-        handleSuggestionClick(suggestions[selectedIndex]);
+      
+      if (query.length === 0) {
+        // Handle recent/popular searches selection
+        if (selectedIndex < recentSearches.length) {
+          handleSuggestionClick(recentSearches[selectedIndex]);
+        } else {
+          const popIndex = selectedIndex - recentSearches.length;
+          handleSuggestionClick(popularSearches[popIndex]);
+        }
       } else {
-        const resultIndex = selectedIndex - suggestions.length;
-        router.push(results[resultIndex].path);
-        handleResultClick();
+        // Handle suggestions and results
+        if (selectedIndex < suggestions.length) {
+          handleSuggestionClick(suggestions[selectedIndex]);
+        } else {
+          const resultIndex = selectedIndex - suggestions.length;
+          router.push(results[resultIndex].url);
+          handleResultClick();
+        }
       }
     } else if (e.key === 'Escape') {
       setIsOpen(false);
@@ -164,6 +237,13 @@ export default function SearchBar({
     inputRef.current?.focus();
   };
 
+  // Function to highlight matching text
+  const highlightMatch = (text: string, highlight: string | undefined) => {
+    if (!highlight) return text;
+    // Remove HTML tags from highlight for display
+    return <span dangerouslySetInnerHTML={{ __html: highlight }} />;
+  };
+
   return (
     <div ref={searchRef} className={`relative ${className}`}>
       <form onSubmit={handleSubmit}>
@@ -173,7 +253,7 @@ export default function SearchBar({
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            onFocus={() => query.trim().length >= 2 && setIsOpen(true)}
+            onFocus={() => setIsOpen(true)}
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
             className="w-full px-4 sm:px-6 py-3 sm:py-4 pr-12 text-base sm:text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
@@ -206,7 +286,8 @@ export default function SearchBar({
 
       {/* Search Dropdown */}
       <AnimatePresence>
-        {isOpen && (suggestions.length > 0 || results.length > 0 || (query.length === 0 && (recentSearches.length > 0 || popularSearches.length > 0))) && (
+        {isOpen && (suggestions.length > 0 || results.length > 0 || 
+          (query.length === 0 && (recentSearches.length > 0 || popularSearches.length > 0)) || isLoading) && (
           <motion.div
             id="search-dropdown"
             initial={{ opacity: 0, y: -10 }}
@@ -215,8 +296,18 @@ export default function SearchBar({
             transition={{ duration: 0.2 }}
             className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50 max-h-96 overflow-y-auto"
           >
+            {/* Loading state */}
+            {isLoading && query.length >= 2 && (
+              <div className="px-4 py-8 text-center">
+                <div className="inline-flex items-center gap-2 text-gray-500">
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-gray-900"></div>
+                  Searching...
+                </div>
+              </div>
+            )}
+
             {/* Recent Searches */}
-            {query.length === 0 && recentSearches.length > 0 && (
+            {!isLoading && query.length === 0 && recentSearches.length > 0 && (
               <div className="border-b border-gray-100">
                 <p className="px-4 py-2 text-sm font-medium text-gray-500 flex items-center gap-2">
                   <Clock className="w-4 h-4" />
@@ -224,7 +315,7 @@ export default function SearchBar({
                 </p>
                 {recentSearches.map((search, index) => (
                   <button
-                    key={search}
+                    key={`recent-${search}`}
                     onClick={() => handleSuggestionClick(search)}
                     className={`w-full text-left px-4 py-3 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none transition-colors ${
                       selectedIndex === index ? 'bg-gray-50' : ''
@@ -240,7 +331,7 @@ export default function SearchBar({
             )}
 
             {/* Popular Searches */}
-            {query.length === 0 && (
+            {!isLoading && query.length === 0 && popularSearches.length > 0 && (
               <div className="border-b border-gray-100">
                 <p className="px-4 py-2 text-sm font-medium text-gray-500 flex items-center gap-2">
                   <TrendingUp className="w-4 h-4" />
@@ -248,7 +339,7 @@ export default function SearchBar({
                 </p>
                 {popularSearches.slice(0, 6).map((search, index) => (
                   <button
-                    key={search}
+                    key={`popular-${search}`}
                     onClick={() => handleSuggestionClick(search)}
                     className={`w-full text-left px-4 py-3 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none transition-colors ${
                       selectedIndex === (recentSearches.length + index) ? 'bg-gray-50' : ''
@@ -264,12 +355,12 @@ export default function SearchBar({
             )}
 
             {/* Suggestions */}
-            {suggestions.length > 0 && (
+            {!isLoading && suggestions.length > 0 && (
               <div className="border-b border-gray-100">
                 <p className="px-4 py-2 text-sm font-medium text-gray-500">Suggestions</p>
                 {suggestions.map((suggestion, index) => (
                   <button
-                    key={suggestion}
+                    key={`suggestion-${suggestion}`}
                     onClick={() => handleSuggestionClick(suggestion)}
                     className={`w-full text-left px-4 py-3 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none transition-colors ${
                       selectedIndex === index ? 'bg-gray-50' : ''
@@ -285,20 +376,20 @@ export default function SearchBar({
             )}
 
             {/* Results */}
-            {results.length > 0 && (
+            {!isLoading && results.length > 0 && (
               <div>
                 <p className="px-4 py-2 text-sm font-medium text-gray-500">
                   Top Results
                 </p>
                 {results.map((result, index) => {
-                  const Icon = categoryIcons[result.category];
-                  const colorClass = categoryColors[result.category];
+                  const Icon = categoryIcons[result.category] || FileText;
+                  const colorClass = categoryColors[result.category] || 'text-gray-600';
                   const isSelected = selectedIndex === suggestions.length + index;
                   
                   return (
                     <Link
                       key={result.id}
-                      href={result.path}
+                      href={result.url}
                       onClick={handleResultClick}
                       className={`block px-4 py-3 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none transition-colors ${
                         isSelected ? 'bg-gray-50' : ''
@@ -308,10 +399,19 @@ export default function SearchBar({
                         <Icon className={`w-5 h-5 mt-0.5 ${colorClass}`} />
                         <div className="flex-1">
                           <h4 className="font-medium text-gray-900">
-                            {result.title}
+                            {result.highlights?.title ? 
+                              highlightMatch(result.title, result.highlights.title) : 
+                              result.title
+                            }
                           </h4>
-                          <p className="text-sm text-gray-600 mt-0.5">
-                            {result.description}
+                          <p className="text-sm text-gray-600 mt-0.5 line-clamp-2">
+                            {result.highlights?.description ? 
+                              highlightMatch(result.description, result.highlights.description) : 
+                              result.description
+                            }
+                          </p>
+                          <p className="text-xs text-gray-500 mt-1">
+                            {result.category.charAt(0).toUpperCase() + result.category.slice(1)}
                           </p>
                         </div>
                       </div>
@@ -327,6 +427,14 @@ export default function SearchBar({
                 >
                   View all results for &quot;{query}&quot;
                 </Link>
+              </div>
+            )}
+
+            {/* No results message */}
+            {!isLoading && query.length >= 2 && suggestions.length === 0 && results.length === 0 && (
+              <div className="px-4 py-8 text-center text-gray-500">
+                <p className="mb-2">No results found for &quot;{query}&quot;</p>
+                <p className="text-sm">Try different keywords or browse our topics</p>
               </div>
             )}
           </motion.div>
