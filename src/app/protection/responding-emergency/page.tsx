@@ -79,6 +79,35 @@ export default function RespondingEmergencyPage() {
             </ol>
           </div>
 
+          <div className="mt-6">
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-white border rounded-lg p-4 text-sm">
+                <h4 className="font-semibold mb-2">Service</h4>
+                <ul className="space-y-1 text-gray-700">
+                  <li>• Order is enforceable only after service</li>
+                  <li>• Law enforcement can serve at no cost</li>
+                  <li>• Keep your copy with you at all times</li>
+                </ul>
+              </div>
+              <div className="bg-white border rounded-lg p-4 text-sm">
+                <h4 className="font-semibold mb-2">Hearing</h4>
+                <ul className="space-y-1 text-gray-700">
+                  <li>• You can request a hearing promptly</li>
+                  <li>• Bring witnesses, messages, photos, reports</li>
+                  <li>• Ask for more time if you get short notice</li>
+                </ul>
+              </div>
+              <div className="bg-white border rounded-lg p-4 text-sm">
+                <h4 className="font-semibold mb-2">Important</h4>
+                <ul className="space-y-1 text-gray-700">
+                  <li>• Violations can result in arrest</li>
+                  <li>• Firearm restrictions may apply</li>
+                  <li>• Consider Address Confidentiality Program</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-8 bg-blue-50 rounded-lg p-6">
             <h3 className="font-semibold mb-4">Important Resources</h3>
             <div className="space-y-3">

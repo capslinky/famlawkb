@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 import ChildSupportContent from '@/components/topics/ChildSupportContent';
 
 export const metadata = {
@@ -36,6 +37,33 @@ export default function ChildSupportPage() {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* Legal Basis */}
+        <div className="mb-6">
+          <Card>
+            <CardContent className="p-6">
+              <h2 className="text-xl font-semibold mb-3">Legal Basis (Arizona)</h2>
+              <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-800">
+                <div>
+                  <h3 className="font-medium mb-2">Core Statutes</h3>
+                  <ul className="space-y-1">
+                    <li>• A.R.S. § 25-320 — Child support; guidelines</li>
+                    <li>• A.R.S. § 25-503 — Support orders; duration; arrears</li>
+                    <li>• A.R.S. § 25-327 — Modification of support orders</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-medium mb-2">Key Principles</h3>
+                  <ul className="space-y-1">
+                    <li>• Income Shares Model (last guideline update 2022)</li>
+                    <li>• Court may deviate when appropriate and in the child’s best interests</li>
+                    <li>• Parenting time and add-ons (insurance, childcare) affect the calculation</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Content */}

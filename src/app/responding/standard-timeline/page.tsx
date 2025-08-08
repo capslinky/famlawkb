@@ -53,6 +53,7 @@ export default function StandardTimelinePage() {
                     <li>• <span className="font-semibold">In-State Service:</span> 20 days from service date</li>
                     <li>• <span className="font-semibold">Out-of-State Service:</span> 30 days from service date</li>
                     <li>• <span className="font-semibold">Weekend/Holiday:</span> Extended to next business day</li>
+                    <li>• <span className="font-semibold">Start Count:</span> The day after you were served</li>
                   </ul>
                 </div>
               </div>
@@ -251,6 +252,42 @@ export default function StandardTimelinePage() {
                   <li>• Consider if you have claims against the other party</li>
                 </ul>
               </div>
+            </div>
+          </section>
+
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-4">Service & Hearing Basics</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-2">Service Rules</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>• Serve your response on the other party</li>
+                    <li>• Mail or e-service if allowed by rule or order</li>
+                    <li>• Keep proof of mailing/service</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-2">Hearings</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>• Court may set conferences or hearings</li>
+                    <li>• Bring organized exhibits and a timeline</li>
+                    <li>• Consider temporary orders if urgent</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-2">After You File</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>• Calendar all deadlines</li>
+                    <li>• Begin initial disclosures within 40 days</li>
+                    <li>• Explore mediation and settlement</li>
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
           </section>
 

@@ -54,6 +54,12 @@ export default function GettingDivorcedPage() {
                 </ul>
               </div>
             </div>
+            <div className="mt-4 bg-white border border-primary-200 rounded p-4 text-sm text-gray-700">
+              <p className="font-semibold mb-1">Note on Covenant Marriage (if applicable)</p>
+              <p>
+                Arizona recognizes covenant marriage, which requires premarital counseling and limits divorce to specific grounds by statute. Most marriages are not covenant marriages.
+              </p>
+            </div>
           </div>
 
           <section className="mb-12">
@@ -119,6 +125,32 @@ export default function GettingDivorcedPage() {
                   </Link>
                 </CardContent>
               </Card>
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">Legal Basis (Arizona)</h2>
+            <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-800">
+              <div className="bg-white border rounded-lg p-4">
+                <h3 className="font-semibold mb-2">Core Statutes</h3>
+                <ul className="space-y-1">
+                  <li>• A.R.S. § 25-312 — Grounds; residency; 60-day period</li>
+                  <li>• A.R.S. § 25-211 — Community property defined</li>
+                  <li>• A.R.S. § 25-318 — Property/debt division</li>
+                  <li>• A.R.S. § 25-319 — Spousal maintenance factors</li>
+                  <li>• A.R.S. § 25-403 et seq. — Children & parenting</li>
+                </ul>
+              </div>
+              <div className="bg-white border rounded-lg p-4">
+                <h3 className="font-semibold mb-2">Key Principles</h3>
+                <ul className="space-y-1">
+                  <li>• No-fault: “irretrievably broken” marriage (non-covenant)</li>
+                  <li>• Community vs. separate property analysis</li>
+                  <li>• Equitable division may differ from strict 50/50</li>
+                  <li>• Parenting decisions guided by “best interests”</li>
+                  <li>• Support based on statutory factors, not formulas</li>
+                </ul>
+              </div>
             </div>
           </section>
 

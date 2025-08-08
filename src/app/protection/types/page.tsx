@@ -199,14 +199,48 @@ export default function TypesPage() {
           </section>
 
           <section className="mt-8">
+            <Card className="border-2 border-blue-200">
+              <CardContent className="p-6">
+                <h2 className="text-xl font-bold mb-3">Legal Basis & Definitions (Arizona)</h2>
+                <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-800">
+                  <div>
+                    <h3 className="font-semibold mb-2">Statutes</h3>
+                    <ul className="space-y-1">
+                      <li>• Order of Protection: A.R.S. § 13-3602</li>
+                      <li>• Injunction Against Harassment: A.R.S. § 12-1809</li>
+                      <li>• Workplace Harassment Injunction: A.R.S. § 12-1810</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Key Terms (Plain English)</h3>
+                    <ul className="space-y-1">
+                      <li>• Domestic violence: Certain crimes or threats within a qualifying relationship</li>
+                      <li>• Harassment: A series of acts directed at a person that would seriously alarm or annoy and serve no legitimate purpose</li>
+                      <li>• Service: The order must be delivered to the defendant to be enforceable</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm">
+                  <p className="font-semibold">Important:</p>
+                  <ul className="list-disc list-inside space-y-1 text-gray-800">
+                    <li>An order is not enforceable until it is served on the defendant.</li>
+                    <li>Either party may request a hearing; courts generally set hearings promptly after request.</li>
+                    <li>Courts may include firearm restrictions and other conditions where appropriate.</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4">Duration and Renewal</h2>
             <div className="grid md:grid-cols-3 gap-4">
               <Card>
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-3">Initial Order</h3>
-                  <p className="text-2xl font-bold text-purple-600 mb-2">1 Year</p>
+                  <p className="text-2xl font-bold text-purple-600 mb-2">Up to 1 Year</p>
                   <p className="text-gray-600 text-sm">
-                    Standard duration for both OOP and IAH after hearing
+                    Generally valid for up to one year from the date of service
                   </p>
                 </CardContent>
               </Card>
@@ -214,9 +248,7 @@ export default function TypesPage() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-3">Renewal</h3>
                   <p className="text-2xl font-bold text-blue-600 mb-2">1+ Years</p>
-                  <p className="text-gray-600 text-sm">
-                    Can be renewed before expiration, potentially indefinitely
-                  </p>
+                  <p className="text-gray-600 text-sm">Can request renewal before expiration; court may extend with good cause</p>
                 </CardContent>
               </Card>
               <Card>
@@ -229,6 +261,40 @@ export default function TypesPage() {
                 </CardContent>
               </Card>
             </div>
+          </section>
+
+          <section className="mt-8">
+            <Card>
+              <CardContent className="p-6">
+                <h2 className="text-xl font-bold mb-3">Service, Hearings, and Enforcement</h2>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-800">
+                  <div>
+                    <h3 className="font-semibold mb-2">Service</h3>
+                    <ul className="space-y-1">
+                      <li>• Order is effective upon service</li>
+                      <li>• Law enforcement can serve at no cost</li>
+                      <li>• Keep a certified copy with you</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Hearings</h3>
+                    <ul className="space-y-1">
+                      <li>• Either party can request a hearing</li>
+                      <li>• Courts typically schedule quickly after request</li>
+                      <li>• Bring witnesses and evidence</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Enforcement & Safety</h3>
+                    <ul className="space-y-1">
+                      <li>• Violations can lead to arrest</li>
+                      <li>• Firearm restrictions may apply</li>
+                      <li>• Consider the Address Confidentiality Program (ACP)</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </section>
 
           <section className="mt-8 bg-amber-50 border border-amber-200 rounded-lg p-6">

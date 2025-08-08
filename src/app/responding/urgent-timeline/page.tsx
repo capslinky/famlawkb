@@ -280,6 +280,42 @@ export default function UrgentTimelinePage() {
             </div>
           </section>
 
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-4">Service & Hearing Basics</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-2">Service Rules</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>• Serve your response on the other party</li>
+                    <li>• Mail or e-service if allowed by rule or order</li>
+                    <li>• File proof of mailing/service with the court</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-2">Hearings</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>• Watch for court notices and deadlines</li>
+                    <li>• Prepare exhibits and a brief timeline</li>
+                    <li>• Ask for temporary orders if urgent</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-2">After You File</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>• Calendar dates immediately</li>
+                    <li>• Begin initial disclosures within 40 days</li>
+                    <li>• Explore mediation to narrow issues</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
           <div className="mt-8 p-4 bg-red-100 rounded-lg text-center">
             <p className="font-bold text-red-900">
               Remember: Every hour counts when you have less than 10 days. 

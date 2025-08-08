@@ -1,25 +1,29 @@
-'use client';
-
 import Link from 'next/link';
 import { Phone, MapPin, Shield, FileText, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { useUserType } from '@/hooks/useUserType';
-import { useEffect } from 'react';
+import { QuickExitButton } from '@/components/QuickExitButton';
+import { EmergencyViewTracker } from './EmergencyViewTracker';
+export const metadata = {
+  title: 'Emergency Help — Arizona Domestic Violence & Safety Resources',
+  description:
+    'Immediate help, crisis hotlines, protection orders, shelters, and safety tips for people in danger in Arizona. Call 911 if you are in immediate danger.',
+};
 
 export default function EmergencyHelpPage() {
-  const { updateUserType } = useUserType();
-
-  useEffect(() => {
-    // Track that user has viewed emergency content
-    updateUserType('emergency');
-  }, [updateUserType]);
   return (
     <main className="min-h-screen bg-red-50">
+      {/* client-side tracker for analytics/user type */}
+      <EmergencyViewTracker />
       <div className="bg-red-600 text-white py-6">
         <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-3xl font-bold mb-2">Emergency Help</h1>
-          <p className="text-red-100">Immediate resources for your safety</p>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h1 className="text-3xl font-bold mb-2">Emergency Help</h1>
+              <p className="text-red-100">Immediate resources for your safety</p>
+            </div>
+            <QuickExitButton className="bg-white/10 hover:bg-white/20 text-white border border-white/40" />
+          </div>
         </div>
       </div>
 
@@ -58,7 +62,7 @@ export default function EmergencyHelpPage() {
                   </div>
                 </a>
 
-                <a href="tel:1-800-273-8255" className="block">
+                <a href="tel:988" className="block">
                   <div className="bg-purple-600 text-white p-4 rounded-lg hover:bg-purple-700 transition-colors">
                     <div className="flex items-center justify-between">
                       <div>
@@ -75,9 +79,10 @@ export default function EmergencyHelpPage() {
           </Card>
 
           {/* Safety Steps */}
-          <Card className="mb-8">
-            <CardContent className="p-6">
+            <Card className="mb-8">
+              <CardContent className="p-6">
               <h2 className="text-xl font-bold mb-4">Immediate Safety Steps</h2>
+              <p className="text-sm text-gray-600 mb-3">Tip: If you’re on a shared device, consider clearing your browser history after visiting this page. Use the Quick Exit button above if you need to leave immediately.</p>
               <ol className="space-y-3">
                 <li className="flex gap-3">
                   <span className="flex-shrink-0 w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-bold">1</span>
@@ -129,6 +134,7 @@ export default function EmergencyHelpPage() {
                   <div>
                     <p className="font-semibold">Statewide</p>
                     <p>AZ Coalition: <a href="tel:1-800-782-6400" className="text-blue-600">1-800-782-6400</a></p>
+                    <p className="mt-1">Address Confidentiality Program (ACP): <a href="https://azag.gov/ACP" target="_blank" rel="noopener noreferrer" className="text-blue-600">azag.gov/ACP</a></p>
                   </div>
                 </div>
               </CardContent>
@@ -154,6 +160,9 @@ export default function EmergencyHelpPage() {
                       <ExternalLink className="w-4 h-4" />
                     </Button>
                   </a>
+                  <Link href="/protection/types" className="block">
+                    <Button variant="outline" className="w-full">Compare Order Types</Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -197,6 +206,7 @@ export default function EmergencyHelpPage() {
                 Return to Home Page
               </Button>
             </Link>
+            <div className="text-xs text-gray-500 mt-3">If you are in danger now, call 911. For confidential support: National Domestic Violence Hotline 1-800-799-7233 or 988 Suicide & Crisis Lifeline.</div>
           </div>
         </div>
       </div>

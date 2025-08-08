@@ -82,7 +82,7 @@ export default function DivorcePetitionChildrenPage() {
               <CardContent className="p-6">
                 <h3 className="font-semibold mb-2">Filing Fee</h3>
                 <p className="text-2xl font-bold text-green-600">$349</p>
-                <p className="text-sm text-gray-600">Fee waiver available</p>
+                <p className="text-sm text-gray-600">Varies by county; fee waiver/deferral available</p>
               </CardContent>
             </Card>
           </div>
@@ -248,6 +248,17 @@ export default function DivorcePetitionChildrenPage() {
                   </ul>
                 </CardContent>
               </Card>
+              <Card className="border-l-4 border-blue-500">
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-lg mb-3">Step 4: Serve and File Proof</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Serve your spouse within <strong>120 days</strong> of filing</li>
+                    <li>• Methods: process server/sheriff or signed Acceptance of Service</li>
+                    <li>• Then file Affidavit/Acceptance of Service with the court</li>
+                    <li>• Keep copies for your records</li>
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
           </section>
 
@@ -262,6 +273,27 @@ export default function DivorcePetitionChildrenPage() {
                   <li>• Both parents must complete Parent Information Program</li>
                   <li>• Temporary orders may be needed for immediate issues</li>
                   <li>• Consider mediation for contested issues</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section className="mt-8">
+            <h3 className="font-bold text-lg mb-4">What Happens Next</h3>
+            <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+              <div className="bg-white border rounded p-4">
+                <h4 className="font-semibold mb-2">Post-Filing Timeline</h4>
+                <ul className="space-y-1">
+                  <li>• 60-day cooling-off period after service</li>
+                  <li>• Initial disclosures due within 40 days</li>
+                  <li>• Case management conference may be scheduled</li>
+                </ul>
+              </div>
+              <div className="bg-white border rounded p-4">
+                <h4 className="font-semibold mb-2">Helpful Options</h4>
+                <ul className="space-y-1">
+                  <li>• Request temporary orders for parenting/support</li>
+                  <li>• Take parenting class if required in your county</li>
+                  <li>• Explore mediation and settlement resources</li>
                 </ul>
               </div>
             </div>

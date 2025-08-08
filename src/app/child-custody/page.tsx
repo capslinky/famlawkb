@@ -31,7 +31,7 @@ export default function ChildCustodyPage() {
           {/* Title Section */}
           <div className="mb-8">
             <h1 className="text-4xl font-bold mb-4">Child Custody (Legal Decision-Making) in Arizona</h1>
-            
+
             {/* At a Glance Summary */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
               <div className="flex items-start gap-3">
@@ -114,6 +114,32 @@ export default function ChildCustodyPage() {
                   </ul>
                 </CardContent>
               </Card>
+            </div>
+
+            {/* Legal Basis & Statutes */}
+            <div className="bg-white border border-blue-200 rounded-lg p-6 mb-8">
+              <h2 className="text-lg font-semibold mb-3">Legal Basis & Key Statutes</h2>
+              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-800">
+                <div>
+                  <h3 className="font-medium mb-2">Arizona Statutes</h3>
+                  <ul className="space-y-1">
+                    <li>• A.R.S. § 25-403 — Best interests factors</li>
+                    <li>• A.R.S. § 25-403.01 — Legal decision-making; parenting time</li>
+                    <li>• A.R.S. § 25-403.02 — Parenting plans; requirements</li>
+                    <li>• A.R.S. § 25-403.03 — Domestic violence; presumption</li>
+                    <li>• A.R.S. § 25-411 — Modification of orders</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-medium mb-2">Important Principles</h3>
+                  <ul className="space-y-1">
+                    <li>• Courts must consider all § 25-403 best interests factors</li>
+                    <li>• Significant domestic violence creates a presumption against joint decision-making</li>
+                    <li>• Parenting time and decision-making are separate determinations</li>
+                    <li>• Modifying orders generally requires a substantial and continuing change</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 

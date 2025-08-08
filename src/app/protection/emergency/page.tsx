@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle, Phone, Shield, MapPin, Clock, Package } from 'lucide-react';
+import { QuickExitButton } from '@/components/QuickExitButton';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -14,12 +15,15 @@ export default function EmergencyPage() {
     <main className="min-h-screen bg-gray-50">
       <div className="bg-red-700 text-white">
         <div className="max-w-4xl mx-auto px-6 py-6">
-          <div className="flex items-center gap-3">
-            <AlertTriangle className="w-8 h-8" />
-            <div>
-              <h1 className="text-2xl font-bold">Emergency Protection & Safety</h1>
-              <p className="text-red-100">Immediate help available 24/7</p>
+          <div className="flex items-start justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <AlertTriangle className="w-8 h-8" />
+              <div>
+                <h1 className="text-2xl font-bold">Emergency Protection & Safety</h1>
+                <p className="text-red-100">Immediate help available 24/7</p>
+              </div>
             </div>
+            <QuickExitButton />
           </div>
         </div>
       </div>
@@ -210,6 +214,15 @@ export default function EmergencyPage() {
                       </Link>
                     </div>
                     <div className="bg-purple-50 rounded-lg p-4">
+                      <p className="font-semibold mb-1">Address Confidentiality Program (ACP)</p>
+                      <p className="text-sm text-gray-600 mb-2">Protects your home address in public records</p>
+                      <a href="https://azag.gov/ACP" target="_blank" rel="noopener noreferrer" className="block">
+                        <Button variant="outline" className="w-full">
+                          Learn about ACP
+                        </Button>
+                      </a>
+                    </div>
+                    <div className="bg-purple-50 rounded-lg p-4">
                       <p className="font-semibold mb-1">Military Family Crisis Line</p>
                       <p className="text-sm text-gray-600 mb-2">Support for military families statewide</p>
                       <Link href="tel:800-336-4592" className="block">
@@ -370,6 +383,40 @@ export default function EmergencyPage() {
             </div>
           </section>
 
+          <section className="mt-8">
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-bold text-lg mb-2">Service & Hearing Quick Facts</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-800">
+                  <div>
+                    <h4 className="font-semibold mb-1">Emergency Orders</h4>
+                    <ul className="space-y-1">
+                      <li>• Effective immediately when served</li>
+                      <li>• Valid until next court day</li>
+                      <li>• File regular order next business day</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Service</h4>
+                    <ul className="space-y-1">
+                      <li>• Law enforcement can serve at no cost</li>
+                      <li>• Provide safe serve locations if known</li>
+                      <li>• Keep a certified copy with you</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Hearing</h4>
+                    <ul className="space-y-1">
+                      <li>• Either party can request a hearing</li>
+                      <li>• Bring evidence, witnesses, and a timeline</li>
+                      <li>• Violations can lead to arrest</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
           <section className="mt-8 bg-purple-50 rounded-lg p-6">
             <h3 className="font-bold text-lg mb-4">Remember: You Are Not Alone</h3>
             <div className="space-y-3 text-gray-700">
@@ -402,6 +449,7 @@ export default function EmergencyPage() {
               </Button>
             </Link>
           </div>
+          <p className="mt-4 text-xs text-gray-500 text-center">Tip: If using a shared device, clear your browser history after visiting safety pages.</p>
         </div>
       </div>
     </main>

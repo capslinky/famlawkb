@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { Calculator, DollarSign, Users, FileText, AlertCircle, CheckCircle, PrinterIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { calculateChildSupport, Inputs as EngineInputs } from '@/lib/childSupport';
 
 interface CalculatorInputs {
   parent1Income: string;
@@ -17,6 +18,8 @@ interface CalculatorInputs {
   childcareExpenses: string;
   parent1OtherSupport: string;
   parent2OtherSupport: string;
+  extraordinaryExpenses: string;
+  deviationAdjustment: string;
 }
 
 interface CalculationResult {
@@ -30,23 +33,6 @@ interface CalculationResult {
   payingParent: 'parent1' | 'parent2' | 'none';
 }
 
-// Arizona Child Support Guidelines Schedule (simplified version for key amounts)
-const SUPPORT_SCHEDULE = [
-  { minIncome: 0, maxIncome: 1000, children: [0, 0, 0, 0, 0] },
-  { minIncome: 1000, maxIncome: 2000, children: [167, 263, 333, 381, 422] },
-  { minIncome: 2000, maxIncome: 3000, children: [250, 394, 500, 571, 633] },
-  { minIncome: 3000, maxIncome: 4000, children: [333, 525, 667, 762, 844] },
-  { minIncome: 4000, maxIncome: 5000, children: [417, 656, 833, 952, 1056] },
-  { minIncome: 5000, maxIncome: 6000, children: [500, 788, 1000, 1143, 1267] },
-  { minIncome: 6000, maxIncome: 7000, children: [583, 919, 1167, 1333, 1478] },
-  { minIncome: 7000, maxIncome: 8000, children: [667, 1050, 1333, 1524, 1689] },
-  { minIncome: 8000, maxIncome: 9000, children: [750, 1181, 1500, 1714, 1900] },
-  { minIncome: 9000, maxIncome: 10000, children: [833, 1313, 1667, 1905, 2111] },
-  { minIncome: 10000, maxIncome: 15000, children: [1042, 1641, 2083, 2381, 2639] },
-  { minIncome: 15000, maxIncome: 20000, children: [1250, 1969, 2500, 2857, 3167] },
-  { minIncome: 20000, maxIncome: 30000, children: [1458, 2297, 2917, 3333, 3694] }
-];
-
 export default function ChildSupportCalculator() {
   const [inputs, setInputs] = useState<CalculatorInputs>({
     parent1Income: '',
@@ -58,7 +44,9 @@ export default function ChildSupportCalculator() {
     parent2HealthInsurance: '',
     childcareExpenses: '',
     parent1OtherSupport: '',
-    parent2OtherSupport: ''
+    parent2OtherSupport: '',
+    extraordinaryExpenses: '',
+    deviationAdjustment: ''
   });
 
   const [result, setResult] = useState<CalculationResult | null>(null);
@@ -71,92 +59,34 @@ export default function ChildSupportCalculator() {
     }));
   };
 
-  const getBasicSupport = (combinedIncome: number, numChildren: number): number => {
-    for (const bracket of SUPPORT_SCHEDULE) {
-      if (combinedIncome >= bracket.minIncome && combinedIncome < bracket.maxIncome) {
-        return bracket.children[numChildren - 1] || 0;
-      }
-    }
-    
-    // For incomes above schedule, use proportional calculation
-    if (combinedIncome >= 30000) {
-      const baseAmount = SUPPORT_SCHEDULE[SUPPORT_SCHEDULE.length - 1].children[numChildren - 1] || 0;
-      const factor = Math.min(combinedIncome / 30000, 2.5); // Cap at 2.5x
-      return Math.round(baseAmount * factor);
-    }
-    
-    return 0;
-  };
-
   const calculateSupport = (): CalculationResult => {
     const parent1Income = parseFloat(inputs.parent1Income) || 0;
     const parent2Income = parseFloat(inputs.parent2Income) || 0;
-    const combinedIncome = parent1Income + parent2Income;
-    
-    const parent1ParentingDays = parseFloat(inputs.parent1ParentingDays) || 0;
-    const parent2ParentingDays = parseFloat(inputs.parent2ParentingDays) || 0;
-    
-    const parent1HealthInsurance = parseFloat(inputs.parent1HealthInsurance) || 0;
-    const parent2HealthInsurance = parseFloat(inputs.parent2HealthInsurance) || 0;
-    const childcareExpenses = parseFloat(inputs.childcareExpenses) || 0;
-    
-    const parent1OtherSupport = parseFloat(inputs.parent1OtherSupport) || 0;
-    const parent2OtherSupport = parseFloat(inputs.parent2OtherSupport) || 0;
+    const engineInputs: EngineInputs = {
+      parent1Income,
+      parent2Income,
+      numChildren: inputs.numChildren,
+      parent1ParentingDays: parseFloat(inputs.parent1ParentingDays) || 0,
+      parent2ParentingDays: parseFloat(inputs.parent2ParentingDays) || 0,
+      parent1HealthInsurance: parseFloat(inputs.parent1HealthInsurance) || 0,
+      parent2HealthInsurance: parseFloat(inputs.parent2HealthInsurance) || 0,
+      childcareExpenses: parseFloat(inputs.childcareExpenses) || 0,
+      parent1OtherSupport: parseFloat(inputs.parent1OtherSupport) || 0,
+      parent2OtherSupport: parseFloat(inputs.parent2OtherSupport) || 0,
+      extraordinaryExpenses: parseFloat(inputs.extraordinaryExpenses) || 0,
+      deviationAdjustment: parseFloat(inputs.deviationAdjustment) || 0,
+    };
 
-    // Basic support from schedule
-    const basicSupport = getBasicSupport(combinedIncome, inputs.numChildren);
-    
-    // Income shares percentages
-    const parent1Share = combinedIncome > 0 ? parent1Income / combinedIncome : 0.5;
-    const parent2Share = combinedIncome > 0 ? parent2Income / combinedIncome : 0.5;
-    
-    // Add health insurance and childcare to basic support
-    const totalSupport = basicSupport + parent1HealthInsurance + parent2HealthInsurance + childcareExpenses;
-    
-    // Calculate each parent's proportional obligation
-    let parent1Obligation = totalSupport * parent1Share;
-    let parent2Obligation = totalSupport * parent2Share;
-    
-    // Subtract other support obligations
-    parent1Obligation = Math.max(0, parent1Obligation - parent1OtherSupport);
-    parent2Obligation = Math.max(0, parent2Obligation - parent2OtherSupport);
-    
-    // Apply parenting time adjustment (simplified - if parent has significant time, reduce obligation)
-    const totalDays = parent1ParentingDays + parent2ParentingDays;
-    if (totalDays > 0) {
-      const parent1TimePercent = parent1ParentingDays / totalDays;
-      const parent2TimePercent = parent2ParentingDays / totalDays;
-      
-      // If parent has 40%+ parenting time, apply reduction (simplified calculation)
-      if (parent1TimePercent >= 0.4) {
-        parent1Obligation *= (1 - (parent1TimePercent - 0.35) * 0.5);
-      }
-      if (parent2TimePercent >= 0.4) {
-        parent2Obligation *= (1 - (parent2TimePercent - 0.35) * 0.5);
-      }
-    }
-    
-    // Determine final support payment
-    let finalSupport = 0;
-    let payingParent: 'parent1' | 'parent2' | 'none' = 'none';
-    
-    if (parent1Obligation > parent2Obligation) {
-      finalSupport = Math.round(parent1Obligation - parent2Obligation);
-      payingParent = 'parent1';
-    } else if (parent2Obligation > parent1Obligation) {
-      finalSupport = Math.round(parent2Obligation - parent1Obligation);
-      payingParent = 'parent2';
-    }
-
+    const r = calculateChildSupport(engineInputs);
     return {
-      combinedIncome,
-      basicSupport,
-      parent1Share: Math.round(parent1Share * 100),
-      parent2Share: Math.round(parent2Share * 100),
-      parent1Obligation: Math.round(parent1Obligation),
-      parent2Obligation: Math.round(parent2Obligation),
-      finalSupport,
-      payingParent
+      combinedIncome: r.combinedIncome,
+      basicSupport: r.basicSupport,
+      parent1Share: r.parent1SharePct,
+      parent2Share: r.parent2SharePct,
+      parent1Obligation: r.parent1Obligation,
+      parent2Obligation: r.parent2Obligation,
+      finalSupport: r.finalSupport,
+      payingParent: r.payingParent,
     };
   };
 
@@ -177,7 +107,9 @@ export default function ChildSupportCalculator() {
       parent2HealthInsurance: '',
       childcareExpenses: '',
       parent1OtherSupport: '',
-      parent2OtherSupport: ''
+      parent2OtherSupport: '',
+      extraordinaryExpenses: '',
+      deviationAdjustment: ''
     });
     setResult(null);
     setShowResults(false);
@@ -191,10 +123,14 @@ export default function ChildSupportCalculator() {
     return inputs.parent1Income && inputs.parent2Income && inputs.numChildren > 0;
   };
 
+  const totalParentingDays =
+    (parseFloat(inputs.parent1ParentingDays) || 0) + (parseFloat(inputs.parent2ParentingDays) || 0);
+  const parentingDaysWarning = totalParentingDays > 0 && totalParentingDays !== 365;
+
   return (
     <div className="space-y-6">
       {/* Calculator Form */}
-      <Card>
+      <Card className="print:hidden">
         <CardContent className="p-6">
           <div className="flex items-center gap-3 mb-6">
             <Calculator className="w-6 h-6 text-blue-600" />
@@ -239,6 +175,7 @@ export default function ChildSupportCalculator() {
                   min="0"
                   aria-describedby="parenting-days-help"
                 />
+                <p id="parenting-days-help" className="mt-1 text-xs text-gray-500">Total overnights for both parents should equal 365.</p>
               </div>
 
               <div>
@@ -396,10 +333,61 @@ export default function ChildSupportCalculator() {
                   />
                 </div>
               </div>
+              <div>
+                <label htmlFor="extraordinary-expenses" className="block text-sm font-medium text-gray-700 mb-1">
+                  Extraordinary Expenses (monthly)
+                </label>
+                <div className="relative">
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
+                  <input
+                    id="extraordinary-expenses"
+                    type="number"
+                    value={inputs.extraordinaryExpenses}
+                    onChange={(e) => handleInputChange('extraordinaryExpenses', e.target.value)}
+                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="0.00"
+                    min="0"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="mt-6 flex gap-3">
+          {/* Optional Adjustments */}
+          <div className="mt-6">
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="deviation-adjustment" className="block text-sm font-medium text-gray-700 mb-1">
+                  Deviation Adjustment (optional)
+                </label>
+                <div className="relative">
+                  <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" aria-hidden="true" />
+                  <input
+                    id="deviation-adjustment"
+                    type="number"
+                    value={inputs.deviationAdjustment}
+                    onChange={(e) => handleInputChange('deviationAdjustment', e.target.value)}
+                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="0.00 (can be negative)"
+                  />
+                </div>
+                <p className="mt-1 text-xs text-gray-500">Positive increases final payment; negative decreases it.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-2">
+            {parentingDaysWarning && (
+              <div className="mb-4 p-3 text-sm rounded border border-amber-300 bg-amber-50 text-amber-900 flex items-start gap-2">
+                <AlertCircle className="w-4 h-4 mt-0.5" />
+                <div>
+                  The total overnights for both parents should equal 365. Adjust one or both values for a more accurate estimate.
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="mt-4 flex gap-3 flex-wrap">
             <Button 
               onClick={handleCalculate}
               disabled={!isFormValid()}
@@ -410,6 +398,26 @@ export default function ChildSupportCalculator() {
             </Button>
             <Button variant="outline" onClick={handleReset}>
               Reset
+            </Button>
+            <Button variant="outline" onClick={() => {
+              try {
+                const payload = { inputs };
+                localStorage.setItem('childSupportDraft', JSON.stringify(payload));
+              } catch {}
+            }}>
+              Save Draft
+            </Button>
+            <Button variant="outline" onClick={() => {
+              try {
+                const raw = localStorage.getItem('childSupportDraft');
+                if (!raw) return;
+                const data = JSON.parse(raw);
+                if (data && data.inputs) {
+                  setInputs(data.inputs);
+                }
+              } catch {}
+            }}>
+              Load Draft
             </Button>
           </div>
         </CardContent>
@@ -424,10 +432,79 @@ export default function ChildSupportCalculator() {
                 <CheckCircle className="w-6 h-6 text-green-600" aria-hidden="true" />
                 <h2 id="results-heading" className="text-xl font-semibold text-green-900">Calculation Results</h2>
               </div>
-              <Button variant="outline" size="sm" onClick={printResults}>
-                <PrinterIcon className="w-4 h-4 mr-2" />
-                Print
-              </Button>
+              <div className="flex gap-2 flex-wrap">
+                <Button variant="outline" size="sm" onClick={() => {
+                  const summary = `Arizona Child Support Estimate\n` +
+                    `Combined income: $${result.combinedIncome.toLocaleString()}\n` +
+                    `Basic support: $${result.basicSupport.toLocaleString()}\n` +
+                    `Parent shares: P1 ${result.parent1Share}% / P2 ${result.parent2Share}%\n` +
+                    `Final payment: $${result.finalSupport.toLocaleString()} by ${result.payingParent === 'parent1' ? 'Parent 1' : result.payingParent === 'parent2' ? 'Parent 2' : 'None'}`;
+                  navigator.clipboard.writeText(summary).catch(() => {});
+                }}>
+                  Copy Summary
+                </Button>
+                <Button variant="outline" size="sm" onClick={() => {
+                  const rows = [
+                    ['Field','Value'],
+                    ['Parent 1 Income', parseFloat(inputs.parent1Income || '0')],
+                    ['Parent 2 Income', parseFloat(inputs.parent2Income || '0')],
+                    ['Combined Income', result.combinedIncome],
+                    ['Children', inputs.numChildren],
+                    ['P1 Parenting Days', parseFloat(inputs.parent1ParentingDays || '0')],
+                    ['P2 Parenting Days', parseFloat(inputs.parent2ParentingDays || '0')],
+                    ['Health Insurance Total', (parseFloat(inputs.parent1HealthInsurance || '0') + parseFloat(inputs.parent2HealthInsurance || '0'))],
+                    ['Childcare', parseFloat(inputs.childcareExpenses || '0')],
+                    ['Extraordinary Expenses', parseFloat(inputs.extraordinaryExpenses || '0')],
+                    ['Basic Support', result.basicSupport],
+                    ['Parent 1 Share %', result.parent1Share],
+                    ['Parent 2 Share %', result.parent2Share],
+                    ['Parent 1 Obligation', result.parent1Obligation],
+                    ['Parent 2 Obligation', result.parent2Obligation],
+                    ['Paying Parent', result.payingParent],
+                    ['Final Support', result.finalSupport],
+                  ];
+                  const csv = rows.map(r => r.join(',')).join('\n');
+                  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = 'child-support-estimate.csv';
+                  a.click();
+                  URL.revokeObjectURL(url);
+                }}>
+                  Download CSV
+                </Button>
+                <Button variant="outline" size="sm" onClick={() => {
+                  const data = {
+                    inputs: {
+                      parent1Income: parseFloat(inputs.parent1Income || '0'),
+                      parent2Income: parseFloat(inputs.parent2Income || '0'),
+                      numChildren: inputs.numChildren,
+                      parent1ParentingDays: parseFloat(inputs.parent1ParentingDays || '0'),
+                      parent2ParentingDays: parseFloat(inputs.parent2ParentingDays || '0'),
+                      parent1HealthInsurance: parseFloat(inputs.parent1HealthInsurance || '0'),
+                      parent2HealthInsurance: parseFloat(inputs.parent2HealthInsurance || '0'),
+                      childcareExpenses: parseFloat(inputs.childcareExpenses || '0'),
+                      extraordinaryExpenses: parseFloat(inputs.extraordinaryExpenses || '0'),
+                      deviationAdjustment: parseFloat(inputs.deviationAdjustment || '0'),
+                    },
+                    result,
+                  };
+                  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = 'child-support-estimate.json';
+                  a.click();
+                  URL.revokeObjectURL(url);
+                }}>
+                  Download JSON
+                </Button>
+                <Button variant="outline" size="sm" onClick={printResults}>
+                  <PrinterIcon className="w-4 h-4 mr-2" />
+                  Print
+                </Button>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -464,6 +541,10 @@ export default function ChildSupportCalculator() {
                     <span>Childcare:</span>
                     <span className="font-medium">${parseFloat(inputs.childcareExpenses || '0').toLocaleString()}</span>
                   </div>
+                  <div className="flex justify-between">
+                    <span>Extraordinary Expenses:</span>
+                    <span className="font-medium">${parseFloat(inputs.extraordinaryExpenses || '0').toLocaleString()}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -484,6 +565,53 @@ export default function ChildSupportCalculator() {
               </div>
             </div>
 
+            {/* Court-Ready Summary */}
+            <div className="bg-white rounded-lg p-6 mb-6 border">
+              <h3 className="font-semibold mb-3">Court-Ready Summary (Print)</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <tbody className="divide-y">
+                    <tr>
+                      <td className="py-2 pr-4 text-gray-600">Combined Income</td>
+                      <td className="py-2 font-medium">${result.combinedIncome.toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 text-gray-600">Children</td>
+                      <td className="py-2 font-medium">{inputs.numChildren}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 text-gray-600">Basic Support</td>
+                      <td className="py-2 font-medium">${result.basicSupport.toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 text-gray-600">Health Insurance (total)</td>
+                      <td className="py-2 font-medium">${(parseFloat(inputs.parent1HealthInsurance || '0') + parseFloat(inputs.parent2HealthInsurance || '0')).toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 text-gray-600">Childcare</td>
+                      <td className="py-2 font-medium">${parseFloat(inputs.childcareExpenses || '0').toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 text-gray-600">Extraordinary Expenses</td>
+                      <td className="py-2 font-medium">${parseFloat(inputs.extraordinaryExpenses || '0').toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 text-gray-600">Parent 1 Share / Obligation</td>
+                      <td className="py-2 font-medium">{result.parent1Share}% — ${result.parent1Obligation.toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 text-gray-600">Parent 2 Share / Obligation</td>
+                      <td className="py-2 font-medium">{result.parent2Share}% — ${result.parent2Obligation.toLocaleString()}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 text-gray-600">Final Payment (monthly)</td>
+                      <td className="py-2 font-bold text-green-700">${result.finalSupport.toLocaleString()} by {result.payingParent === 'parent1' ? 'Parent 1' : result.payingParent === 'parent2' ? 'Parent 2' : 'None'}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
             <div className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 text-center">
               <h3 className="text-lg font-semibold mb-2" role="heading" aria-level={3}>Estimated Monthly Child Support</h3>
               {result.payingParent === 'none' ? (
@@ -497,6 +625,9 @@ export default function ChildSupportCalculator() {
                   <p className="text-sm text-gray-700">
                     Paid by Parent {result.payingParent === 'parent1' ? '1' : '2'} to Parent {result.payingParent === 'parent1' ? '2' : '1'}
                   </p>
+                  {Boolean(parseFloat(inputs.deviationAdjustment || '0')) && (
+                    <p className="mt-1 text-xs text-gray-600">Includes deviation adjustment of ${parseFloat(inputs.deviationAdjustment || '0').toLocaleString()}.</p>
+                  )}
                 </div>
               )}
             </div>
@@ -521,7 +652,7 @@ export default function ChildSupportCalculator() {
       )}
 
       {/* Help Information */}
-      <Card role="region" aria-labelledby="help-heading">
+      <Card role="region" aria-labelledby="help-heading" className="print:hidden">
         <CardContent className="p-6">
           <div className="flex items-center gap-3 mb-4">
             <FileText className="w-5 h-5 text-blue-600" aria-hidden="true" />

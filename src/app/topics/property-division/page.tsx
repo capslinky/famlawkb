@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 import PropertyDivisionContent from '@/components/topics/PropertyDivisionContent';
 
 export const metadata = {
@@ -36,6 +37,33 @@ export default function PropertyDivisionPage() {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* Legal Basis */}
+        <div className="mb-6">
+          <Card>
+            <CardContent className="p-6">
+              <h2 className="text-xl font-semibold mb-3">Legal Basis (Arizona)</h2>
+              <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-800">
+                <div>
+                  <h3 className="font-medium mb-2">Core Statutes</h3>
+                  <ul className="space-y-1">
+                    <li>• A.R.S. § 25-211 — Community property defined</li>
+                    <li>• A.R.S. § 25-213 — Separate property</li>
+                    <li>• A.R.S. § 25-318 — Equitable division of property/debts</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-medium mb-2">Key Principles</h3>
+                  <ul className="space-y-1">
+                    <li>• Community vs. separate characterization controls division</li>
+                    <li>• Equitable division isn’t always a strict 50/50</li>
+                    <li>• Tracing and reimbursement claims may apply</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Content */}

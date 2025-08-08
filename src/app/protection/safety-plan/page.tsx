@@ -72,6 +72,12 @@ export default function SafetyPlanPage() {
                     🔒 <strong>Privacy Note:</strong> Consider printing this guide or saving it on a safe device. Clear your browser history after visiting this page if your internet activity might be monitored.
                   </p>
                 </div>
+                <div className="mt-3 bg-purple-100 rounded-lg p-3 border border-purple-300">
+                  <p className="text-sm text-purple-900">
+                    📫 <strong>Address Confidentiality Program (ACP):</strong> If you are concerned about your address being discovered through public records, learn about Arizona’s ACP at{' '}
+                    <a href="https://azag.gov/ACP" target="_blank" rel="noopener noreferrer" className="underline">azag.gov/ACP</a>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

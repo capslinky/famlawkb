@@ -187,6 +187,40 @@ export default function HowToFilePage() {
             </div>
           </section>
 
+          <section className="mt-8">
+            <Card className="border-2 border-blue-200">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-3">Legal Basis & Your Rights</h3>
+                <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-800">
+                  <div>
+                    <h4 className="font-semibold mb-2">Arizona Statutes</h4>
+                    <ul className="space-y-1">
+                      <li>• Order of Protection: A.R.S. § 13-3602</li>
+                      <li>• Injunction Against Harassment: A.R.S. § 12-1809</li>
+                      <li>• Workplace Harassment: A.R.S. § 12-1810</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Hearings & Service</h4>
+                    <ul className="space-y-1">
+                      <li>• Orders must be served to be enforceable</li>
+                      <li>• Either party may request a hearing</li>
+                      <li>• Courts set hearings promptly after request</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Safety & Privacy</h4>
+                    <ul className="space-y-1">
+                      <li>• Firearm restrictions may be ordered</li>
+                      <li>• Consider the Address Confidentiality Program (ACP)</li>
+                      <li>• Keep a certified copy of your order</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
           <section className="space-y-6">
             <h2 className="text-2xl font-bold">Complete Step-by-Step Filing Process</h2>
             <p className="text-gray-600">
@@ -693,6 +727,40 @@ export default function HowToFilePage() {
                 </div>
               </div>
             </div>
+          </section>
+
+          <section className="mt-8">
+            <Card>
+              <CardContent className="p-6">
+                <h2 className="text-xl font-bold mb-3">Serve + Proof + Hearing: Quick Facts</h2>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-800">
+                  <div>
+                    <h3 className="font-semibold mb-2">Service</h3>
+                    <ul className="space-y-1">
+                      <li>• Order is enforceable only after service</li>
+                      <li>• Law enforcement can serve at no cost</li>
+                      <li>• Provide addresses/locations to help serve</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Proof</h3>
+                    <ul className="space-y-1">
+                      <li>• Keep a certified copy with you</li>
+                      <li>• Ask clerk how to get additional copies</li>
+                      <li>• Share copies with school and employer</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Hearing</h3>
+                    <ul className="space-y-1">
+                      <li>• Either party can request a hearing</li>
+                      <li>• Courts set hearings promptly after request</li>
+                      <li>• Bring witnesses, evidence, and timelines</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </section>
 
           <section className="mt-12 bg-red-50 rounded-lg p-6">

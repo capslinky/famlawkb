@@ -273,6 +273,42 @@ export default function LateResponsePage() {
             </div>
           </section>
 
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-4">Service & Court Basics</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-2">If No Default Yet</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>• File your response immediately</li>
+                    <li>• Serve the other party and file proof</li>
+                    <li>• Ask for an extension if needed</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-2">If Default Entered</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>• File motion to set aside default</li>
+                    <li>• Attach your proposed response</li>
+                    <li>• Request a prompt hearing</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-2">If Judgment Entered</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li>• Consider Rule 60 motion (time-limited)</li>
+                    <li>• Consider appeal (strict timelines)</li>
+                    <li>• Seek legal advice immediately</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
           <section className="mt-8 bg-blue-50 rounded-lg p-6">
             <h3 className="font-bold text-lg mb-4">Immediate Next Steps</h3>
             <div className="grid sm:grid-cols-2 gap-4">

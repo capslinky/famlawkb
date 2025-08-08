@@ -61,6 +61,29 @@ export default function RespondHubPage() {
             <li>10–20 minutes to complete the response form.</li>
           </ul>
         </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mt-6">
+          <Card>
+            <CardContent className="p-6">
+              <h2 className="font-semibold mb-2">Service & Hearing Basics</h2>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Serve your filed response and keep proof</li>
+                <li>• Watch for notices of conferences/hearings</li>
+                <li>• Organize exhibits and a short case timeline</li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6">
+              <h2 className="font-semibold mb-2">Helpful References</h2>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• A.R.S. Title 25 — Family law procedures</li>
+                <li>• Arizona Rules of Family Law Procedure</li>
+                <li>• Court self-help centers by county</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </main>
   );

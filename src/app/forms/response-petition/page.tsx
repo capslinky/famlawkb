@@ -54,6 +54,7 @@ export default function ResponsePetitionPage() {
                     <li>• <strong>Served in Arizona:</strong> 20 days to respond</li>
                     <li>• <strong>Served outside Arizona:</strong> 30 days to respond</li>
                     <li>• <strong>Count from:</strong> Day after you were served</li>
+                    <li>• <strong>If deadline falls on weekend/holiday:</strong> Next court business day</li>
                   </ul>
                 </div>
                 <div className="flex flex-wrap gap-4">
@@ -199,6 +200,17 @@ export default function ResponsePetitionPage() {
                     <li>• Mail copy to other party/attorney</li>
                     <li>• File proof of mailing with court</li>
                     <li>• Keep copy for your records</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="border-l-4 border-blue-500">
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-lg mb-3">Fee Waiver or Deferral</h3>
+                  <p className="text-gray-700 mb-2">If you cannot afford the filing fee:</p>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Ask the clerk for fee waiver/deferral paperwork</li>
+                    <li>• Provide income/expense information as requested</li>
+                    <li>• Keep copies of any orders on your fees</li>
                   </ul>
                 </CardContent>
               </Card>

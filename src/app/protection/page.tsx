@@ -52,6 +52,30 @@ export default function ProtectionHubPage() {
         <div className="bg-white border border-rose-200 text-rose-900 rounded-lg p-4 text-sm">
           If you’re in danger now, call 911. Use the Quick Exit button to leave this site fast.
         </div>
+
+        <div className="mt-6 grid md:grid-cols-2 gap-6">
+          <Card className="border border-rose-200">
+            <CardContent className="p-6">
+              <h2 className="font-semibold mb-2">Legal Basis (Arizona)</h2>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Order of Protection: A.R.S. § 13-3602</li>
+                <li>• Injunction Against Harassment: A.R.S. § 12-1809</li>
+                <li>• Workplace Harassment: A.R.S. § 12-1810</li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="border border-rose-200">
+            <CardContent className="p-6">
+              <h2 className="font-semibold mb-2">Service & Hearing Fundamentals</h2>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Orders must be served to be enforceable</li>
+                <li>• Either party can request a hearing</li>
+                <li>• Violations can result in arrest</li>
+                <li>• Consider the Address Confidentiality Program (ACP)</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </main>
   );

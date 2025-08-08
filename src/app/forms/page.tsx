@@ -212,6 +212,35 @@ export default function FormsPage() {
             </div>
           </CardContent>
           </Card>
+          {/* Quick Process Stepper */}
+          <Card className="mb-8">
+            <CardContent className="p-6">
+              <h2 className="text-xl font-bold mb-2">Filing Process at a Glance</h2>
+              <p className="text-gray-600 mb-4">Most family law filings follow these steps:</p>
+              <div className="grid md:grid-cols-5 gap-4 text-sm">
+                <div className="bg-white border rounded p-3">
+                  <p className="font-semibold">1) Choose Forms</p>
+                  <p className="text-gray-600">Confirm correct packet</p>
+                </div>
+                <div className="bg-white border rounded p-3">
+                  <p className="font-semibold">2) Complete</p>
+                  <p className="text-gray-600">Type or print clearly</p>
+                </div>
+                <div className="bg-white border rounded p-3">
+                  <p className="font-semibold">3) File</p>
+                  <p className="text-gray-600">Superior Court clerk</p>
+                </div>
+                <div className="bg-white border rounded p-3">
+                  <p className="font-semibold">4) Serve</p>
+                  <p className="text-gray-600">Properly notify the other side</p>
+                </div>
+                <div className="bg-white border rounded p-3">
+                  <p className="font-semibold">5) Proof</p>
+                  <p className="text-gray-600">File proof of service</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
             <div className="flex items-start gap-3">
@@ -224,6 +253,8 @@ export default function FormsPage() {
                   <li>• File original with court and keep copies for yourself</li>
                   <li>• Court staff cannot give legal advice about which forms to use</li>
                   <li>• Consider consulting an attorney for complex cases</li>
+                  <li>• Filing is in the Superior Court clerk’s office for your county</li>
+                  <li>• If you cannot afford fees, ask the clerk about fee waiver or deferral</li>
                 </ul>
               </div>
             </div>
