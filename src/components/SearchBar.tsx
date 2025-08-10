@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { SearchResult } from '@/lib/searchIndex';
+import { useAnalytics } from '@/providers/AnalyticsProvider';
+import { EventCategories, EventActions } from '@/lib/analytics';
 
 interface SearchBarProps {
   className?: string;
@@ -48,6 +50,7 @@ export default function SearchBar({
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [popularSearches, setPopularSearches] = useState<string[]>([]);
+  const analytics = useAnalytics();
   const [isLoading, setIsLoading] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -105,6 +108,9 @@ export default function SearchBar({
       const updated = [trimmed, ...recentSearches.filter(s => s !== trimmed)].slice(0, 5);
       setRecentSearches(updated);
       localStorage.setItem('recentSearches', JSON.stringify(updated));
+      
+      // Track search in analytics
+      analytics.trackSearch(trimmed, results.length);
     }
   };
 
@@ -131,6 +137,15 @@ export default function SearchBar({
       setSuggestions(suggestionsData.suggestions || []);
       setResults(searchData.results || []);
       setIsOpen(true);
+      
+      // Track search performance if no results
+      if (!searchData.results || searchData.results.length === 0) {
+        analytics.track({
+          category: EventCategories.SEARCH,
+          action: EventActions.SEARCH_NO_RESULTS,
+          label: searchQuery,
+        });
+      }
     } catch (error) {
       console.error('Error fetching search data:', error);
       setSuggestions([]);
@@ -187,11 +202,30 @@ export default function SearchBar({
     router.push(`/search?q=${encodeURIComponent(suggestion)}`);
     setIsOpen(false);
     if (onSearch) onSearch(suggestion);
+    
+    // Track suggestion click
+    analytics.track({
+      category: EventCategories.SEARCH,
+      action: 'Search Suggestion Click',
+      label: suggestion,
+    });
   };
 
-  const handleResultClick = () => {
+  const handleResultClick = (result: SearchResult) => {
     setIsOpen(false);
     setQuery('');
+    
+    // Track search result click
+    analytics.track({
+      category: EventCategories.SEARCH,
+      action: EventActions.SEARCH_RESULT_CLICK,
+      label: result.title,
+      metadata: {
+        url: result.url,
+        category: result.category,
+        score: result.score,
+      },
+    });
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -221,8 +255,9 @@ export default function SearchBar({
           handleSuggestionClick(suggestions[selectedIndex]);
         } else {
           const resultIndex = selectedIndex - suggestions.length;
-          router.push(results[resultIndex].url);
-          handleResultClick();
+          const result = results[resultIndex];
+          router.push(result.url);
+          handleResultClick(result);
         }
       }
     } else if (e.key === 'Escape') {
@@ -390,7 +425,7 @@ export default function SearchBar({
                     <Link
                       key={result.id}
                       href={result.url}
-                      onClick={handleResultClick}
+                      onClick={() => handleResultClick(result)}
                       className={`block px-4 py-3 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none transition-colors ${
                         isSelected ? 'bg-gray-50' : ''
                       }`}
@@ -422,7 +457,15 @@ export default function SearchBar({
                 {/* View all results */}
                 <Link
                   href={`/search?q=${encodeURIComponent(query)}`}
-                  onClick={handleResultClick}
+                  onClick={() => {
+                    setIsOpen(false);
+                    setQuery('');
+                    analytics.track({
+                      category: EventCategories.SEARCH,
+                      action: 'View All Results Click',
+                      label: query,
+                    });
+                  }}
                   className="block px-4 py-3 text-center text-sm text-blue-600 hover:text-blue-800 hover:bg-gray-50 border-t border-gray-100"
                 >
                   View all results for &quot;{query}&quot;

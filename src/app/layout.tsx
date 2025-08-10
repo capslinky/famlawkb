@@ -11,6 +11,7 @@ import { ToastProvider } from "@/components/ui/toast";
 import { ScreenReaderProvider } from "@/components/ui/screen-reader-announcements";
 import { SkipNavigation } from "@/components/ui/skip-navigation";
 import BottomNav from "@/components/layout/BottomNav";
+import { AnalyticsProvider } from "@/providers/AnalyticsProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,16 +78,18 @@ export default function RootLayout({
         <ThemeProvider>
           <ToastProvider>
             <ScreenReaderProvider>
-              <SkipNavigation />
-              <CrisisSafetyFeatures />
-              <CrisisDetection />
-              <NavigationHeader />
-              <main id="main-content" className="flex-1 pb-16 lg:pb-0" tabIndex={-1}>
-                {children}
-              </main>
-              <Footer />
-              <ReassuranceWidget />
-              <BottomNav />
+              <AnalyticsProvider>
+                <SkipNavigation />
+                <CrisisSafetyFeatures />
+                <CrisisDetection />
+                <NavigationHeader />
+                <main id="main-content" className="flex-1 pb-16 lg:pb-0" tabIndex={-1}>
+                  {children}
+                </main>
+                <Footer />
+                <ReassuranceWidget />
+                <BottomNav />
+              </AnalyticsProvider>
             </ScreenReaderProvider>
           </ToastProvider>
         </ThemeProvider>

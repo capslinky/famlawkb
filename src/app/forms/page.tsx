@@ -212,6 +212,33 @@ export default function FormsPage() {
             </div>
           </CardContent>
           </Card>
+          {/* New Enhanced Forms Section */}
+          <Card className="mb-8 border-2 border-blue-200 bg-blue-50">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-3 mb-4">
+                <Sparkles className="w-6 h-6 text-blue-600 mt-0.5" />
+                <div>
+                  <h2 className="text-xl font-bold text-blue-900 mb-2">✨ NEW: Interactive Form Assistant</h2>
+                  <p className="text-blue-800 mb-3">
+                    Complete your forms online with real-time validation, helpful guidance, and automatic progress saving.
+                  </p>
+                  <div className="flex gap-3">
+                    <Link href="/forms/divorce-petition-enhanced">
+                      <Button>
+                        Try Enhanced Divorce Petition
+                      </Button>
+                    </Link>
+                    <Link href="/forms/wizard">
+                      <Button variant="outline">
+                        Form Selection Wizard
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Quick Process Stepper */}
           <Card className="mb-8">
             <CardContent className="p-6">
